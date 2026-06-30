@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>아이동월드 위키</title>
+<link rel="stylesheet" href="i18n/lang.css" />
 <style>
   :root{
     --ink:#2b2f3a; --muted:#7b8190; --hair:rgba(40,48,66,.10);
@@ -58,11 +59,17 @@
 </style>
 </head>
 <body>
+  <header class="idw-topbar">
+    <span class="idw-brand"><span class="idw-brand__mark">💠</span><span data-i18n="top_label">아이동월드</span></span>
+    <button class="idw-langchip" id="idwLangChip" type="button" aria-label="language">
+      <span class="idw-langchip__dot"></span><span id="idwLangName">한국어</span><span class="idw-langchip__ico">▾</span>
+    </button>
+  </header>
   <div class="wrap">
     <header class="masthead">
-      <div class="eyebrow">IDONG WORLD · WIKI</div>
-      <h1>아이동월드 위키<span class="dot">.</span></h1>
-      <p>아이돌과 동물이 만난 작은 행성 — 세계관과 도감을 한곳에.</p>
+      <div class="eyebrow" data-i18n="home_eyebrow">IDONG WORLD · WIKI</div>
+      <h1><span data-i18n="home_title">아이동월드 위키</span><span class="dot">.</span></h1>
+      <p data-i18n="home_tagline">아이돌과 동물이 만난 작은 행성 — 세계관과 도감을 한곳에.</p>
     </header>
 
     <main class="books">
@@ -70,9 +77,9 @@
       <div class="book soon" style="--c:#6f9d58">
         <div class="cover"><img src="assets/home/worldbook.webp" alt="아이동 월드북" loading="lazy" /></div>
         <div class="book__body">
-          <h2>📖 아이동 월드북</h2>
-          <p>회색섬에서 시작되는 세계관. 15구역·아이동·반짝섬의 이야기와 설정을 담은 로어북.</p>
-          <span class="status wait">준비중</span>
+          <h2 data-i18n="book_world_title">📖 아이동 월드북</h2>
+          <p data-i18n="book_world_desc">회색섬에서 시작되는 세계관. 15구역·아이동·반짝섬의 이야기와 설정을 담은 로어북.</p>
+          <span class="status wait" data-i18n="status_soon">준비중</span>
         </div>
       </div>
 
@@ -80,9 +87,9 @@
       <div class="book soon" style="--c:#EC5B9B">
         <div class="cover contain"><img src="assets/home/sheet.webp" alt="아이동 시트북" loading="lazy" /></div>
         <div class="book__body">
-          <h2>🐾 아이동 시트북</h2>
-          <p>671마리 아이동의 캐릭터 시트. 타입·성격·기질·도감을 한 장씩 펼쳐보는 캐릭터북.</p>
-          <span class="status wait">준비중</span>
+          <h2 data-i18n="book_sheet_title">🐾 아이동 시트북</h2>
+          <p data-i18n="book_sheet_desc">671마리 아이동의 캐릭터 시트. 타입·성격·기질·도감을 한 장씩 펼쳐보는 캐릭터북.</p>
+          <span class="status wait" data-i18n="status_soon">준비중</span>
         </div>
       </div>
 
@@ -96,17 +103,22 @@
           </div>
         </div>
         <div class="book__body">
-          <h2>💠 아이템 카드북</h2>
-          <p>2,832종 아이템 도감. 분류·태그·아이동별로 찾아보는 반짝 컬렉터블 카드.</p>
-          <span class="status on">2,832종 · 열람하기 →</span>
+          <h2 data-i18n="book_item_title">💠 아이템 카드북</h2>
+          <p data-i18n="book_item_desc">2,832종 아이템 도감. 분류·태그·아이동별로 찾아보는 반짝 컬렉터블 카드.</p>
+          <span class="status on" data-i18n="status_item">2,832종 · 열람하기 →</span>
         </div>
       </a>
     </main>
 
     <p class="foot">
-      © IDONG World · 한국콘텐츠진흥원 지원 작품<br/>
-      준비중 항목은 순차 공개됩니다.
+      <span data-i18n="foot_credit">© IDONG World · 한국콘텐츠진흥원 지원 작품</span><br/>
+      <span data-i18n="foot_note">준비중 항목은 순차 공개됩니다.</span>
     </p>
   </div>
+
+  <script>window.IDW_I18N_DIR="i18n/";</script>
+  <script src="i18n/languages.js"></script>
+  <script src="i18n/ui.js"></script>
+  <script src="i18n/lang-core.js"></script>
 </body>
 </html>

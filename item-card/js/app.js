@@ -1,9 +1,9 @@
-/* 아이동월드 위키 · 아이템 카드 — 분류(카테고리) + 태그(속성·중첩) */
+/* 아이동월드 위키 · 아이템 카드 — 분류(카테고리) + 태그(속성·중첩) + 다국어 */
 (function(){
   "use strict";
   var ITEMS=window.IDW_ITEMS||[], AIDONG=window.IDW_AIDONG||[];
 
-  // 분류(카테고리)
+  // 분류(카테고리) — 키=한국어 코드(필터/데이터 기준), 표시명은 i18n
   var CAT={
     "자원":{c:"#B98A55",e:"💎",d:"가공 전 원재료·물자."},
     "주방":{c:"#F2994A",e:"🍳",d:"식재료·요리·주방도구 등 부엌 살림 전반."},
@@ -27,17 +27,31 @@
   function famOf(t){ return t==="소장템"?"소장": (FUNC.indexOf(t)>=0?"기능": (MATSET[t]?"소재":"형태")); }
   var GRADE={1:{t:"흔함",c:"#8A93A6",g:"◈"},2:{t:"희귀",c:"#5B8DEF",g:"◈◈"},3:{t:"유일",c:"#C9A227",g:"◈◈◈"}};
 
+  // ── i18n 접근자 ──
+  function L(k,vars){ var s=(window.IDWLang?IDWLang.t(k):"")||""; if(vars){for(var p in vars)s=s.split("{"+p+"}").join(vars[p]);} return s; }
+  function MAP(g,k){ return window.IDWLang?IDWLang.map(g,k):null; }
+  function curLang(){ return window.IDWLang?IDWLang.lang():"ko"; }
+  function catName(c){ return MAP("cat",c)||c; }
+  function catDesc(c){ return MAP("cat_desc",c)||(CAT[c]?CAT[c].d:""); }
+  function tagName(t){ return MAP("tag",t)||t; }
+  function famName(f){ return MAP("fam",f)||f; }
+  function gradeName(g){ return MAP("grade",String(g))||(GRADE[g]?GRADE[g].t:""); }
+  function itTR(it){ var p=window.IDW_ITEMS_TR&&window.IDW_ITEMS_TR[curLang()]; return p&&p[it.id]; }
+  function itemNM(it){ var x=itTR(it); return (x&&x.nm)||it.nm; }
+  function itemON(it){ var x=itTR(it); return (x&&x.on)||it.on||it.nm; }
+  function itemDE(it){ var x=itTR(it); return (x&&x.de)||it.de||""; }
+  function aidongName(i){ var p=window.IDW_AIDONG_TR&&window.IDW_AIDONG_TR[curLang()]; return (p&&p[i])||AIDONG[i]; }
+
   function hexa(h,a){var n=parseInt(h.slice(1),16);return "rgba("+((n>>16)&255)+","+((n>>8)&255)+","+(n&255)+","+a+")";}
   function esc(s){return (s||"").replace(/[&<>"]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m];});}
   function catC(c){return (CAT[c]||{c:"#8A93A6"}).c;}
   function tagColor(t){return FAM[famOf(t)].c;}
   function accent(c){return "--accent:"+c+";--accent-soft:"+hexa(c,.12)+";--accent-ring:"+hexa(c,.24)+";";}
   function gvars(g){var G=GRADE[g];return "--g-c:"+G.c+";--g-soft:"+hexa(G.c,.12)+";--g-ring:"+hexa(G.c,.26)+";";}
-  function tail(pt){if(!pt)return "";var p=pt.split("›");return p[p.length-1].trim();}
   function catChip(c,nav){var d=CAT[c]||{c:"#8A93A6",e:""};
-    return '<span class="tag cat"'+(nav?' data-navk="cat" data-navv="'+esc(c)+'"':'')+' style="--tc:'+d.c+';--tcs:'+hexa(d.c,.13)+';--tcr:'+hexa(d.c,.28)+'">'+(d.e?'<span class="te">'+d.e+'</span>':'')+esc(c)+'</span>';}
+    return '<span class="tag cat"'+(nav?' data-navk="cat" data-navv="'+esc(c)+'"':'')+' style="--tc:'+d.c+';--tcs:'+hexa(d.c,.13)+';--tcr:'+hexa(d.c,.28)+'">'+(d.e?'<span class="te">'+d.e+'</span>':'')+esc(catName(c))+'</span>';}
   function tagChip(t,nav){var c=tagColor(t);
-    return '<span class="tag"'+(nav?' data-navk="tag" data-navv="'+esc(t)+'"':'')+' style="--tc:'+c+';--tcs:'+hexa(c,.1)+';--tcr:'+hexa(c,.24)+'">#'+esc(t)+'</span>';}
+    return '<span class="tag"'+(nav?' data-navk="tag" data-navv="'+esc(t)+'"':'')+' style="--tc:'+c+';--tcs:'+hexa(c,.1)+';--tcr:'+hexa(c,.24)+'">#'+esc(tagName(t))+'</span>';}
 
   // 카운트
   var catCount={}, tagCount={};
@@ -55,40 +69,42 @@
     if(sel.kind==="cat"  && it.cat.indexOf(sel.key)<0) return false;
     if(sel.kind==="tag"  && it.tg.indexOf(sel.key)<0) return false;
     if(sel.kind==="aidong" && it.ad.indexOf(sel.key)<0) return false;
-    if(q){var s=q.toLowerCase(); if(it.nm.toLowerCase().indexOf(s)<0 && it.id.toLowerCase().indexOf(s)<0) return false;}
+    if(q){var s=q.toLowerCase(); if(itemNM(it).toLowerCase().indexOf(s)<0 && it.nm.toLowerCase().indexOf(s)<0 && it.id.toLowerCase().indexOf(s)<0) return false;}
     return true;
   }
   function applyFilter(){
+    var lg=curLang();
     filtered=ITEMS.filter(match);
     filtered.sort(function(a,b){
-      if(sort==="name") return a.nm.localeCompare(b.nm,"ko");
+      if(sort==="name") return itemNM(a).localeCompare(itemNM(b),lg);
       if(sort==="rare") return (b.gr-a.gr)||(a.rf-b.rf)||a.id.localeCompare(b.id);
       if(sort==="ref")  return (b.rf-a.rf)||a.id.localeCompare(b.id);
       return a.id.localeCompare(b.id);
     });
     grid.innerHTML=""; shown=0;
-    countEl.textContent="총 "+filtered.length.toLocaleString()+"개";
+    countEl.textContent=L("count",{n:filtered.length.toLocaleString()});
     updateBack();
-    if(!filtered.length){grid.innerHTML='<div class="empty">결과가 없습니다.</div>';return;}
+    if(!filtered.length){grid.innerHTML='<div class="empty">'+esc(L("empty"))+'</div>';return;}
     renderMore();
   }
   function cardHtml(it){
     var lead=catC(it.cat[0]), G=GRADE[it.gr];
-    var catChips=it.cat.map(catChip).join("");
-    // 본문 태그: 소장템 우선 + 앞쪽 2개
+    var catChips=it.cat.map(function(c){return catChip(c);}).join("");
     var shownTags=[]; if(it.tg.indexOf("소장템")>=0) shownTags.push("소장템");
     it.tg.forEach(function(t){if(t!=="소장템"&&shownTags.length<3)shownTags.push(t);});
     var more=it.tg.length-shownTags.length;
-    var tagHtml=shownTags.map(tagChip).join("")+(more>0?'<span class="more">+'+more+'</span>':'');
+    var tagHtml=shownTags.map(function(t){return tagChip(t);}).join("")+(more>0?'<span class="more">+'+more+'</span>':'');
+    var sub2 = curLang()==="ko" ? ('<p class="sub2">'+esc(tail(it.pt))+'</p>') : "";
     return '<article class="card" data-id="'+it.id+'" style="'+accent(lead)+gvars(it.gr)+'">'
       +'<div class="card__top"><div class="tags">'+catChips+'</div>'
-        +'<span class="grade"><span class="gem">'+G.g+'</span>'+G.t+'</span></div>'
+        +'<span class="grade"><span class="gem">'+G.g+'</span>'+esc(gradeName(it.gr))+'</span></div>'
       +'<div class="art"><span class="tw a"></span><span class="tw b"></span>'
-        +'<img src="assets/thumb/'+it.im+'" srcset="assets/mini/'+it.im+' 96w, assets/thumb/'+it.im+' 320w" sizes="(max-width:560px) 60px, 200px" alt="'+esc(it.nm)+'" loading="lazy" /></div>'
-      +'<div class="card__body"><h3 class="name">'+esc(it.nm)+'</h3>'
-        +'<p class="sub2">'+esc(tail(it.pt))+'</p>'
+        +'<img src="assets/thumb/'+it.im+'" srcset="assets/mini/'+it.im+' 96w, assets/thumb/'+it.im+' 320w" sizes="(max-width:560px) 60px, 200px" alt="'+esc(itemNM(it))+'" loading="lazy" /></div>'
+      +'<div class="card__body"><h3 class="name">'+esc(itemNM(it))+'</h3>'
+        +sub2
         +'<div class="tags small">'+tagHtml+'</div></div></article>';
   }
+  function tail(pt){if(!pt)return "";var p=pt.split("›");return p[p.length-1].trim();}
   function renderMore(){ if(shown>=filtered.length)return;
     var end=Math.min(shown+BATCH,filtered.length),h=""; for(var i=shown;i<end;i++)h+=cardHtml(filtered[i]);
     grid.insertAdjacentHTML("beforeend",h); shown=end; }
@@ -100,41 +116,40 @@
     var on=sel.kind===kind&&sel.key===key, ring=color?hexa(color,.36):"rgba(91,141,239,.3)";
     return '<span class="chip'+(on?" on":"")+'" data-k="'+kind+'" data-v="'+esc(key==null?"":key)+'" style="'
       +(on&&color?("background:"+color+";--chip-ring:"+ring+";"):"")+'">'
-      +(dot&&color?'<i style="background:'+color+'"></i>':'')+(emoji?emoji+" ":"")+label
+      +(dot&&color?'<i style="background:'+color+'"></i>':'')+(emoji?emoji+" ":"")+esc(label)
       +(cnt!=null?'<span class="n">'+cnt.toLocaleString()+'</span>':'')+'</span>';
   }
-  function formTagsByCount(min){ // 형태 태그 (count>=min) 카운트 내림차순
+  function formTagsByCount(min){
     return Object.keys(tagCount).filter(function(t){return famOf(t)==="형태"&&tagCount[t]>=min;})
       .sort(function(a,b){return tagCount[b]-tagCount[a];});
   }
   function renderNav(){
-    var cat='<span class="grouplabel">📂 분류</span>'+chip("전체보기","all",null,"#3a4150","",ITEMS.length,false);
-    CATORDER.forEach(function(k){var d=CAT[k];cat+=chip("#"+k,"cat",k,d.c,d.e,catCount[k]||0,true);});
+    var cat='<span class="grouplabel">'+esc(L("nav_cat"))+'</span>'+chip(L("all"),"all",null,"#3a4150","",ITEMS.length,false);
+    CATORDER.forEach(function(k){var d=CAT[k];cat+=chip("#"+catName(k),"cat",k,d.c,d.e,catCount[k]||0,true);});
 
     var nTags=0;
-    var tagrow=function(label,arr){ nTags+=arr.length; var h='<span class="famlabel">'+label+'</span>';
-      arr.forEach(function(t){h+=chip("#"+t,"tag",t,tagColor(t),"",tagCount[t]||0,true);}); return '<div class="famrow">'+h+'</div>'; };
-    var rows= tagrow(FAM["소장"].e+" 소장", ["소장템"])
-      + tagrow(FAM["기능"].e+" 기능", FUNC.filter(function(t){return tagCount[t];}))
-      + tagrow(FAM["소재"].e+" 소재", MAT.filter(function(t){return tagCount[t];}).sort(function(a,b){return tagCount[b]-tagCount[a];}))
-      + tagrow(FAM["형태"].e+" 형태", formTagsByCount(10));
-    var open=sel.kind==="tag"; // 태그 선택 중이면 펼친 채로
-    var tg='<div class="tags-head"><span class="grouplabel">🏷️ 태그</span>'
-      + '<button type="button" class="tags-toggle" id="tagsToggle">'+(open?'▴ 태그 접기':'▾ 태그 더보기 ('+nTags+')')+'</button></div>'
+    var tagrow=function(famkey,arr){ nTags+=arr.length; var h='<span class="famlabel">'+FAM[famkey].e+' '+esc(famName(famkey))+'</span>';
+      arr.forEach(function(t){h+=chip("#"+tagName(t),"tag",t,tagColor(t),"",tagCount[t]||0,true);}); return '<div class="famrow">'+h+'</div>'; };
+    var rows= tagrow("소장", ["소장템"])
+      + tagrow("기능", FUNC.filter(function(t){return tagCount[t];}))
+      + tagrow("소재", MAT.filter(function(t){return tagCount[t];}).sort(function(a,b){return tagCount[b]-tagCount[a];}))
+      + tagrow("형태", formTagsByCount(10));
+    var open=sel.kind==="tag";
+    var tg='<div class="tags-head"><span class="grouplabel">'+esc(L("nav_tag"))+'</span>'
+      + '<button type="button" class="tags-toggle" id="tagsToggle">'+(open?'▴ '+esc(L("tags_less")):'▾ '+esc(L("tags_more"))+' ('+nTags+')')+'</button></div>'
       + '<div class="tags-body">'+rows+'</div>';
 
     filterBox.innerHTML='<div class="chipgroup">'+cat+'</div><div class="chipgroup tags-group'+(open?" open":"")+'">'+tg+'</div>';
 
-    // 설명문
-    if(sel.kind==="cat"&&CAT[sel.key]){tagdesc.hidden=false;tagdesc.innerHTML='<b style="color:'+CAT[sel.key].c+'">#'+esc(sel.key)+'</b> — '+esc(CAT[sel.key].d);}
-    else if(sel.kind==="tag"&&sel.key==="소장템"){tagdesc.hidden=false;tagdesc.innerHTML='<b style="color:#5B8DEF">#소장템</b> — 아이동 도감에 수록되는 전용 수집품. 도감 25칸 중 20칸이 이 전용 소장템으로 채워집니다.';}
-    else if(sel.kind==="aidong"){tagdesc.hidden=false;tagdesc.innerHTML='<b style="color:#E0729B">🐾 '+esc(AIDONG[sel.key])+'</b> 의 도감 — 이 아이동이 품은 아이템 '+filtered.length+'종.';}
+    if(sel.kind==="cat"&&CAT[sel.key]){tagdesc.hidden=false;tagdesc.innerHTML='<b style="color:'+CAT[sel.key].c+'">#'+esc(catName(sel.key))+'</b> — '+esc(catDesc(sel.key));}
+    else if(sel.kind==="tag"&&sel.key==="소장템"){tagdesc.hidden=false;tagdesc.innerHTML='<b style="color:#5B8DEF">#'+esc(tagName("소장템"))+'</b> — '+esc(L("tagdesc_collect"));}
+    else if(sel.kind==="aidong"){tagdesc.hidden=false;tagdesc.textContent=L("tagdesc_aidong",{name:aidongName(sel.key),n:filtered.length});}
     else tagdesc.hidden=true;
   }
   filterBox.addEventListener("click",function(e){
     var tog=e.target.closest(".tags-toggle");
     if(tog){var g=filterBox.querySelector(".tags-group");var op=g.classList.toggle("open");
-      tog.textContent=op?"▴ 태그 접기":"▾ 태그 더보기";return;}
+      tog.textContent=op?("▴ "+L("tags_less")):("▾ "+L("tags_more"));return;}
     var c=e.target.closest(".chip");if(!c)return;
     sel={kind:c.dataset.k,key:c.dataset.k==="all"?null:c.dataset.v};
     if(sel.kind!=="aidong"){var asel=document.getElementById("aidongSel");if(asel)asel.value="-1";}
@@ -142,10 +157,10 @@
 
   // 아이동 도감 (상시)
   function renderSub(){
-    var opts='<option value="-1">아이동 선택 (671)</option>';
-    for(var i=0;i<AIDONG.length;i++)opts+='<option value="'+i+'"'+(sel.kind==="aidong"&&sel.key===i?" selected":"")+'>'+esc(AIDONG[i])+'</option>';
+    var opts='<option value="-1">'+esc(L("aidong_select",{n:AIDONG.length}))+'</option>';
+    for(var i=0;i<AIDONG.length;i++)opts+='<option value="'+i+'"'+(sel.kind==="aidong"&&sel.key===i?" selected":"")+'>'+esc(aidongName(i))+'</option>';
     subBox.hidden=false;
-    subBox.innerHTML='<span class="sublabel">🐾 아이동 도감</span><select id="aidongSel">'+opts+'</select><span class="subhint">아이동을 고르면 그 도감의 아이템만</span>';
+    subBox.innerHTML='<span class="sublabel">'+esc(L("aidong_label"))+'</span><select id="aidongSel">'+opts+'</select><span class="subhint">'+esc(L("aidong_hint"))+'</span>';
     document.getElementById("aidongSel").addEventListener("change",function(){
       var v=parseInt(this.value,10);
       if(v<0){sel={kind:"all",key:null};} else {sel={kind:"aidong",key:v};}
@@ -164,56 +179,57 @@
       dBack=document.getElementById("dBack"), crumb=document.getElementById("crumb"), byId={};
   ITEMS.forEach(function(it){byId[it.id]=it;});
   var HOME="../index.html";
+  var curDetail=null;
 
   function famGroup(it){
     var groups={"기능":[],"소재":[],"형태":[],"소장":[]};
     it.tg.forEach(function(t){groups[famOf(t)].push(t);});
     var order=["소장","기능","소재","형태"],h="";
-    order.forEach(function(f){ if(groups[f].length) h+='<div class="ir"><span class="k">'+FAM[f].e+' '+f+'</span><span class="v"><div class="tags">'+groups[f].map(function(t){return tagChip(t,true);}).join("")+'</div></span></div>'; });
+    order.forEach(function(f){ if(groups[f].length) h+='<div class="ir"><span class="k">'+FAM[f].e+' '+esc(famName(f))+'</span><span class="v"><div class="tags">'+groups[f].map(function(t){return tagChip(t,true);}).join("")+'</div></span></div>'; });
     return h;
   }
   function showDetail(it){
+    curDetail=it;
     var lead=catC(it.cat[0]),G=GRADE[it.gr];
     var catChips=it.cat.map(function(c){return catChip(c,true);}).join("");
     var aidongRow=""; if(it.ad&&it.ad.length){
-      aidongRow='<div class="ir"><span class="k">🐾 수집 아이동</span><span class="v aidong">'
-        +it.ad.map(function(i){return '<span class="ad" data-navk="aidong" data-navv="'+i+'">'+esc(AIDONG[i])+'</span>';}).join("")+'</span></div>';}
-    var diff=it.on&&it.on!==it.nm;
+      aidongRow='<div class="ir"><span class="k">'+esc(L("d_aidong"))+'</span><span class="v aidong">'
+        +it.ad.map(function(i){return '<span class="ad" data-navk="aidong" data-navv="'+i+'">'+esc(aidongName(i))+'</span>';}).join("")+'</span></div>';}
+    var nm=itemNM(it), on=itemON(it), de=itemDE(it), diff=on&&on!==nm;
     detail.setAttribute("style",accent(lead)+gvars(it.gr));
     detail.innerHTML='<div class="detail__hero"><div class="row"><div class="tags">'+catChips+'</div>'
-        +'<span class="grade"><span class="gem">'+G.g+'</span>'+G.t+'</span></div>'
-        +'<div class="detail__art"><span class="tw a"></span><span class="tw b"></span><img src="assets/thumb/'+it.im+'" alt="'+esc(it.nm)+'"/></div>'
-        +'<h2 class="objname">'+esc(it.on||it.nm)+'</h2>'+(it.ipa?'<div class="ipa">['+esc(it.ipa)+']</div>':'')
+        +'<span class="grade"><span class="gem">'+G.g+'</span>'+esc(gradeName(it.gr))+'</span></div>'
+        +'<div class="detail__art"><span class="tw a"></span><span class="tw b"></span><img src="assets/thumb/'+it.im+'" alt="'+esc(nm)+'"/></div>'
+        +'<h2 class="objname">'+esc(on||nm)+'</h2>'+(it.ipa?'<div class="ipa">['+esc(it.ipa)+']</div>':'')
       +'</div>'
       +'<div class="detail__body">'
-        +'<div class="fullname">'+(diff?'<span class="fnlabel">정식명</span> ':'')+esc(it.nm)+'<span class="id">'+it.id+'</span></div>'
-        +(it.de?'<p class="lore">'+esc(it.de)+'</p>':'<div class="lore tbd">설명 준비중</div>')
+        +'<div class="fullname">'+(diff?'<span class="fnlabel">'+esc(L("d_fullname"))+'</span> ':'')+esc(nm)+'<span class="id">'+it.id+'</span></div>'
+        +(de?'<p class="lore">'+esc(de)+'</p>':'<div class="lore tbd">'+esc(L("desc_tbd"))+'</div>')
         +'<div class="info">'
-          +'<div class="ir"><span class="k">📂 분류</span><span class="v"><div class="tags">'+catChips+'</div></span></div>'
+          +'<div class="ir"><span class="k">'+esc(L("d_cat"))+'</span><span class="v"><div class="tags">'+catChips+'</div></span></div>'
           +famGroup(it)
-          +'<div class="ir"><span class="k">등급</span><span class="v"><span class="gem" style="color:'+G.c+'">'+G.g+'</span> '+G.t+'</span></div>'
-          +'<div class="ir"><span class="k">도감 출현</span><span class="v">'+it.rf+'개 아이동 도감</span></div>'
+          +'<div class="ir"><span class="k">'+esc(L("d_grade"))+'</span><span class="v"><span class="gem" style="color:'+G.c+'">'+G.g+'</span> '+esc(gradeName(it.gr))+'</span></div>'
+          +'<div class="ir"><span class="k">'+esc(L("d_ref"))+'</span><span class="v">'+esc(L("d_ref_val",{n:it.rf}))+'</span></div>'
           +aidongRow
-          +'<div class="ir"><span class="k">아이콘</span><span class="v path">'+esc(it.im)+'</span></div>'
-        +'</div><button class="detail__back" id="detailBack">← 돌아가기</button></div>';
+          +'<div class="ir"><span class="k">'+esc(L("d_icon"))+'</span><span class="v path">'+esc(it.im)+'</span></div>'
+        +'</div><button class="detail__back" id="detailBack">'+esc(L("back"))+'</button></div>';
     detailView.hidden=false; listView.hidden=true; window.scrollTo(0,0);
     detail.querySelector("#detailBack").onclick=showList;
   }
   function showList(){ detailView.hidden=true; listView.hidden=false; window.scrollTo(0,0); }
 
   function updateBack(){
-    if(sel.kind==="all"){ backBtn.textContent="← 위키 홈"; crumb.textContent=""; }
-    else{ backBtn.textContent="← 아이템 메인";
-      crumb.textContent=(sel.kind==="aidong"?("🐾 "+(AIDONG[sel.key]||"")):("#"+sel.key))+" ("+filtered.length.toLocaleString()+")"; }
+    if(sel.kind==="all"){ backBtn.textContent=L("back_home"); crumb.textContent=""; }
+    else{ backBtn.textContent=L("back_main");
+      var label=(sel.kind==="aidong"?("🐾 "+aidongName(sel.key)):("#"+(sel.kind==="cat"?catName(sel.key):tagName(sel.key))));
+      crumb.textContent=label+" ("+filtered.length.toLocaleString()+")"; }
   }
-  // 리스트 뒤로가기: 필터중→메인 / 메인→위키홈
   backBtn.addEventListener("click",function(){
     if(sel.kind!=="all"){ sel={kind:"all",key:null}; applyFilter(); renderNav(); renderSub(); window.scrollTo(0,0); }
     else { location.href=HOME; }
   });
   dBack.addEventListener("click",showList);
 
-  // 상세 안 분류/태그/아이동 클릭 → 해당 리스트로 이동
   detail.addEventListener("click",function(e){
     var n=e.target.closest("[data-navk]"); if(!n)return;
     var k=n.dataset.navk,v=n.dataset.navv;
@@ -223,7 +239,15 @@
   grid.addEventListener("click",function(e){var c=e.target.closest(".card");if(c)showDetail(byId[c.dataset.id]);});
   document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !detailView.hidden) showList(); });
 
+  // ── 렌더(언어 적용) ──
+  function renderAll(){
+    qEl.placeholder=L("search_ph");
+    var subEl=document.getElementById("sub"); if(subEl) subEl.textContent=L("ic_sub",{n:ITEMS.length.toLocaleString()});
+    renderNav(); renderSub(); applyFilter();
+    if(detailView && !detailView.hidden && curDetail) showDetail(curDetail);
+  }
+  if(window.IDWLang && IDWLang.onChange) IDWLang.onChange(renderAll);
+
   // init
-  document.getElementById("sub").textContent="반짝 컬렉터블 · 전체 도감 "+ITEMS.length.toLocaleString()+"종";
-  renderNav(); renderSub(); applyFilter();
+  renderAll();
 })();

@@ -4,16 +4,25 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>아이동월드 위키 · 아이템 카드</title>
+<link rel="stylesheet" href="../i18n/lang.css" />
 <link rel="stylesheet" href="css/gallery.css" />
 </head>
 <body>
+  <!-- 상단 언어바 (welcome 상단바 계승) -->
+  <header class="idw-topbar">
+    <a class="idw-brand" href="../index.html"><span class="idw-brand__mark">💠</span><span data-i18n="top_label">아이동월드</span></a>
+    <button class="idw-langchip" id="idwLangChip" type="button" aria-label="language">
+      <span class="idw-langchip__dot"></span><span id="idwLangName">한국어</span><span class="idw-langchip__ico">▾</span>
+    </button>
+  </header>
+
   <!-- 리스트 뷰 (아이템 메인 / 분류·태그·아이동 리스트) -->
   <div id="listView">
     <div class="topbar wrap"><button class="backbtn" id="backBtn">← 위키 홈</button><span class="crumb" id="crumb"></span></div>
     <header class="masthead">
       <div class="wrap">
-        <div class="eyebrow">IDONG WORLD · WIKI</div>
-        <h1>아이템 카드<span class="dot">.</span></h1>
+        <div class="eyebrow" data-i18n="ic_eyebrow">IDONG WORLD · WIKI</div>
+        <h1><span data-i18n="ic_title">아이템 카드</span><span class="dot">.</span></h1>
         <p class="sub" id="sub">반짝 컬렉터블 · 전체 도감</p>
       </div>
     </header>
@@ -24,12 +33,12 @@
         <button id="qclear" class="qclear" aria-label="지우기" hidden>×</button>
       </div>
       <div class="sortwrap">
-        <label for="sort">정렬</label>
+        <label for="sort" data-i18n="sort_label">정렬</label>
         <select id="sort">
-          <option value="id">기본순</option>
-          <option value="name">이름순 (가나다)</option>
-          <option value="rare">희귀도순</option>
-          <option value="ref">도감 출현순</option>
+          <option value="id" data-i18n="sort_id">기본순</option>
+          <option value="name" data-i18n="sort_name">이름순 (가나다)</option>
+          <option value="rare" data-i18n="sort_rare">희귀도순</option>
+          <option value="ref" data-i18n="sort_ref">도감 출현순</option>
         </select>
       </div>
     </div>
@@ -47,8 +56,12 @@
     <div id="detail" class="detail"></div>
   </section>
 
+  <script>window.IDW_I18N_DIR="../i18n/";window.IDW_LOAD_ITEM_PACKS=true;</script>
+  <script src="../i18n/languages.js"></script>
+  <script src="../i18n/ui.js"></script>
   <script src="data/aidong.js"></script>
   <script src="data/items.js"></script>
+  <script src="../i18n/lang-core.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

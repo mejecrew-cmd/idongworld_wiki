@@ -1,0 +1,52 @@
+/* 아이동월드 위키 — 상단 언어바 + 언어 드롭다운 (welcome 상단바 구조 계승, 라이트 테마) */
+.idw-topbar{
+  position:sticky; top:0; z-index:60;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 20px;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(40,48,66,.08);
+}
+.idw-brand{
+  display:inline-flex; align-items:center; gap:7px;
+  font-weight:800; font-size:.95rem; letter-spacing:-.01em; color:#2b2f3a;
+  text-decoration:none;
+}
+.idw-brand .idw-brand__mark{ font-size:1.05rem; }
+.idw-langchip{
+  display:inline-flex; align-items:center; gap:8px;
+  background:#fff; color:#3f4660;
+  border:1px solid rgba(40,48,66,.16); border-radius:9999px;
+  padding:7px 13px; font-family:inherit; font-size:.82rem; font-weight:700;
+  cursor:pointer; box-shadow:0 2px 8px rgba(43,47,58,.06);
+  transition:border-color .2s, box-shadow .2s, transform .1s;
+}
+.idw-langchip:hover{ border-color:rgba(91,141,239,.5); box-shadow:0 4px 12px rgba(43,47,58,.1); }
+.idw-langchip:active{ transform:translateY(1px); }
+.idw-langchip__dot{ width:7px; height:7px; border-radius:50%; background:#5B8DEF;
+  box-shadow:0 0 8px 1px rgba(91,141,239,.6); flex:none; }
+.idw-langchip__ico{ opacity:.5; font-size:.78rem; }
+
+/* 드롭다운 패널 */
+.idw-langpanel{
+  position:fixed; top:54px; right:14px; z-index:200;
+  width:min(360px, calc(100vw - 28px));
+  background:#fff; border:1px solid rgba(40,48,66,.12); border-radius:16px;
+  box-shadow:0 18px 48px rgba(20,30,60,.22);
+  padding:14px; animation:idwPop .18s ease;
+}
+@keyframes idwPop{ from{opacity:0; transform:translateY(-6px)} to{opacity:1; transform:none} }
+.idw-langpanel__head{ font-size:.74rem; font-weight:800; letter-spacing:.04em;
+  color:#7b8190; text-transform:uppercase; margin:2px 4px 10px; }
+.idw-langgrid{ display:grid; grid-template-columns:1fr 1fr; gap:4px;
+  max-height:min(60vh,420px); overflow:auto; }
+.idw-langopt{
+  text-align:left; border:1px solid transparent; background:transparent;
+  border-radius:9px; padding:9px 11px; font-family:inherit; font-size:.86rem;
+  color:#3c4250; cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  transition:background .15s;
+}
+.idw-langopt:hover{ background:rgba(91,141,239,.08); }
+.idw-langopt.on{ background:rgba(91,141,239,.16); color:#2f5fc0; font-weight:800; }
+body[dir="rtl"] .idw-langopt{ text-align:right; }
+body[dir="rtl"] .idw-langpanel{ right:auto; left:14px; }
