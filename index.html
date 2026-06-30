@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>아이동월드 위키</title>
+<style>
+  :root{
+    --ink:#2b2f3a; --muted:#7b8190; --hair:rgba(40,48,66,.10);
+    --font:"Noto Sans KR","Apple SD Gothic Neo",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --accent:#5B8DEF;
+  }
+  *{box-sizing:border-box;} html,body{margin:0;padding:0;}
+  body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased;
+    background:radial-gradient(1200px 620px at 50% -8%,#fff 0,rgba(255,255,255,0) 60%),linear-gradient(165deg,#eef3fb,#f7f4ef);
+    min-height:100vh;padding:0 0 80px;}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px;}
+  .masthead{padding:52px 0 30px;text-align:center;}
+  .eyebrow{font-size:.78rem;letter-spacing:.34em;color:var(--muted);font-weight:700;text-transform:uppercase;}
+  .masthead h1{margin:.32em 0 .18em;font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;letter-spacing:-.01em;}
+  .masthead h1 .dot{color:var(--accent);}
+  .masthead p{margin:0;color:var(--muted);font-size:1rem;}
+
+  .books{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:14px;}
+  @media (max-width:760px){ .books{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto;} }
+
+  .book{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;
+    background:#fff;border:1px solid var(--hair);border-radius:24px;overflow:hidden;isolation:isolate;
+    box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 12px 30px rgba(43,47,58,.09),0 3px 8px rgba(43,47,58,.05);
+    transition:transform .26s cubic-bezier(.2,.8,.2,1),box-shadow .26s;}
+  .book::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;z-index:2;
+    background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 55%,#fff));}
+  .book.live{cursor:pointer;}
+  .book.live:hover{transform:translateY(-8px);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 22px 44px color-mix(in srgb,var(--c) 30%,transparent),0 6px 14px rgba(43,47,58,.1);}
+  .book.soon{opacity:.78;}
+
+  .cover{position:relative;aspect-ratio:16/11;overflow:hidden;
+    background:radial-gradient(120% 90% at 30% 18%,#fff,color-mix(in srgb,var(--c) 12%,#fff));
+    display:grid;place-items:center;}
+  .cover img{width:100%;height:100%;object-fit:cover;}
+  .cover.contain img{width:72%;height:72%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(43,47,58,.16));}
+  /* 카드북 몽타주 */
+  .montage{position:relative;width:100%;height:100%;}
+  .montage img{position:absolute;width:42%;aspect-ratio:1;object-fit:contain;border-radius:14px;background:#fff;
+    border:1px solid var(--hair);box-shadow:0 8px 18px rgba(43,47,58,.14);}
+  .montage img:nth-child(1){left:10%;top:24%;transform:rotate(-9deg);}
+  .montage img:nth-child(2){left:30%;top:12%;transform:rotate(2deg);z-index:2;}
+  .montage img:nth-child(3){left:50%;top:24%;transform:rotate(10deg);}
+
+  .book__body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:7px;flex:1;}
+  .book__body h2{margin:0;font-size:1.3rem;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:8px;}
+  .book__body p{margin:0;font-size:.9rem;line-height:1.55;color:#5d6373;flex:1;}
+  .status{align-self:flex-start;margin-top:4px;padding:5px 12px;border-radius:999px;font-size:.76rem;font-weight:800;}
+  .status.on{background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 30%,#fff);}
+  .status.wait{background:rgba(40,48,66,.06);color:#8a90a0;border:1px solid var(--hair);}
+
+  .foot{margin-top:46px;text-align:center;color:var(--muted);font-size:.82rem;line-height:1.7;}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="eyebrow">IDONG WORLD · WIKI</div>
+      <h1>아이동월드 위키<span class="dot">.</span></h1>
+      <p>아이돌과 동물이 만난 작은 행성 — 세계관과 도감을 한곳에.</p>
+    </header>
+
+    <main class="books">
+      <!-- 월드북 -->
+      <div class="book soon" style="--c:#6f9d58">
+        <div class="cover"><img src="assets/home/worldbook.webp" alt="아이동 월드북" loading="lazy" /></div>
+        <div class="book__body">
+          <h2>📖 아이동 월드북</h2>
+          <p>회색섬에서 시작되는 세계관. 15구역·아이동·반짝섬의 이야기와 설정을 담은 로어북.</p>
+          <span class="status wait">준비중</span>
+        </div>
+      </div>
+
+      <!-- 아이동 시트북 -->
+      <div class="book soon" style="--c:#EC5B9B">
+        <div class="cover contain"><img src="assets/home/sheet.webp" alt="아이동 시트북" loading="lazy" /></div>
+        <div class="book__body">
+          <h2>🐾 아이동 시트북</h2>
+          <p>671마리 아이동의 캐릭터 시트. 타입·성격·기질·도감을 한 장씩 펼쳐보는 캐릭터북.</p>
+          <span class="status wait">준비중</span>
+        </div>
+      </div>
+
+      <!-- 아이템 카드북 -->
+      <a class="book live" href="item-card/index.html" style="--c:#5B8DEF">
+        <div class="cover">
+          <div class="montage">
+            <img src="item-card/assets/thumb/p_0003_ribon.webp" alt="" loading="lazy" />
+            <img src="item-card/assets/thumb/p_0007_sigye.webp" alt="" loading="lazy" />
+            <img src="item-card/assets/thumb/u_1356_haendeumaikeu.webp" alt="" loading="lazy" />
+          </div>
+        </div>
+        <div class="book__body">
+          <h2>💠 아이템 카드북</h2>
+          <p>2,832종 아이템 도감. 분류·태그·아이동별로 찾아보는 반짝 컬렉터블 카드.</p>
+          <span class="status on">2,832종 · 열람하기 →</span>
+        </div>
+      </a>
+    </main>
+
+    <p class="foot">
+      © IDONG World · 한국콘텐츠진흥원 지원 작품<br/>
+      준비중 항목은 순차 공개됩니다.
+    </p>
+  </div>
+</body>
+</html>

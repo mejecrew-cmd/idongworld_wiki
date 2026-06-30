@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>아이동월드 위키 · 아이템 카드</title>
+<link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+  <!-- 리스트 뷰 (아이템 메인 / 분류·태그·아이동 리스트) -->
+  <div id="listView">
+    <div class="topbar wrap"><button class="backbtn" id="backBtn">← 위키 홈</button><span class="crumb" id="crumb"></span></div>
+    <header class="masthead">
+      <div class="wrap">
+        <div class="eyebrow">IDONG WORLD · WIKI</div>
+        <h1>아이템 카드<span class="dot">.</span></h1>
+        <p class="sub" id="sub">반짝 컬렉터블 · 전체 도감</p>
+      </div>
+    </header>
+    <div class="controls wrap">
+      <div class="search">
+        <span class="ico">🔍</span>
+        <input id="q" type="search" placeholder="아이템 이름 검색…" autocomplete="off" />
+        <button id="qclear" class="qclear" aria-label="지우기" hidden>×</button>
+      </div>
+      <div class="sortwrap">
+        <label for="sort">정렬</label>
+        <select id="sort">
+          <option value="id">기본순</option>
+          <option value="name">이름순 (가나다)</option>
+          <option value="rare">희귀도순</option>
+          <option value="ref">도감 출현순</option>
+        </select>
+      </div>
+    </div>
+    <nav class="filters wrap" id="filters"></nav>
+    <p class="tagdesc wrap" id="tagdesc" hidden></p>
+    <div class="subfilter wrap" id="subfilter" hidden></div>
+    <div class="resultbar wrap"><span id="count"></span></div>
+    <main class="grid wrap" id="grid"></main>
+    <div class="sentinel" id="sentinel"></div>
+  </div>
+
+  <!-- 상세 뷰 (단독 페이지) -->
+  <section id="detailView" hidden>
+    <div class="topbar wrap"><button class="backbtn" id="dBack">← 돌아가기</button></div>
+    <div id="detail" class="detail"></div>
+  </section>
+
+  <script src="data/aidong.js"></script>
+  <script src="data/items.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
