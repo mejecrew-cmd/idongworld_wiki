@@ -62,8 +62,8 @@ body.locked{overflow:hidden;}
 
 .resultbar{margin-top:14px;font-size:.84rem;color:var(--muted);font-weight:600;}
 
-/* 그리드 */
-.grid{display:grid;gap:18px;margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(204px,1fr));}
+/* 그리드 — 최대폭에서 5열(아이동 도감 25칸 = 5×5), 좁아지면 자동 감소 */
+.grid{display:grid;gap:18px;margin-top:8px;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));}
 
 /* 카드 */
 .card{position:relative;background:var(--card);border:1px solid var(--hair);border-radius:var(--radius);
