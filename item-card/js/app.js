@@ -38,7 +38,7 @@
   function gradeName(g){ return MAP("grade",String(g))||(GRADE[g]?GRADE[g].t:""); }
   function itTR(it){ var p=window.IDW_ITEMS_TR&&window.IDW_ITEMS_TR[curLang()]; return p&&p[it.id]; }
   function itemNM(it){ var x=itTR(it); return (x&&x.nm)||it.nm; }
-  function itemON(it){ var x=itTR(it); return (x&&x.on)||it.on||it.nm; }
+  function itemON(it){ return it.on||it.nm; } /* 사물명=한국어 원본 고정(번역 대상 아님, IPA도 원본) */
   function itemDE(it){ var x=itTR(it); return (x&&x.de)||it.de||""; }
   function aidongName(i){ var p=window.IDW_AIDONG_TR&&window.IDW_AIDONG_TR[curLang()]; return (p&&p[i])||AIDONG[i]; }
 
