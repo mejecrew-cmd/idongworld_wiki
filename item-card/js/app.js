@@ -241,10 +241,12 @@
           +aidongRow
           +'<div class="ir"><span class="k">'+esc(L("d_icon"))+'</span><span class="v path">'+esc(it.im)+'</span></div>'
         +'</div><button class="detail__back" id="detailBack">'+esc(L("back"))+'</button></div>';
+    if(!listView.hidden) listScroll=window.scrollY; // 리스트에서 진입할 때만 위치 저장
     detailView.hidden=false; listView.hidden=true; window.scrollTo(0,0);
-    detail.querySelector("#detailBack").onclick=showList;
+    detail.querySelector("#detailBack").onclick=function(){showList(true);};
   }
-  function showList(){ detailView.hidden=true; listView.hidden=false; window.scrollTo(0,0); }
+  var listScroll=0;
+  function showList(restore){ detailView.hidden=true; listView.hidden=false; window.scrollTo(0, restore?listScroll:0); }
 
   function updateBack(){
     if(sel.kind==="all"){ backBtn.textContent=L("back_home"); crumb.textContent=""; }
@@ -256,7 +258,7 @@
     if(sel.kind!=="all"){ sel={kind:"all",key:null}; applyFilter(); renderNav(); renderSub(); window.scrollTo(0,0); }
     else { location.href=HOME; }
   });
-  dBack.addEventListener("click",showList);
+  dBack.addEventListener("click",function(){showList(true);});
 
   detail.addEventListener("click",function(e){
     var n=e.target.closest("[data-navk]"); if(!n)return;
@@ -265,7 +267,7 @@
     showList(); applyFilter(); renderNav(); renderSub(); window.scrollTo(0,0);
   });
   grid.addEventListener("click",function(e){var c=e.target.closest(".card");if(c)showDetail(byId[c.dataset.id]);});
-  document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !detailView.hidden) showList(); });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !detailView.hidden) showList(true); });
 
   // ── 렌더(언어 적용) ──
   function renderAll(){
