@@ -203,3 +203,22 @@ body.locked{overflow:hidden;}
 .fullname .id{margin-left:auto;font-size:.7rem;color:#aab0bd;font-weight:600;}
 .detail [data-navk]{cursor:pointer;transition:transform .1s,filter .1s;}
 .detail [data-navk]:hover{transform:translateY(-1px);filter:brightness(.96);}
+
+/* ── 아이동 배너 (특정 아이동 도감 필터 시) ── */
+.aidong-banner{display:flex;align-items:center;gap:18px;margin-top:14px;padding:16px 20px;border-radius:20px;
+  text-decoration:none;color:inherit;background:linear-gradient(120deg,rgba(224,114,155,.15),rgba(91,141,239,.10));
+  border:1px solid rgba(224,114,155,.30);box-shadow:0 8px 24px rgba(43,47,58,.08);transition:transform .2s,box-shadow .2s;}
+.aidong-banner:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(224,114,155,.22);}
+.ab-art{flex:none;width:96px;height:96px;border-radius:18px;overflow:hidden;display:grid;place-items:center;
+  background:radial-gradient(120% 90% at 30% 16%,#fff,#fdf2f7);border:1px solid rgba(224,114,155,.3);}
+.ab-art img{width:88%;height:88%;object-fit:contain;filter:drop-shadow(0 5px 9px rgba(43,47,58,.14));}
+.ab-body{min-width:0;flex:1;}
+.ab-eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.04em;color:#c34d81;text-transform:uppercase;}
+.ab-name{margin:3px 0 5px;font-size:1.4rem;font-weight:800;letter-spacing:-.02em;}
+.ab-desc{margin:0 0 9px;font-size:.9rem;line-height:1.55;color:#5d6373;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.ab-cta{display:inline-block;font-size:.82rem;font-weight:800;color:#fff;background:#E0729B;
+  border-radius:999px;padding:7px 16px;box-shadow:0 6px 16px rgba(224,114,155,.35);}
+.aidong-banner:hover .ab-cta{background:#d55f8c;}
+@media(max-width:560px){.aidong-banner{gap:12px;padding:12px 14px;}.ab-art{width:66px;height:66px;border-radius:14px;}
+  .ab-name{font-size:1.15rem;}.ab-desc{-webkit-line-clamp:3;font-size:.85rem;}}

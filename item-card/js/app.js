@@ -112,6 +112,7 @@
     countEl.textContent=L("count",{n:filtered.length.toLocaleString()});
     updateBack();
     syncAidongUrl();
+    renderAidongBanner();
     if(!filtered.length){grid.innerHTML='<div class="empty">'+esc(L("empty"))+'</div>';return;}
     renderMore();
   }
@@ -268,6 +269,34 @@
   });
   grid.addEventListener("click",function(e){var c=e.target.closest(".card");if(c)showDetail(byId[c.dataset.id]);});
   document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !detailView.hidden) showList(true); });
+
+  // ── 아이동 배너 (특정 아이동 도감 필터 시 리스트 위에) ──
+  var SHEET_D=window.IDW_SHEET||[], bannerEl=document.getElementById("aidongBanner"), koTried=false;
+  function loadKoOnce(cb){
+    if(window.IDW_SHEET_KO||koTried){cb();return;}
+    koTried=true;
+    var s=document.createElement("script"); s.src="../sheet/data/ko.js"; s.onload=cb; s.onerror=cb;
+    document.head.appendChild(s);
+  }
+  function renderAidongBanner(){
+    if(!bannerEl) return;
+    if(sel.kind!=="aidong"){ bannerEl.hidden=true; return; }
+    var i=sel.key, sd=SHEET_D[i]||{}, name=aidongName(i);
+    var icon=sd.id?("../sheet/assets/icon/"+sd.id+".webp"):"";
+    var ko=window.IDW_SHEET_KO&&window.IDW_SHEET_KO[i];
+    var desc=(ko&&ko.intro)||[sd.an,sd.il].filter(Boolean).join(" · ");
+    bannerEl.href="../sheet/index.html?ad="+i;
+    bannerEl.innerHTML='<div class="ab-art"><img src="'+icon+'" alt="'+esc(name)+'" onerror="this.style.display=\'none\'"/></div>'
+      +'<div class="ab-body"><div class="ab-eyebrow">'+esc(L("ab_owner"))+'</div>'
+      +'<h2 class="ab-name">'+esc(name)+'</h2>'
+      +'<p class="ab-desc">'+esc(desc)+'</p>'
+      +'<span class="ab-cta">'+esc(L("ab_cta"))+'</span></div>';
+    bannerEl.hidden=false;
+    if(!(ko&&ko.intro)) loadKoOnce(function(){
+      if(sel.kind==="aidong"&&sel.key===i){var k2=window.IDW_SHEET_KO&&window.IDW_SHEET_KO[i];
+        if(k2&&k2.intro){var d=bannerEl.querySelector(".ab-desc"); if(d)d.textContent=k2.intro;}}
+    });
+  }
 
   // ── 렌더(언어 적용) ──
   function renderAll(){
