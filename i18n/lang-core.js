@@ -13,7 +13,8 @@
   var UI    = window.IDW_WIKI_I18N || {};
   var FALLBACK = "ko";
   var DIR = window.IDW_I18N_DIR || "i18n/";       // 페이지별 상대경로
-  var LOAD_PACKS = !!window.IDW_LOAD_ITEM_PACKS;  // 아이템 페이지만 true
+  var LOAD_ITEMS  = !!window.IDW_LOAD_ITEM_PACKS;   // 아이템 페이지
+  var LOAD_AIDONG = !!(window.IDW_LOAD_ITEM_PACKS || window.IDW_LOAD_AIDONG_PACKS); // 아이템·시트 페이지
 
   window.IDW_ITEMS_TR  = window.IDW_ITEMS_TR  || {};
   window.IDW_AIDONG_TR = window.IDW_AIDONG_TR || {};
@@ -115,10 +116,10 @@
   /* ---- 번역팩 지연 로드 ---- */
   var loaded = {}; // code → true(완료)
   function loadPacks(code, done) {
-    if (!LOAD_PACKS || code === "ko" || loaded[code]) { done(); return; }
+    if ((!LOAD_ITEMS && !LOAD_AIDONG) || code === "ko" || loaded[code]) { done(); return; }
     var need = [];
-    if (!window.IDW_ITEMS_TR[code])  need.push(DIR + "items." + code + ".js");
-    if (!window.IDW_AIDONG_TR[code]) need.push(DIR + "aidong." + code + ".js");
+    if (LOAD_ITEMS  && !window.IDW_ITEMS_TR[code])  need.push(DIR + "items." + code + ".js");
+    if (LOAD_AIDONG && !window.IDW_AIDONG_TR[code]) need.push(DIR + "aidong." + code + ".js");
     if (!need.length) { loaded[code] = true; done(); return; }
     var left = need.length, finished = false;
     function one() { if (--left <= 0 && !finished) { finished = true; loaded[code] = true; done(); } }

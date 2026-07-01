@@ -60,8 +60,35 @@
     it.tg.forEach(function(t){tagCount[t]=(tagCount[t]||0)+1;});
   });
 
+  function initialAidongFromUrl(){
+    var raw=""; try{
+      var sp=new URLSearchParams(location.search);
+      raw=sp.get("ad")||sp.get("aidong")||sp.get("id")||"";
+    }catch(e){}
+    if(!raw) return -1;
+    if(/^AIDONG-\d{4}$/i.test(raw)){
+      var n=parseInt(raw.replace(/\D/g,""),10)-1;
+      return n>=0&&n<AIDONG.length?n:-1;
+    }
+    if(/^\d+$/.test(raw)){
+      var z=parseInt(raw,10);
+      return z>=0&&z<AIDONG.length?z:-1;
+    }
+    var low=raw.toLowerCase();
+    for(var i=0;i<AIDONG.length;i++) if((AIDONG[i]||"").toLowerCase()===low) return i;
+    return -1;
+  }
+  function syncAidongUrl(){
+    if(!history || !history.replaceState) return;
+    var u=new URL(location.href);
+    if(sel.kind==="aidong") u.searchParams.set("ad",String(sel.key));
+    else u.searchParams.delete("ad");
+    history.replaceState(null,"",u.pathname+u.search+u.hash);
+  }
+
   // 상태: 단일 선택자 (all | cat | tag | aidong)
-  var sel={kind:"all",key:null}, q="", sort="id";
+  var initialAd=initialAidongFromUrl();
+  var sel=initialAd>=0?{kind:"aidong",key:initialAd}:{kind:"all",key:null}, q="", sort="id";
   var filtered=[], shown=0, BATCH=80;
   var grid=document.getElementById("grid"), sentinel=document.getElementById("sentinel"), countEl=document.getElementById("count");
 
@@ -84,6 +111,7 @@
     grid.innerHTML=""; shown=0;
     countEl.textContent=L("count",{n:filtered.length.toLocaleString()});
     updateBack();
+    syncAidongUrl();
     if(!filtered.length){grid.innerHTML='<div class="empty">'+esc(L("empty"))+'</div>';return;}
     renderMore();
   }

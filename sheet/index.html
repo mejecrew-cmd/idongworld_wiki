@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>아이동월드 위키 · 아이동 시트북</title>
+<link rel="stylesheet" href="../i18n/lang.css" />
+<link rel="stylesheet" href="css/sheet.css" />
+</head>
+<body>
+  <header class="idw-topbar">
+    <a class="idw-brand" href="../index.html"><span class="idw-brand__mark">IDW</span><span data-i18n="top_label">아이동월드</span></a>
+    <button class="idw-langchip" id="idwLangChip" type="button" aria-label="language">
+      <span class="idw-langchip__dot"></span><span id="idwLangName">한국어</span><span class="idw-langchip__ico">▾</span>
+    </button>
+  </header>
+
+  <div id="listView" class="page">
+    <aside class="side">
+      <a class="home-link" href="../index.html">← 위키 홈</a>
+      <div class="side__title">
+        <span>IDONG WORLD · SHEETBOOK</span>
+        <strong>아이동 시트북</strong>
+      </div>
+      <div class="search">
+        <span class="search__ico">⌕</span>
+        <input id="q" type="search" placeholder="이름·동물·섬 검색" autocomplete="off" />
+        <button id="qclear" type="button" aria-label="지우기" hidden>×</button>
+      </div>
+      <div class="filter-head">
+        <span>동물 필터</span>
+        <button id="clearAnimal" type="button" hidden>전체</button>
+      </div>
+      <nav id="animalFilters" class="animal-filters" aria-label="동물 필터"></nav>
+    </aside>
+
+    <main class="main">
+      <div class="main__top">
+        <div>
+          <p class="eyebrow">671 CHARACTER SHEETS</p>
+          <h1>아이동 시트북</h1>
+        </div>
+        <div class="tools">
+          <span id="count" class="count"></span>
+          <label class="sort">
+            <span>정렬</span>
+            <select id="sort">
+              <option value="no">번호순</option>
+              <option value="name">이름순</option>
+              <option value="animal">동물순</option>
+              <option value="island">섬 이름순</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div id="activeFilter" class="active-filter" hidden></div>
+      <section id="grid" class="grid" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <section id="detailView" class="detail-page" hidden>
+    <div class="detail-top">
+      <button id="backToList" type="button" class="backbtn">← 목록</button>
+      <a id="itemBookTop" class="item-link" href="../item-card/index.html">아이템 카드북</a>
+    </div>
+    <article id="detail" class="sheet-detail"></article>
+  </section>
+
+  <script>window.IDW_I18N_DIR="../i18n/";window.IDW_LOAD_AIDONG_PACKS=true;</script>
+  <script src="../i18n/languages.js"></script>
+  <script src="../i18n/ui.js"></script>
+  <script src="../item-card/data/aidong.js"></script>
+  <script src="data/sheet.js"></script>
+  <script src="data/pedia.js"></script>
+  <script src="data/ko.js"></script>
+  <script src="../i18n/lang-core.js"></script>
+  <script src="js/sheet.js"></script>
+</body>
+</html>
