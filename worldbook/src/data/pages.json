@@ -1,0 +1,9143 @@
+[
+ {
+  "page_id": "p00_01",
+  "route": "/lore/",
+  "template": "cover",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 0,
+   "section_id": "s00",
+   "title_key": "s00.title",
+   "label_key": "s00.label"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": null,
+   "parent_id": null,
+   "next_id": "p00_02",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "p00_01.title",
+   "category_key": "p00_01.category",
+   "summary_keys": []
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p00_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p00_01.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_01.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p00_01.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p00_02",
+   "p00_03",
+   "p00_04",
+   "p00_05",
+   "p00_06",
+   "p00_07",
+   "p00_08",
+   "s01_index",
+   "s02_index",
+   "s03_index",
+   "s04_index",
+   "s05_index",
+   "s06_index",
+   "s07_index",
+   "s08_index"
+  ],
+  "hero": {
+   "src": "assets/images/worldbook_v1/img_p00_01.webp",
+   "alt_key": "p00_01.hero.alt",
+   "caption_key": "p00_01.hero.caption",
+   "aspect_ratio": "16:9",
+   "focal_point": "center",
+   "image_id": "img_p00_01"
+  }
+ },
+ {
+  "page_id": "p00_02",
+  "route": "/lore/00/how-to-read",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 0,
+   "section_id": "s00",
+   "title_key": "s00.title",
+   "label_key": "s00.label"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s00.title",
+    "route": "/lore/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p00_01",
+   "parent_id": "p00_01",
+   "next_id": "p00_03",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "p00_02.title",
+   "category_key": "p00_02.category",
+   "summary_keys": []
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p00_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p00_02.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_02.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_02.body.03"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p00_03",
+  "route": "/lore/00/first-sentence",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 0,
+   "section_id": "s00",
+   "title_key": "s00.title",
+   "label_key": "s00.label"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s00.title",
+    "route": "/lore/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p00_02",
+   "parent_id": "p00_01",
+   "next_id": "p00_04",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "p00_03.title",
+   "category_key": "p00_03.category",
+   "summary_keys": []
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p00_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p00_03.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_03.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p00_03.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p00_04",
+  "route": "/lore/00/canon-layers",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 0,
+   "section_id": "s00",
+   "title_key": "s00.title",
+   "label_key": "s00.label"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s00.title",
+    "route": "/lore/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p00_03",
+   "parent_id": "p00_01",
+   "next_id": "p00_05",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "p00_04.title",
+   "category_key": "p00_04.category",
+   "summary_keys": []
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p00_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p00_04.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_04.body.02"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p00_04.data.01.title",
+    "items": [
+     {
+      "label_key": "p00_04.data.01.row.01.label",
+      "value_key": "p00_04.data.01.row.01.value"
+     },
+     {
+      "label_key": "p00_04.data.01.row.02.label",
+      "value_key": "p00_04.data.01.row.02.value"
+     },
+     {
+      "label_key": "p00_04.data.01.row.03.label",
+      "value_key": "p00_04.data.01.row.03.value"
+     },
+     {
+      "label_key": "p00_04.data.01.row.04.label",
+      "value_key": "p00_04.data.01.row.04.value"
+     },
+     {
+      "label_key": "p00_04.data.01.row.05.label",
+      "value_key": "p00_04.data.01.row.05.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p00_05",
+  "route": "/lore/00/three-names",
+  "template": "data_box",
+  "status": "draft",
+  "section": {
+   "chapter_no": 0,
+   "section_id": "s00",
+   "title_key": "s00.title",
+   "label_key": "s00.label"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s00.title",
+    "route": "/lore/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p00_04",
+   "parent_id": "p00_01",
+   "next_id": "p00_06",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "p00_05.title",
+   "category_key": "p00_05.category",
+   "summary_keys": []
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p00_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p00_05.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_05.body.02"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p00_05.data.01.title",
+    "items": [
+     {
+      "label_key": "p00_05.data.01.row.01.label",
+      "value_key": "p00_05.data.01.row.01.value"
+     },
+     {
+      "label_key": "p00_05.data.01.row.02.label",
+      "value_key": "p00_05.data.01.row.02.value"
+     },
+     {
+      "label_key": "p00_05.data.01.row.03.label",
+      "value_key": "p00_05.data.01.row.03.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p00_06",
+  "route": "/lore/00/web-navigation",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 0,
+   "section_id": "s00",
+   "title_key": "s00.title",
+   "label_key": "s00.label"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s00.title",
+    "route": "/lore/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p00_05",
+   "parent_id": "p00_01",
+   "next_id": "p00_07",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "p00_06.title",
+   "category_key": "p00_06.category",
+   "summary_keys": []
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p00_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p00_06.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_06.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_06.body.03"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p00_07",
+  "route": "/lore/00/image-and-record-promise",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 0,
+   "section_id": "s00",
+   "title_key": "s00.title",
+   "label_key": "s00.label"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s00.title",
+    "route": "/lore/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p00_06",
+   "parent_id": "p00_01",
+   "next_id": "p00_08",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "p00_07.title",
+   "category_key": "p00_07.category",
+   "summary_keys": []
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p00_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p00_07.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_07.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_07.body.03"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p00_08",
+  "route": "/lore/00/future-records",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 0,
+   "section_id": "s00",
+   "title_key": "s00.title",
+   "label_key": "s00.label"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s00.title",
+    "route": "/lore/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p00_07",
+   "parent_id": "p00_01",
+   "next_id": "s01_index",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "p00_08.title",
+   "category_key": "p00_08.category",
+   "summary_keys": []
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p00_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p00_08.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_08.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p00_08.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p00_08.body.03"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "s01_index",
+  "route": "/lore/01",
+  "template": "section_index",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p00_08",
+   "parent_id": "p00_01",
+   "next_id": "p01_01",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "s01_index.title",
+   "category_key": "s01_index.category",
+   "summary_keys": [
+    "s01_index.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "s01_index",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "s01_index.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "s01_index.body.02"
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p01_01",
+   "p01_02",
+   "p01_03",
+   "p01_04",
+   "p01_05",
+   "p01_06",
+   "p01_07",
+   "p01_08",
+   "p01_09",
+   "p01_10",
+   "p01_11",
+   "p01_12"
+  ],
+  "hero": {
+   "src": "assets/images/worldbook_v1/img_s01_index.webp",
+   "alt_key": "s01_index.hero.alt",
+   "caption_key": "s01_index.hero.caption",
+   "aspect_ratio": "16:9",
+   "focal_point": "center",
+   "image_id": "img_s01_index"
+  }
+ },
+ {
+  "page_id": "p01_01",
+  "route": "/lore/01/real-room",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "s01_index",
+   "parent_id": "s01_index",
+   "next_id": "p01_02",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_01.title",
+   "category_key": "p01_01.category",
+   "summary_keys": [
+    "p01_01.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_01.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_01.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_01.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_01.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_01.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_02",
+  "route": "/lore/01/sea-and-rowboat",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_01",
+   "parent_id": "s01_index",
+   "next_id": "p01_03",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_02.title",
+   "category_key": "p01_02.category",
+   "summary_keys": [
+    "p01_02.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_02.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_02.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_02.body.03"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_02.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_03",
+  "route": "/lore/01/first-wind",
+  "template": "timeline",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_02",
+   "parent_id": "s01_index",
+   "next_id": "p01_04",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_03.title",
+   "category_key": "p01_03.category",
+   "summary_keys": [
+    "p01_03.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_03.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_03.quote.01"
+   },
+   {
+    "type": "timeline",
+    "title_key": "p01_03.time.01.title",
+    "items": [
+     {
+      "label_key": "p01_03.time.01.item.01.label",
+      "text_key": "p01_03.time.01.item.01.text"
+     },
+     {
+      "label_key": "p01_03.time.01.item.02.label",
+      "text_key": "p01_03.time.01.item.02.text"
+     },
+     {
+      "label_key": "p01_03.time.01.item.03.label",
+      "text_key": "p01_03.time.01.item.03.text"
+     },
+     {
+      "label_key": "p01_03.time.01.item.04.label",
+      "text_key": "p01_03.time.01.item.04.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_04",
+  "route": "/lore/01/gray-island",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_03",
+   "parent_id": "s01_index",
+   "next_id": "p01_05",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_04.title",
+   "category_key": "p01_04.category",
+   "summary_keys": [
+    "p01_04.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_04.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_04.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_04.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_04.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_04.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_05",
+  "route": "/lore/01/lodge-repair",
+  "template": "image_pair",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_04",
+   "parent_id": "s01_index",
+   "next_id": "p01_06",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_05.title",
+   "category_key": "p01_05.category",
+   "summary_keys": [
+    "p01_05.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_05.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_05.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_05.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p01_05.data.01.title",
+    "items": [
+     {
+      "label_key": "p01_05.data.01.row.01.label",
+      "value_key": "p01_05.data.01.row.01.value"
+     },
+     {
+      "label_key": "p01_05.data.01.row.02.label",
+      "value_key": "p01_05.data.01.row.02.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_06",
+  "route": "/lore/01/naming-island",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_05",
+   "parent_id": "s01_index",
+   "next_id": "p01_07",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_06.title",
+   "category_key": "p01_06.category",
+   "summary_keys": [
+    "p01_06.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_06.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_06.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_06.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_06.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_06.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_06.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_07",
+  "route": "/lore/01/seven-seasons",
+  "template": "timeline",
+  "status": "draft",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_06",
+   "parent_id": "s01_index",
+   "next_id": "p01_08",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_07.title",
+   "category_key": "p01_07.category",
+   "summary_keys": [
+    "p01_07.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_07.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_07.quote.01"
+   },
+   {
+    "type": "timeline",
+    "title_key": "p01_07.time.01.title",
+    "items": [
+     {
+      "label_key": "p01_07.time.01.item.01.label",
+      "text_key": "p01_07.time.01.item.01.text"
+     },
+     {
+      "label_key": "p01_07.time.01.item.02.label",
+      "text_key": "p01_07.time.01.item.02.text"
+     },
+     {
+      "label_key": "p01_07.time.01.item.03.label",
+      "text_key": "p01_07.time.01.item.03.text"
+     },
+     {
+      "label_key": "p01_07.time.01.item.04.label",
+      "text_key": "p01_07.time.01.item.04.text"
+     },
+     {
+      "label_key": "p01_07.time.01.item.05.label",
+      "text_key": "p01_07.time.01.item.05.text"
+     },
+     {
+      "label_key": "p01_07.time.01.item.06.label",
+      "text_key": "p01_07.time.01.item.06.text"
+     },
+     {
+      "label_key": "p01_07.time.01.item.07.label",
+      "text_key": "p01_07.time.01.item.07.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_08",
+  "route": "/lore/01/light-spreading-season",
+  "template": "image_pair",
+  "status": "draft",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_07",
+   "parent_id": "s01_index",
+   "next_id": "p01_09",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_08.title",
+   "category_key": "p01_08.category",
+   "summary_keys": [
+    "p01_08.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_08.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_08.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_08.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p01_08.data.01.title",
+    "items": [
+     {
+      "label_key": "p01_08.data.01.row.01.label",
+      "value_key": "p01_08.data.01.row.01.value"
+     },
+     {
+      "label_key": "p01_08.data.01.row.02.label",
+      "value_key": "p01_08.data.01.row.02.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_09",
+  "route": "/lore/01/sparkle-day",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_08",
+   "parent_id": "s01_index",
+   "next_id": "p01_10",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_09.title",
+   "category_key": "p01_09.category",
+   "summary_keys": [
+    "p01_09.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_09",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_09.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_09.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_09.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_09.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_09.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_10",
+  "route": "/lore/01/today-sparkle-point",
+  "template": "data_box",
+  "status": "draft",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_09",
+   "parent_id": "s01_index",
+   "next_id": "p01_11",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_10.title",
+   "category_key": "p01_10.category",
+   "summary_keys": [
+    "p01_10.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_10",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_10.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_10.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_10.body.03"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p01_10.data.01.title",
+    "items": [
+     {
+      "label_key": "p01_10.data.01.row.01.label",
+      "value_key": "p01_10.data.01.row.01.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.02.label",
+      "value_key": "p01_10.data.01.row.02.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.03.label",
+      "value_key": "p01_10.data.01.row.03.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.04.label",
+      "value_key": "p01_10.data.01.row.04.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.05.label",
+      "value_key": "p01_10.data.01.row.05.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.06.label",
+      "value_key": "p01_10.data.01.row.06.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.07.label",
+      "value_key": "p01_10.data.01.row.07.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.08.label",
+      "value_key": "p01_10.data.01.row.08.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.09.label",
+      "value_key": "p01_10.data.01.row.09.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.10.label",
+      "value_key": "p01_10.data.01.row.10.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.11.label",
+      "value_key": "p01_10.data.01.row.11.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.12.label",
+      "value_key": "p01_10.data.01.row.12.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.13.label",
+      "value_key": "p01_10.data.01.row.13.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.14.label",
+      "value_key": "p01_10.data.01.row.14.value"
+     },
+     {
+      "label_key": "p01_10.data.01.row.15.label",
+      "value_key": "p01_10.data.01.row.15.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_11",
+  "route": "/lore/01/safe-absence",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_10",
+   "parent_id": "s01_index",
+   "next_id": "p01_12",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_11.title",
+   "category_key": "p01_11.category",
+   "summary_keys": [
+    "p01_11.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_11",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_11.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_11.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_11.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_11.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_11.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p01_11.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p01_12",
+  "route": "/lore/01/heart-island-alias",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 1,
+   "section_id": "s01",
+   "title_key": "s01_index.title",
+   "label_key": "s01_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s01_index.title",
+    "route": "/lore/01"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_11",
+   "parent_id": "s01_index",
+   "next_id": "s02_index",
+   "back_fallback_id": "s01_index"
+  },
+  "header": {
+   "title_key": "p01_12.title",
+   "category_key": "p01_12.category",
+   "summary_keys": [
+    "p01_12.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p01_12",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p01_12.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_12.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_12.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p01_12.body.04"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p01_12.data.01.title",
+    "items": [
+     {
+      "label_key": "p01_12.data.01.row.01.label",
+      "value_key": "p01_12.data.01.row.01.value"
+     },
+     {
+      "label_key": "p01_12.data.01.row.02.label",
+      "value_key": "p01_12.data.01.row.02.value"
+     },
+     {
+      "label_key": "p01_12.data.01.row.03.label",
+      "value_key": "p01_12.data.01.row.03.value"
+     },
+     {
+      "label_key": "p01_12.data.01.row.04.label",
+      "value_key": "p01_12.data.01.row.04.value"
+     },
+     {
+      "label_key": "p01_12.data.01.row.05.label",
+      "value_key": "p01_12.data.01.row.05.value"
+     },
+     {
+      "label_key": "p01_12.data.01.row.06.label",
+      "value_key": "p01_12.data.01.row.06.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "s02_index",
+  "route": "/lore/02",
+  "template": "section_index",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p01_12",
+   "parent_id": "p00_01",
+   "next_id": "p02_01",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "s02_index.title",
+   "category_key": "s02_index.category",
+   "summary_keys": [
+    "s02_index.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "s02_index",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "s02_index.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "s02_index.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "s02_index.body.03"
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p02_01",
+   "p02_02",
+   "p02_03",
+   "p02_04",
+   "p02_05",
+   "p02_06",
+   "p02_07",
+   "p02_08",
+   "p02_09",
+   "p02_10"
+  ]
+ },
+ {
+  "page_id": "p02_01",
+  "route": "/lore/02/what-is-aidong",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "s02_index",
+   "parent_id": "s02_index",
+   "next_id": "p02_02",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_01.title",
+   "category_key": "p02_01.category",
+   "summary_keys": [
+    "p02_01.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_01.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_01.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_01.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_01.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_01.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_02",
+  "route": "/lore/02/type-and-instance",
+  "template": "data_box",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_01",
+   "parent_id": "s02_index",
+   "next_id": "p02_03",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_02.title",
+   "category_key": "p02_02.category",
+   "summary_keys": [
+    "p02_02.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_02.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_02.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_02.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p02_02.data.01.title",
+    "items": [
+     {
+      "label_key": "p02_02.data.01.row.01.label",
+      "value_key": "p02_02.data.01.row.01.value"
+     },
+     {
+      "label_key": "p02_02.data.01.row.02.label",
+      "value_key": "p02_02.data.01.row.02.value"
+     },
+     {
+      "label_key": "p02_02.data.01.row.03.label",
+      "value_key": "p02_02.data.01.row.03.value"
+     },
+     {
+      "label_key": "p02_02.data.01.row.04.label",
+      "value_key": "p02_02.data.01.row.04.value"
+     },
+     {
+      "label_key": "p02_02.data.01.row.05.label",
+      "value_key": "p02_02.data.01.row.05.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_03",
+  "route": "/lore/02/animal-persona-rule",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_02",
+   "parent_id": "s02_index",
+   "next_id": "p02_04",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_03.title",
+   "category_key": "p02_03.category",
+   "summary_keys": [
+    "p02_03.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_03.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_03.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_03.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_03.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_03.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_03.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_04",
+  "route": "/lore/02/speech-and-expression",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_03",
+   "parent_id": "s02_index",
+   "next_id": "p02_05",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_04.title",
+   "category_key": "p02_04.category",
+   "summary_keys": [
+    "p02_04.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_04.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_04.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_04.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_04.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_04.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_05",
+  "route": "/lore/02/aidong-sheet-reading",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_04",
+   "parent_id": "s02_index",
+   "next_id": "p02_06",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_05.title",
+   "category_key": "p02_05.category",
+   "summary_keys": [
+    "p02_05.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_05.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_05.body.02"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p02_05.data.01.title",
+    "items": [
+     {
+      "label_key": "p02_05.data.01.row.01.label",
+      "value_key": "p02_05.data.01.row.01.value"
+     },
+     {
+      "label_key": "p02_05.data.01.row.02.label",
+      "value_key": "p02_05.data.01.row.02.value"
+     },
+     {
+      "label_key": "p02_05.data.01.row.03.label",
+      "value_key": "p02_05.data.01.row.03.value"
+     },
+     {
+      "label_key": "p02_05.data.01.row.04.label",
+      "value_key": "p02_05.data.01.row.04.value"
+     },
+     {
+      "label_key": "p02_05.data.01.row.05.label",
+      "value_key": "p02_05.data.01.row.05.value"
+     },
+     {
+      "label_key": "p02_05.data.01.row.06.label",
+      "value_key": "p02_05.data.01.row.06.value"
+     },
+     {
+      "label_key": "p02_05.data.01.row.07.label",
+      "value_key": "p02_05.data.01.row.07.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_06",
+  "route": "/lore/02/first-impression-long-time",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_05",
+   "parent_id": "s02_index",
+   "next_id": "p02_07",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_06.title",
+   "category_key": "p02_06.category",
+   "summary_keys": [
+    "p02_06.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_06.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_06.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_06.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_06.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_06.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_07",
+  "route": "/lore/02/first-five-aidongs",
+  "template": "data_box",
+  "status": "draft",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_06",
+   "parent_id": "s02_index",
+   "next_id": "p02_08",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_07.title",
+   "category_key": "p02_07.category",
+   "summary_keys": [
+    "p02_07.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_07.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_07.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_07.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p02_07.data.01.title",
+    "items": [
+     {
+      "label_key": "p02_07.data.01.row.01.label",
+      "value_key": "p02_07.data.01.row.01.value"
+     },
+     {
+      "label_key": "p02_07.data.01.row.02.label",
+      "value_key": "p02_07.data.01.row.02.value"
+     },
+     {
+      "label_key": "p02_07.data.01.row.03.label",
+      "value_key": "p02_07.data.01.row.03.value"
+     },
+     {
+      "label_key": "p02_07.data.01.row.04.label",
+      "value_key": "p02_07.data.01.row.04.value"
+     },
+     {
+      "label_key": "p02_07.data.01.row.05.label",
+      "value_key": "p02_07.data.01.row.05.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_08",
+  "route": "/lore/02/no-real-likeness",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_07",
+   "parent_id": "s02_index",
+   "next_id": "p02_09",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_08.title",
+   "category_key": "p02_08.category",
+   "summary_keys": [
+    "p02_08.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_08.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_08.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_08.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_08.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_08.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_09",
+  "route": "/lore/02/aidong-creatures-difference",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_08",
+   "parent_id": "s02_index",
+   "next_id": "p02_10",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_09.title",
+   "category_key": "p02_09.category",
+   "summary_keys": [
+    "p02_09.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_09",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_09.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_09.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_09.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_09.body.04"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p02_09.data.01.title",
+    "items": [
+     {
+      "label_key": "p02_09.data.01.row.01.label",
+      "value_key": "p02_09.data.01.row.01.value"
+     },
+     {
+      "label_key": "p02_09.data.01.row.02.label",
+      "value_key": "p02_09.data.01.row.02.value"
+     },
+     {
+      "label_key": "p02_09.data.01.row.03.label",
+      "value_key": "p02_09.data.01.row.03.value"
+     },
+     {
+      "label_key": "p02_09.data.01.row.04.label",
+      "value_key": "p02_09.data.01.row.04.value"
+     },
+     {
+      "label_key": "p02_09.data.01.row.05.label",
+      "value_key": "p02_09.data.01.row.05.value"
+     }
+    ]
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_09.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p02_10",
+  "route": "/lore/02/my-aidong-sheet",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 2,
+   "section_id": "s02",
+   "title_key": "s02_index.title",
+   "label_key": "s02_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s02_index.title",
+    "route": "/lore/02"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_09",
+   "parent_id": "s02_index",
+   "next_id": "s03_index",
+   "back_fallback_id": "s02_index"
+  },
+  "header": {
+   "title_key": "p02_10.title",
+   "category_key": "p02_10.category",
+   "summary_keys": [
+    "p02_10.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p02_10",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p02_10.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_10.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p02_10.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p02_10.body.03"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p02_10.data.01.title",
+    "items": [
+     {
+      "label_key": "p02_10.data.01.row.01.label",
+      "value_key": "p02_10.data.01.row.01.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.02.label",
+      "value_key": "p02_10.data.01.row.02.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.03.label",
+      "value_key": "p02_10.data.01.row.03.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.04.label",
+      "value_key": "p02_10.data.01.row.04.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.05.label",
+      "value_key": "p02_10.data.01.row.05.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.06.label",
+      "value_key": "p02_10.data.01.row.06.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.07.label",
+      "value_key": "p02_10.data.01.row.07.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.08.label",
+      "value_key": "p02_10.data.01.row.08.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.09.label",
+      "value_key": "p02_10.data.01.row.09.value"
+     },
+     {
+      "label_key": "p02_10.data.01.row.10.label",
+      "value_key": "p02_10.data.01.row.10.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "s03_index",
+  "route": "/lore/03",
+  "template": "section_index",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p02_10",
+   "parent_id": "p00_01",
+   "next_id": "p03_01",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "s03_index.title",
+   "category_key": "s03_index.category",
+   "summary_keys": [
+    "s03_index.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "s03_index",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "s03_index.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "s03_index.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "s03_index.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p03_01",
+   "p03_02",
+   "p03_03",
+   "p03_04",
+   "p03_05",
+   "p03_06",
+   "p03_07",
+   "p03_08",
+   "p03_09",
+   "p03_10",
+   "p03_11",
+   "p03_12",
+   "p03_13",
+   "p03_14",
+   "p03_15",
+   "p03_16",
+   "p03_17",
+   "p03_18",
+   "p03_19",
+   "p03_20",
+   "p03_21"
+  ]
+ },
+ {
+  "page_id": "p03_01",
+  "route": "/lore/03/sparkle-island-map",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "s03_index",
+   "parent_id": "s03_index",
+   "next_id": "p03_02",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_01.title",
+   "category_key": "p03_01.category",
+   "summary_keys": [
+    "p03_01.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_01.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_01.body.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_01.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_01.list.01.title",
+    "items": [
+     "p03_01.list.01.item.01",
+     "p03_01.list.01.item.02",
+     "p03_01.list.01.item.03",
+     "p03_01.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_01.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_01.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_01.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_01.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_01.body.07"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_01.head.09"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_01.body.08"
+   }
+  ],
+  "related_items": [],
+  "children": [],
+  "hero": {
+   "src": "assets/images/worldbook_v1/img_p03_01.webp",
+   "alt_key": "p03_01.hero.alt",
+   "caption_key": "p03_01.hero.caption",
+   "aspect_ratio": "16:9",
+   "focal_point": "center",
+   "image_id": "img_p03_01"
+  }
+ },
+ {
+  "page_id": "p03_02",
+  "route": "/lore/03/fifteen-area-rule",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_01",
+   "parent_id": "s03_index",
+   "next_id": "p03_03",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_02.title",
+   "category_key": "p03_02.category",
+   "summary_keys": [
+    "p03_02.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p03_02.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_02.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_02.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_02.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_02.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p03_03",
+  "route": "/lore/03/area-01-lighthouse",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_02",
+   "parent_id": "s03_index",
+   "next_id": "p03_04",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_03.title",
+   "category_key": "p03_03.category",
+   "summary_keys": [
+    "p03_03.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_03.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_03.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_03.body.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_03.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_03.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_03.list.01.title",
+    "items": [
+     "p03_03.list.01.item.01",
+     "p03_03.list.01.item.02",
+     "p03_03.list.01.item.03",
+     "p03_03.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_03.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_03.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_03.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_03.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_03.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_03.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_03.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_03.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_03.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_03.body.07"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_03.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_03.body.08"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p01_04",
+    "label_key": "p01_04.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p01_07",
+    "label_key": "p01_07.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "01",
+  "variant": "night",
+  "hero": {
+   "src": "assets/images/worldbook_v1/img_p03_03.webp",
+   "alt_key": "p03_03.hero.alt",
+   "caption_key": "p03_03.hero.caption",
+   "aspect_ratio": "16:9",
+   "focal_point": "center",
+   "image_id": "img_p03_03"
+  }
+ },
+ {
+  "page_id": "p03_04",
+  "route": "/lore/03/area-02-harbor",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_03",
+   "parent_id": "s03_index",
+   "next_id": "p03_05",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_04.title",
+   "category_key": "p03_04.category",
+   "summary_keys": [
+    "p03_04.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_04.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_04.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_04.body.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_04.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_04.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_04.list.01.title",
+    "items": [
+     "p03_04.list.01.item.01",
+     "p03_04.list.01.item.02",
+     "p03_04.list.01.item.03",
+     "p03_04.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_04.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_04.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_04.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_04.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_04.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_04.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_04.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_04.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_04.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_04.body.07"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_04.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_04.body.08"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p01_03",
+    "label_key": "p01_03.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p05_01",
+    "label_key": "p05_01.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "02",
+  "variant": "water",
+  "hero": {
+   "src": "assets/images/worldbook_v1/img_p03_04.webp",
+   "alt_key": "p03_04.hero.alt",
+   "caption_key": "p03_04.hero.caption",
+   "aspect_ratio": "16:9",
+   "focal_point": "center",
+   "image_id": "img_p03_04"
+  }
+ },
+ {
+  "page_id": "p03_05",
+  "route": "/lore/03/area-03-memory-forest",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_04",
+   "parent_id": "s03_index",
+   "next_id": "p03_06",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_05.title",
+   "category_key": "p03_05.category",
+   "summary_keys": [
+    "p03_05.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_05.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_05.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_05.body.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_05.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_05.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_05.list.01.title",
+    "items": [
+     "p03_05.list.01.item.01",
+     "p03_05.list.01.item.02",
+     "p03_05.list.01.item.03",
+     "p03_05.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_05.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_05.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_05.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_05.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_05.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_05.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_05.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_05.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_05.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_05.body.07"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_05.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_05.body.08"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p07_02",
+    "label_key": "p07_02.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p07_03",
+    "label_key": "p07_03.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "03"
+ },
+ {
+  "page_id": "p03_06",
+  "route": "/lore/03/area-04-worry-cave",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_05",
+   "parent_id": "s03_index",
+   "next_id": "p03_07",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_06.title",
+   "category_key": "p03_06.category",
+   "summary_keys": [
+    "p03_06.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_06.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_06.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_06.body.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_06.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_06.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_06.list.01.title",
+    "items": [
+     "p03_06.list.01.item.01",
+     "p03_06.list.01.item.02",
+     "p03_06.list.01.item.03",
+     "p03_06.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_06.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_06.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_06.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_06.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_06.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_06.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_06.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_06.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_06.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_06.body.07"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_06.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_06.body.08"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p04_10",
+    "label_key": "p04_10.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "04",
+  "variant": "night"
+ },
+ {
+  "page_id": "p03_07",
+  "route": "/lore/03/area-05-confidence-falls",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_06",
+   "parent_id": "s03_index",
+   "next_id": "p03_08",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_07.title",
+   "category_key": "p03_07.category",
+   "summary_keys": [
+    "p03_07.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_07.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_07.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_07.body.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_07.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_07.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_07.list.01.title",
+    "items": [
+     "p03_07.list.01.item.01",
+     "p03_07.list.01.item.02",
+     "p03_07.list.01.item.03",
+     "p03_07.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_07.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_07.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_07.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_07.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_07.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_07.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_07.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_07.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_07.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_07.body.07"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_07.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_07.body.08"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p06_08",
+    "label_key": "p06_08.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "05",
+  "variant": "water"
+ },
+ {
+  "page_id": "p03_08",
+  "route": "/lore/03/area-06-rest-oasis",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_07",
+   "parent_id": "s03_index",
+   "next_id": "p03_09",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_08.title",
+   "category_key": "p03_08.category",
+   "summary_keys": [
+    "p03_08.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_08.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_08.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_08.body.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_08.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_08.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_08.list.01.title",
+    "items": [
+     "p03_08.list.01.item.01",
+     "p03_08.list.01.item.02",
+     "p03_08.list.01.item.03",
+     "p03_08.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_08.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_08.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_08.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_08.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_08.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_08.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_08.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_08.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_08.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_08.body.07"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_08.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_08.body.08"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p04_07",
+    "label_key": "p04_07.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "06",
+  "variant": "water"
+ },
+ {
+  "page_id": "p03_09",
+  "route": "/lore/03/area-07-time-square",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_08",
+   "parent_id": "s03_index",
+   "next_id": "p03_10",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_09.title",
+   "category_key": "p03_09.category",
+   "summary_keys": [
+    "p03_09.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_09",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_09.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_09.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_09.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_09.list.01.title",
+    "items": [
+     "p03_09.list.01.item.01",
+     "p03_09.list.01.item.02",
+     "p03_09.list.01.item.03",
+     "p03_09.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_09.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_09.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_09.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_09.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_09.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.07"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_09.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_09.body.09"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p04_09",
+    "label_key": "p04_09.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p07_01",
+    "label_key": "p07_01.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "07"
+ },
+ {
+  "page_id": "p03_10",
+  "route": "/lore/03/area-08-reflection-trail",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_09",
+   "parent_id": "s03_index",
+   "next_id": "p03_11",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_10.title",
+   "category_key": "p03_10.category",
+   "summary_keys": [
+    "p03_10.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_10",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_10.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_10.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_10.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_10.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_10.list.01.title",
+    "items": [
+     "p03_10.list.01.item.01",
+     "p03_10.list.01.item.02",
+     "p03_10.list.01.item.03",
+     "p03_10.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_10.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_10.body.02"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_10.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_10.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_10.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_10.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_10.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_10.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_10.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_10.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_10.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_10.body.07"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p08_07",
+    "label_key": "p08_07.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "08",
+  "variant": "fog"
+ },
+ {
+  "page_id": "p03_11",
+  "route": "/lore/03/area-09-sparkle-mountain",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_10",
+   "parent_id": "s03_index",
+   "next_id": "p03_12",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_11.title",
+   "category_key": "p03_11.category",
+   "summary_keys": [
+    "p03_11.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_11",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_11.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_11.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_11.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_11.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_11.list.01.title",
+    "items": [
+     "p03_11.list.01.item.01",
+     "p03_11.list.01.item.02",
+     "p03_11.list.01.item.03",
+     "p03_11.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_11.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_11.body.02"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_11.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_11.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_11.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_11.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_11.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_11.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_11.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_11.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_11.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_11.body.07"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p01_09",
+    "label_key": "p01_09.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p06_07",
+    "label_key": "p06_07.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "09",
+  "variant": "stage",
+  "hero": {
+   "src": "assets/images/worldbook_v1/img_p03_11.webp",
+   "alt_key": "p03_11.hero.alt",
+   "caption_key": "p03_11.hero.caption",
+   "aspect_ratio": "16:9",
+   "focal_point": "center",
+   "image_id": "img_p03_11"
+  }
+ },
+ {
+  "page_id": "p03_12",
+  "route": "/lore/03/area-10-friendship-bridge",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_11",
+   "parent_id": "s03_index",
+   "next_id": "p03_13",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_12.title",
+   "category_key": "p03_12.category",
+   "summary_keys": [
+    "p03_12.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_12",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_12.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_12.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_12.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_12.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_12.list.01.title",
+    "items": [
+     "p03_12.list.01.item.01",
+     "p03_12.list.01.item.02",
+     "p03_12.list.01.item.03",
+     "p03_12.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_12.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_12.body.02"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_12.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_12.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_12.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_12.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_12.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_12.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_12.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_12.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_12.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_12.body.07"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p05_09",
+    "label_key": "p05_09.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p07_05",
+    "label_key": "p07_05.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "10"
+ },
+ {
+  "page_id": "p03_13",
+  "route": "/lore/03/area-11-creative-spring",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_12",
+   "parent_id": "s03_index",
+   "next_id": "p03_14",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_13.title",
+   "category_key": "p03_13.category",
+   "summary_keys": [
+    "p03_13.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_13",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_13.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_13.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_13.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_13.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_13.list.01.title",
+    "items": [
+     "p03_13.list.01.item.01",
+     "p03_13.list.01.item.02",
+     "p03_13.list.01.item.03",
+     "p03_13.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_13.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_13.body.02"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_13.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_13.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_13.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_13.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_13.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_13.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_13.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_13.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_13.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_13.body.07"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p08_09",
+    "label_key": "p08_09.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "11",
+  "variant": "water"
+ },
+ {
+  "page_id": "p03_14",
+  "route": "/lore/03/area-12-challenge-cliff",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_13",
+   "parent_id": "s03_index",
+   "next_id": "p03_15",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_14.title",
+   "category_key": "p03_14.category",
+   "summary_keys": [
+    "p03_14.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_14",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_14.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_14.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_14.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_14.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_14.list.01.title",
+    "items": [
+     "p03_14.list.01.item.01",
+     "p03_14.list.01.item.02",
+     "p03_14.list.01.item.03",
+     "p03_14.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_14.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_14.body.02"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_14.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_14.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_14.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_14.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_14.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_14.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_14.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_14.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_14.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_14.body.07"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p05_02",
+    "label_key": "p05_02.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "12",
+  "variant": "fog"
+ },
+ {
+  "page_id": "p03_15",
+  "route": "/lore/03/area-13-dream-house",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_14",
+   "parent_id": "s03_index",
+   "next_id": "p03_16",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_15.title",
+   "category_key": "p03_15.category",
+   "summary_keys": [
+    "p03_15.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_15",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_15.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_15.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_15.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_15.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_15.list.01.title",
+    "items": [
+     "p03_15.list.01.item.01",
+     "p03_15.list.01.item.02",
+     "p03_15.list.01.item.03",
+     "p03_15.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_15.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_15.body.02"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_15.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_15.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_15.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_15.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_15.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_15.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_15.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_15.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_15.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_15.body.07"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p01_06",
+    "label_key": "p01_06.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p04_01",
+    "label_key": "p04_01.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "13",
+  "variant": "night",
+  "hero": {
+   "src": "assets/images/worldbook_v1/img_p03_15.webp",
+   "alt_key": "p03_15.hero.alt",
+   "caption_key": "p03_15.hero.caption",
+   "aspect_ratio": "16:9",
+   "focal_point": "center",
+   "image_id": "img_p03_15"
+  }
+ },
+ {
+  "page_id": "p03_16",
+  "route": "/lore/03/area-14-growth-garden",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_15",
+   "parent_id": "s03_index",
+   "next_id": "p03_17",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_16.title",
+   "category_key": "p03_16.category",
+   "summary_keys": [
+    "p03_16.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_16",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_16.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_16.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_16.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_16.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_16.list.01.title",
+    "items": [
+     "p03_16.list.01.item.01",
+     "p03_16.list.01.item.02",
+     "p03_16.list.01.item.03",
+     "p03_16.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_16.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_16.body.02"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_16.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_16.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_16.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_16.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_16.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_16.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_16.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_16.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_16.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_16.body.07"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p06_04",
+    "label_key": "p06_04.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p06_08",
+    "label_key": "p06_08.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "14"
+ },
+ {
+  "page_id": "p03_17",
+  "route": "/lore/03/area-15-reflection-lake",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_16",
+   "parent_id": "s03_index",
+   "next_id": "p03_18",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_17.title",
+   "category_key": "p03_17.category",
+   "summary_keys": [
+    "p03_17.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_17",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "subheading",
+    "text_key": "p03_17.head.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_17.quote.01"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_17.head.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_17.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "p03_17.list.01.title",
+    "items": [
+     "p03_17.list.01.item.01",
+     "p03_17.list.01.item.02",
+     "p03_17.list.01.item.03",
+     "p03_17.list.01.item.04"
+    ]
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_17.head.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_17.body.02"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_17.head.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_17.body.03"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_17.head.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_17.body.04"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_17.head.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_17.body.05"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_17.head.07"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_17.body.06"
+   },
+   {
+    "type": "subheading",
+    "text_key": "p03_17.head.08"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_17.body.07"
+   }
+  ],
+  "related_items": [
+   {
+    "type": "page",
+    "page_id": "p01_11",
+    "label_key": "p01_11.nav_label"
+   },
+   {
+    "type": "page",
+    "page_id": "p08_07",
+    "label_key": "p08_07.nav_label"
+   }
+  ],
+  "children": [],
+  "zone": "15",
+  "variant": "water"
+ },
+ {
+  "page_id": "p03_18",
+  "route": "/lore/03/colors-plants-sounds",
+  "template": "data_box",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_17",
+   "parent_id": "s03_index",
+   "next_id": "p03_19",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_18.title",
+   "category_key": "p03_18.category",
+   "summary_keys": [
+    "p03_18.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_18",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p03_18.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_18.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p03_18.data.01.title",
+    "items": [
+     {
+      "label_key": "p03_18.data.01.row.01.label",
+      "value_key": "p03_18.data.01.row.01.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.02.label",
+      "value_key": "p03_18.data.01.row.02.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.03.label",
+      "value_key": "p03_18.data.01.row.03.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.04.label",
+      "value_key": "p03_18.data.01.row.04.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.05.label",
+      "value_key": "p03_18.data.01.row.05.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.06.label",
+      "value_key": "p03_18.data.01.row.06.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.07.label",
+      "value_key": "p03_18.data.01.row.07.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.08.label",
+      "value_key": "p03_18.data.01.row.08.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.09.label",
+      "value_key": "p03_18.data.01.row.09.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.10.label",
+      "value_key": "p03_18.data.01.row.10.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.11.label",
+      "value_key": "p03_18.data.01.row.11.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.12.label",
+      "value_key": "p03_18.data.01.row.12.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.13.label",
+      "value_key": "p03_18.data.01.row.13.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.14.label",
+      "value_key": "p03_18.data.01.row.14.value"
+     },
+     {
+      "label_key": "p03_18.data.01.row.15.label",
+      "value_key": "p03_18.data.01.row.15.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p03_19",
+  "route": "/lore/03/resources-and-gems",
+  "template": "codex_grid",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_18",
+   "parent_id": "s03_index",
+   "next_id": "p03_20",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_19.title",
+   "category_key": "p03_19.category",
+   "summary_keys": [
+    "p03_19.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_19",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p03_19.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_19.quote.01"
+   },
+   {
+    "type": "codex_grid",
+    "title_key": "p03_19.codex.01.title",
+    "items": [
+     {
+      "label_key": "p03_19.codex.01.card.01.label",
+      "text_key": "p03_19.codex.01.card.01.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.02.label",
+      "text_key": "p03_19.codex.01.card.02.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.03.label",
+      "text_key": "p03_19.codex.01.card.03.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.04.label",
+      "text_key": "p03_19.codex.01.card.04.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.05.label",
+      "text_key": "p03_19.codex.01.card.05.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.06.label",
+      "text_key": "p03_19.codex.01.card.06.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.07.label",
+      "text_key": "p03_19.codex.01.card.07.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.08.label",
+      "text_key": "p03_19.codex.01.card.08.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.09.label",
+      "text_key": "p03_19.codex.01.card.09.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.10.label",
+      "text_key": "p03_19.codex.01.card.10.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.11.label",
+      "text_key": "p03_19.codex.01.card.11.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.12.label",
+      "text_key": "p03_19.codex.01.card.12.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.13.label",
+      "text_key": "p03_19.codex.01.card.13.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.14.label",
+      "text_key": "p03_19.codex.01.card.14.text"
+     },
+     {
+      "label_key": "p03_19.codex.01.card.15.label",
+      "text_key": "p03_19.codex.01.card.15.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p03_20",
+  "route": "/lore/03/creature-index",
+  "template": "codex_grid",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_19",
+   "parent_id": "s03_index",
+   "next_id": "p03_21",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_20.title",
+   "category_key": "p03_20.category",
+   "summary_keys": [
+    "p03_20.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_20",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p03_20.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_20.quote.01"
+   },
+   {
+    "type": "codex_grid",
+    "title_key": "p03_20.codex.01.title",
+    "items": [
+     {
+      "label_key": "p03_20.codex.01.card.01.label",
+      "text_key": "p03_20.codex.01.card.01.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.02.label",
+      "text_key": "p03_20.codex.01.card.02.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.03.label",
+      "text_key": "p03_20.codex.01.card.03.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.04.label",
+      "text_key": "p03_20.codex.01.card.04.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.05.label",
+      "text_key": "p03_20.codex.01.card.05.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.06.label",
+      "text_key": "p03_20.codex.01.card.06.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.07.label",
+      "text_key": "p03_20.codex.01.card.07.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.08.label",
+      "text_key": "p03_20.codex.01.card.08.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.09.label",
+      "text_key": "p03_20.codex.01.card.09.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.10.label",
+      "text_key": "p03_20.codex.01.card.10.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.11.label",
+      "text_key": "p03_20.codex.01.card.11.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.12.label",
+      "text_key": "p03_20.codex.01.card.12.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.13.label",
+      "text_key": "p03_20.codex.01.card.13.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.14.label",
+      "text_key": "p03_20.codex.01.card.14.text"
+     },
+     {
+      "label_key": "p03_20.codex.01.card.15.label",
+      "text_key": "p03_20.codex.01.card.15.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p03_21",
+  "route": "/lore/03/landmark-monument-index",
+  "template": "codex_grid",
+  "status": "draft",
+  "section": {
+   "chapter_no": 3,
+   "section_id": "s03",
+   "title_key": "s03_index.title",
+   "label_key": "s03_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s03_index.title",
+    "route": "/lore/03"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_20",
+   "parent_id": "s03_index",
+   "next_id": "s04_index",
+   "back_fallback_id": "s03_index"
+  },
+  "header": {
+   "title_key": "p03_21.title",
+   "category_key": "p03_21.category",
+   "summary_keys": [
+    "p03_21.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p03_21",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p03_21.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p03_21.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p03_21.body.02"
+   },
+   {
+    "type": "codex_grid",
+    "title_key": "p03_21.codex.01.title",
+    "items": [
+     {
+      "label_key": "p03_21.codex.01.card.01.label",
+      "text_key": "p03_21.codex.01.card.01.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.02.label",
+      "text_key": "p03_21.codex.01.card.02.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.03.label",
+      "text_key": "p03_21.codex.01.card.03.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.04.label",
+      "text_key": "p03_21.codex.01.card.04.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.05.label",
+      "text_key": "p03_21.codex.01.card.05.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.06.label",
+      "text_key": "p03_21.codex.01.card.06.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.07.label",
+      "text_key": "p03_21.codex.01.card.07.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.08.label",
+      "text_key": "p03_21.codex.01.card.08.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.09.label",
+      "text_key": "p03_21.codex.01.card.09.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.10.label",
+      "text_key": "p03_21.codex.01.card.10.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.11.label",
+      "text_key": "p03_21.codex.01.card.11.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.12.label",
+      "text_key": "p03_21.codex.01.card.12.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.13.label",
+      "text_key": "p03_21.codex.01.card.13.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.14.label",
+      "text_key": "p03_21.codex.01.card.14.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.15.label",
+      "text_key": "p03_21.codex.01.card.15.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.16.label",
+      "text_key": "p03_21.codex.01.card.16.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.17.label",
+      "text_key": "p03_21.codex.01.card.17.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.18.label",
+      "text_key": "p03_21.codex.01.card.18.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.19.label",
+      "text_key": "p03_21.codex.01.card.19.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.20.label",
+      "text_key": "p03_21.codex.01.card.20.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.21.label",
+      "text_key": "p03_21.codex.01.card.21.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.22.label",
+      "text_key": "p03_21.codex.01.card.22.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.23.label",
+      "text_key": "p03_21.codex.01.card.23.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.24.label",
+      "text_key": "p03_21.codex.01.card.24.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.25.label",
+      "text_key": "p03_21.codex.01.card.25.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.26.label",
+      "text_key": "p03_21.codex.01.card.26.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.27.label",
+      "text_key": "p03_21.codex.01.card.27.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.28.label",
+      "text_key": "p03_21.codex.01.card.28.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.29.label",
+      "text_key": "p03_21.codex.01.card.29.text"
+     },
+     {
+      "label_key": "p03_21.codex.01.card.30.label",
+      "text_key": "p03_21.codex.01.card.30.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "s04_index",
+  "route": "/lore/04",
+  "template": "section_index",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p03_21",
+   "parent_id": "p00_01",
+   "next_id": "p04_01",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "s04_index.title",
+   "category_key": "s04_index.category",
+   "summary_keys": [
+    "s04_index.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "s04_index",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "s04_index.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "s04_index.body.02"
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p04_01",
+   "p04_02",
+   "p04_03",
+   "p04_04",
+   "p04_05",
+   "p04_06",
+   "p04_07",
+   "p04_08",
+   "p04_09",
+   "p04_10",
+   "p04_11"
+  ]
+ },
+ {
+  "page_id": "p04_01",
+  "route": "/lore/04/lodge-growth",
+  "template": "image_pair",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "s04_index",
+   "parent_id": "s04_index",
+   "next_id": "p04_02",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_01.title",
+   "category_key": "p04_01.category",
+   "summary_keys": [
+    "p04_01.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_01.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_01.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_01.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p04_01.data.01.title",
+    "items": [
+     {
+      "label_key": "p04_01.data.01.row.01.label",
+      "value_key": "p04_01.data.01.row.01.value"
+     },
+     {
+      "label_key": "p04_01.data.01.row.02.label",
+      "value_key": "p04_01.data.01.row.02.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_02",
+  "route": "/lore/04/aidong-room",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_01",
+   "parent_id": "s04_index",
+   "next_id": "p04_03",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_02.title",
+   "category_key": "p04_02.category",
+   "summary_keys": [
+    "p04_02.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_02.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_02.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_02.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_02.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_02.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_03",
+  "route": "/lore/04/function-rooms",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_02",
+   "parent_id": "s04_index",
+   "next_id": "p04_04",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_03.title",
+   "category_key": "p04_03.category",
+   "summary_keys": [
+    "p04_03.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_03.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_03.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_03.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_03.body.04"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_04",
+  "route": "/lore/04/yard",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_03",
+   "parent_id": "s04_index",
+   "next_id": "p04_05",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_04.title",
+   "category_key": "p04_04.category",
+   "summary_keys": [
+    "p04_04.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_04.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_04.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_04.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_04.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_04.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_05",
+  "route": "/lore/04/wake-up",
+  "template": "lifestyle",
+  "status": "planned",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_04",
+   "parent_id": "s04_index",
+   "next_id": "p04_06",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_05.title",
+   "category_key": "p04_05.category",
+   "summary_keys": [
+    "p04_05.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_05.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_05.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_05.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_05.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_05.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_05.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_06",
+  "route": "/lore/04/meals",
+  "template": "timeline",
+  "status": "planned",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_05",
+   "parent_id": "s04_index",
+   "next_id": "p04_07",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_06.title",
+   "category_key": "p04_06.category",
+   "summary_keys": [
+    "p04_06.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_06.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_06.quote.01"
+   },
+   {
+    "type": "timeline",
+    "title_key": "p04_06.time.01.title",
+    "items": [
+     {
+      "label_key": "p04_06.time.01.item.01.label",
+      "text_key": "p04_06.time.01.item.01.text"
+     },
+     {
+      "label_key": "p04_06.time.01.item.02.label",
+      "text_key": "p04_06.time.01.item.02.text"
+     },
+     {
+      "label_key": "p04_06.time.01.item.03.label",
+      "text_key": "p04_06.time.01.item.03.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_07",
+  "route": "/lore/04/bedtime-story",
+  "template": "lifestyle",
+  "status": "planned",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_06",
+   "parent_id": "s04_index",
+   "next_id": "p04_08",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_07.title",
+   "category_key": "p04_07.category",
+   "summary_keys": [
+    "p04_07.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_07.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_07.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_07.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_07.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_07.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_07.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_08",
+  "route": "/lore/04/dream-diary",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_07",
+   "parent_id": "s04_index",
+   "next_id": "p04_09",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_08.title",
+   "category_key": "p04_08.category",
+   "summary_keys": [
+    "p04_08.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_08.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_08.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_08.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_08.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_08.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_09",
+  "route": "/lore/04/time-and-life",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_08",
+   "parent_id": "s04_index",
+   "next_id": "p04_10",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_09.title",
+   "category_key": "p04_09.category",
+   "summary_keys": [
+    "p04_09.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_09",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_09.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_09.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p04_09.data.01.title",
+    "items": [
+     {
+      "label_key": "p04_09.data.01.row.01.label",
+      "value_key": "p04_09.data.01.row.01.value"
+     },
+     {
+      "label_key": "p04_09.data.01.row.02.label",
+      "value_key": "p04_09.data.01.row.02.value"
+     },
+     {
+      "label_key": "p04_09.data.01.row.03.label",
+      "value_key": "p04_09.data.01.row.03.value"
+     },
+     {
+      "label_key": "p04_09.data.01.row.04.label",
+      "value_key": "p04_09.data.01.row.04.value"
+     },
+     {
+      "label_key": "p04_09.data.01.row.05.label",
+      "value_key": "p04_09.data.01.row.05.value"
+     },
+     {
+      "label_key": "p04_09.data.01.row.06.label",
+      "value_key": "p04_09.data.01.row.06.value"
+     },
+     {
+      "label_key": "p04_09.data.01.row.07.label",
+      "value_key": "p04_09.data.01.row.07.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_10",
+  "route": "/lore/04/no-punishment",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_09",
+   "parent_id": "s04_index",
+   "next_id": "p04_11",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_10.title",
+   "category_key": "p04_10.category",
+   "summary_keys": [
+    "p04_10.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_10",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_10.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_10.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_10.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_10.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_10.body.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_10.body.06"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_10.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p04_11",
+  "route": "/lore/04/daily-small-change",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 4,
+   "section_id": "s04",
+   "title_key": "s04_index.title",
+   "label_key": "s04_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s04_index.title",
+    "route": "/lore/04"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_10",
+   "parent_id": "s04_index",
+   "next_id": "s05_index",
+   "back_fallback_id": "s04_index"
+  },
+  "header": {
+   "title_key": "p04_11.title",
+   "category_key": "p04_11.category",
+   "summary_keys": [
+    "p04_11.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p04_11",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p04_11.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_11.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_11.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_11.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p04_11.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p04_11.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "s05_index",
+  "route": "/lore/05",
+  "template": "section_index",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p04_11",
+   "parent_id": "p00_01",
+   "next_id": "p05_01",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "s05_index.title",
+   "category_key": "s05_index.category",
+   "summary_keys": [
+    "s05_index.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "s05_index",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "s05_index.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "s05_index.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "s05_index.list.01.title",
+    "items": [
+     "s05_index.list.01.item.01",
+     "s05_index.list.01.item.02",
+     "s05_index.list.01.item.03",
+     "s05_index.list.01.item.04",
+     "s05_index.list.01.item.05",
+     "s05_index.list.01.item.06",
+     "s05_index.list.01.item.07",
+     "s05_index.list.01.item.08",
+     "s05_index.list.01.item.09"
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p05_01",
+   "p05_02",
+   "p05_03",
+   "p05_04",
+   "p05_05",
+   "p05_06",
+   "p05_07",
+   "p05_08",
+   "p05_09"
+  ]
+ },
+ {
+  "page_id": "p05_01",
+  "route": "/lore/05/departure-from-harbor",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "s05_index",
+   "parent_id": "s05_index",
+   "next_id": "p05_02",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_01.title",
+   "category_key": "p05_01.category",
+   "summary_keys": [
+    "p05_01.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_01.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_01.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_01.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_01.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_01.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p05_01.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p05_02",
+  "route": "/lore/05/route-board",
+  "template": "timeline",
+  "status": "planned",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_01",
+   "parent_id": "s05_index",
+   "next_id": "p05_03",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_02.title",
+   "category_key": "p05_02.category",
+   "summary_keys": [
+    "p05_02.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_02.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p05_02.quote.01"
+   },
+   {
+    "type": "timeline",
+    "title_key": "p05_02.time.01.title",
+    "items": [
+     {
+      "label_key": "p05_02.time.01.item.01.label",
+      "text_key": "p05_02.time.01.item.01.text"
+     },
+     {
+      "label_key": "p05_02.time.01.item.02.label",
+      "text_key": "p05_02.time.01.item.02.text"
+     },
+     {
+      "label_key": "p05_02.time.01.item.03.label",
+      "text_key": "p05_02.time.01.item.03.text"
+     },
+     {
+      "label_key": "p05_02.time.01.item.04.label",
+      "text_key": "p05_02.time.01.item.04.text"
+     },
+     {
+      "label_key": "p05_02.time.01.item.05.label",
+      "text_key": "p05_02.time.01.item.05.text"
+     },
+     {
+      "label_key": "p05_02.time.01.item.06.label",
+      "text_key": "p05_02.time.01.item.06.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p05_03",
+  "route": "/lore/05/sea-events",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_02",
+   "parent_id": "s05_index",
+   "next_id": "p05_04",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_03.title",
+   "category_key": "p05_03.category",
+   "summary_keys": [
+    "p05_03.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_03.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_03.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p05_03.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p05_03.data.01.title",
+    "items": [
+     {
+      "label_key": "p05_03.data.01.row.01.label",
+      "value_key": "p05_03.data.01.row.01.value"
+     },
+     {
+      "label_key": "p05_03.data.01.row.02.label",
+      "value_key": "p05_03.data.01.row.02.value"
+     },
+     {
+      "label_key": "p05_03.data.01.row.03.label",
+      "value_key": "p05_03.data.01.row.03.value"
+     },
+     {
+      "label_key": "p05_03.data.01.row.04.label",
+      "value_key": "p05_03.data.01.row.04.value"
+     },
+     {
+      "label_key": "p05_03.data.01.row.05.label",
+      "value_key": "p05_03.data.01.row.05.value"
+     },
+     {
+      "label_key": "p05_03.data.01.row.06.label",
+      "value_key": "p05_03.data.01.row.06.value"
+     },
+     {
+      "label_key": "p05_03.data.01.row.07.label",
+      "value_key": "p05_03.data.01.row.07.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p05_04",
+  "route": "/lore/05/aidong-island-landing",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_03",
+   "parent_id": "s05_index",
+   "next_id": "p05_05",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_04.title",
+   "category_key": "p05_04.category",
+   "summary_keys": [
+    "p05_04.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_04.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_04.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_04.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_04.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_04.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p05_04.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p05_05",
+  "route": "/lore/05/recruit-and-place",
+  "template": "timeline",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_04",
+   "parent_id": "s05_index",
+   "next_id": "p05_06",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_05.title",
+   "category_key": "p05_05.category",
+   "summary_keys": [
+    "p05_05.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_05.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p05_05.quote.01"
+   },
+   {
+    "type": "timeline",
+    "title_key": "p05_05.time.01.title",
+    "items": [
+     {
+      "label_key": "p05_05.time.01.item.01.label",
+      "text_key": "p05_05.time.01.item.01.text"
+     },
+     {
+      "label_key": "p05_05.time.01.item.02.label",
+      "text_key": "p05_05.time.01.item.02.text"
+     },
+     {
+      "label_key": "p05_05.time.01.item.03.label",
+      "text_key": "p05_05.time.01.item.03.text"
+     },
+     {
+      "label_key": "p05_05.time.01.item.04.label",
+      "text_key": "p05_05.time.01.item.04.text"
+     },
+     {
+      "label_key": "p05_05.time.01.item.05.label",
+      "text_key": "p05_05.time.01.item.05.text"
+     },
+     {
+      "label_key": "p05_05.time.01.item.06.label",
+      "text_key": "p05_05.time.01.item.06.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p05_06",
+  "route": "/lore/05/area-placement",
+  "template": "map",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_05",
+   "parent_id": "s05_index",
+   "next_id": "p05_07",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_06.title",
+   "category_key": "p05_06.category",
+   "summary_keys": [
+    "p05_06.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_06.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_06.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_06.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_06.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_06.body.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_06.body.06"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_06.body.07"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p05_06.data.01.title",
+    "items": [
+     {
+      "label_key": "p05_06.data.01.row.01.label",
+      "value_key": "p05_06.data.01.row.01.value"
+     },
+     {
+      "label_key": "p05_06.data.01.row.02.label",
+      "value_key": "p05_06.data.01.row.02.value"
+     },
+     {
+      "label_key": "p05_06.data.01.row.03.label",
+      "value_key": "p05_06.data.01.row.03.value"
+     },
+     {
+      "label_key": "p05_06.data.01.row.04.label",
+      "value_key": "p05_06.data.01.row.04.value"
+     },
+     {
+      "label_key": "p05_06.data.01.row.05.label",
+      "value_key": "p05_06.data.01.row.05.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p05_07",
+  "route": "/lore/05/aidong-island-encyclopedia",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_06",
+   "parent_id": "s05_index",
+   "next_id": "p05_08",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_07.title",
+   "category_key": "p05_07.category",
+   "summary_keys": [
+    "p05_07.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_07.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p05_07.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p05_07.data.01.title",
+    "items": [
+     {
+      "label_key": "p05_07.data.01.row.01.label",
+      "value_key": "p05_07.data.01.row.01.value"
+     },
+     {
+      "label_key": "p05_07.data.01.row.02.label",
+      "value_key": "p05_07.data.01.row.02.value"
+     },
+     {
+      "label_key": "p05_07.data.01.row.03.label",
+      "value_key": "p05_07.data.01.row.03.value"
+     },
+     {
+      "label_key": "p05_07.data.01.row.04.label",
+      "value_key": "p05_07.data.01.row.04.value"
+     },
+     {
+      "label_key": "p05_07.data.01.row.05.label",
+      "value_key": "p05_07.data.01.row.05.value"
+     },
+     {
+      "label_key": "p05_07.data.01.row.06.label",
+      "value_key": "p05_07.data.01.row.06.value"
+     },
+     {
+      "label_key": "p05_07.data.01.row.07.label",
+      "value_key": "p05_07.data.01.row.07.value"
+     },
+     {
+      "label_key": "p05_07.data.01.row.08.label",
+      "value_key": "p05_07.data.01.row.08.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p05_08",
+  "route": "/lore/05/clues-and-objects",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_07",
+   "parent_id": "s05_index",
+   "next_id": "p05_09",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_08.title",
+   "category_key": "p05_08.category",
+   "summary_keys": [
+    "p05_08.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_08.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_08.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p05_08.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p05_08.data.01.title",
+    "items": [
+     {
+      "label_key": "p05_08.data.01.row.01.label",
+      "value_key": "p05_08.data.01.row.01.value"
+     },
+     {
+      "label_key": "p05_08.data.01.row.02.label",
+      "value_key": "p05_08.data.01.row.02.value"
+     },
+     {
+      "label_key": "p05_08.data.01.row.03.label",
+      "value_key": "p05_08.data.01.row.03.value"
+     },
+     {
+      "label_key": "p05_08.data.01.row.04.label",
+      "value_key": "p05_08.data.01.row.04.value"
+     },
+     {
+      "label_key": "p05_08.data.01.row.05.label",
+      "value_key": "p05_08.data.01.row.05.value"
+     },
+     {
+      "label_key": "p05_08.data.01.row.06.label",
+      "value_key": "p05_08.data.01.row.06.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p05_09",
+  "route": "/lore/05/to-friend-islands",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 5,
+   "section_id": "s05",
+   "title_key": "s05_index.title",
+   "label_key": "s05_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s05_index.title",
+    "route": "/lore/05"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_08",
+   "parent_id": "s05_index",
+   "next_id": "s06_index",
+   "back_fallback_id": "s05_index"
+  },
+  "header": {
+   "title_key": "p05_09.title",
+   "category_key": "p05_09.category",
+   "summary_keys": [
+    "p05_09.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p05_09",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p05_09.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_09.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_09.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_09.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_09.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p05_09.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p05_09.body.06"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "s06_index",
+  "route": "/lore/06",
+  "template": "section_index",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p05_09",
+   "parent_id": "p00_01",
+   "next_id": "p06_01",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "s06_index.title",
+   "category_key": "s06_index.category",
+   "summary_keys": [
+    "s06_index.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "s06_index",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "s06_index.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "s06_index.body.02"
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p06_01",
+   "p06_02",
+   "p06_03",
+   "p06_04",
+   "p06_05",
+   "p06_06",
+   "p06_07",
+   "p06_08",
+   "p06_09",
+   "p06_10"
+  ]
+ },
+ {
+  "page_id": "p06_01",
+  "route": "/lore/06/what-is-codex-item",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "s06_index",
+   "parent_id": "s06_index",
+   "next_id": "p06_02",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_01.title",
+   "category_key": "p06_01.category",
+   "summary_keys": [
+    "p06_01.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_01.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_01.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_01.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_01.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_01.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_02",
+  "route": "/lore/06/twenty-five-slots",
+  "template": "codex_grid",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_01",
+   "parent_id": "s06_index",
+   "next_id": "p06_03",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_02.title",
+   "category_key": "p06_02.category",
+   "summary_keys": [
+    "p06_02.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_02.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_02.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_02.body.03"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_02.quote.01"
+   },
+   {
+    "type": "codex_grid",
+    "title_key": "p06_02.codex.01.title",
+    "items": [
+     {
+      "label_key": "p06_02.codex.01.card.01.label",
+      "text_key": "p06_02.codex.01.card.01.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.02.label",
+      "text_key": "p06_02.codex.01.card.02.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.03.label",
+      "text_key": "p06_02.codex.01.card.03.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.04.label",
+      "text_key": "p06_02.codex.01.card.04.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.05.label",
+      "text_key": "p06_02.codex.01.card.05.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.06.label",
+      "text_key": "p06_02.codex.01.card.06.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.07.label",
+      "text_key": "p06_02.codex.01.card.07.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.08.label",
+      "text_key": "p06_02.codex.01.card.08.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.09.label",
+      "text_key": "p06_02.codex.01.card.09.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.10.label",
+      "text_key": "p06_02.codex.01.card.10.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.11.label",
+      "text_key": "p06_02.codex.01.card.11.text"
+     },
+     {
+      "label_key": "p06_02.codex.01.card.12.label",
+      "text_key": "p06_02.codex.01.card.12.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_03",
+  "route": "/lore/06/codex-categories",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_02",
+   "parent_id": "s06_index",
+   "next_id": "p06_04",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_03.title",
+   "category_key": "p06_03.category",
+   "summary_keys": [
+    "p06_03.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_03.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_03.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_03.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p06_03.data.01.title",
+    "items": [
+     {
+      "label_key": "p06_03.data.01.row.01.label",
+      "value_key": "p06_03.data.01.row.01.value"
+     },
+     {
+      "label_key": "p06_03.data.01.row.02.label",
+      "value_key": "p06_03.data.01.row.02.value"
+     },
+     {
+      "label_key": "p06_03.data.01.row.03.label",
+      "value_key": "p06_03.data.01.row.03.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_04",
+  "route": "/lore/06/affinity-and-mastery",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_03",
+   "parent_id": "s06_index",
+   "next_id": "p06_05",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_04.title",
+   "category_key": "p06_04.category",
+   "summary_keys": [
+    "p06_04.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_04.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_04.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_04.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_04.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_04.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_05",
+  "route": "/lore/06/practice-room",
+  "template": "lifestyle",
+  "status": "planned",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_04",
+   "parent_id": "s06_index",
+   "next_id": "p06_06",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_05.title",
+   "category_key": "p06_05.category",
+   "summary_keys": [
+    "p06_05.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_05.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_05.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_05.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_05.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_05.body.05"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_05.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_06",
+  "route": "/lore/06/debut-meeting-room",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_05",
+   "parent_id": "s06_index",
+   "next_id": "p06_07",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_06.title",
+   "category_key": "p06_06.category",
+   "summary_keys": [
+    "p06_06.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_06.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_06.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_06.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_06.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_06.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_07",
+  "route": "/lore/06/sparkle-mountain-stage",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_06",
+   "parent_id": "s06_index",
+   "next_id": "p06_08",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_07.title",
+   "category_key": "p06_07.category",
+   "summary_keys": [
+    "p06_07.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_07.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_07.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_07.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_07.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_07.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_08",
+  "route": "/lore/06/growth-stage-index",
+  "template": "timeline",
+  "status": "planned",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_07",
+   "parent_id": "s06_index",
+   "next_id": "p06_09",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_08.title",
+   "category_key": "p06_08.category",
+   "summary_keys": [
+    "p06_08.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_08.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_08.quote.01"
+   },
+   {
+    "type": "timeline",
+    "title_key": "p06_08.time.01.title",
+    "items": [
+     {
+      "label_key": "p06_08.time.01.item.01.label",
+      "text_key": "p06_08.time.01.item.01.text"
+     },
+     {
+      "label_key": "p06_08.time.01.item.02.label",
+      "text_key": "p06_08.time.01.item.02.text"
+     },
+     {
+      "label_key": "p06_08.time.01.item.03.label",
+      "text_key": "p06_08.time.01.item.03.text"
+     },
+     {
+      "label_key": "p06_08.time.01.item.04.label",
+      "text_key": "p06_08.time.01.item.04.text"
+     },
+     {
+      "label_key": "p06_08.time.01.item.05.label",
+      "text_key": "p06_08.time.01.item.05.text"
+     },
+     {
+      "label_key": "p06_08.time.01.item.06.label",
+      "text_key": "p06_08.time.01.item.06.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_09",
+  "route": "/lore/06/gems-and-next-form",
+  "template": "data_box",
+  "status": "draft",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_08",
+   "parent_id": "s06_index",
+   "next_id": "p06_10",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_09.title",
+   "category_key": "p06_09.category",
+   "summary_keys": [
+    "p06_09.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_09",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_09.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_09.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_09.body.03"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_09.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p06_09.data.01.title",
+    "items": [
+     {
+      "label_key": "p06_09.data.01.row.01.label",
+      "value_key": "p06_09.data.01.row.01.value"
+     },
+     {
+      "label_key": "p06_09.data.01.row.02.label",
+      "value_key": "p06_09.data.01.row.02.value"
+     },
+     {
+      "label_key": "p06_09.data.01.row.03.label",
+      "value_key": "p06_09.data.01.row.03.value"
+     },
+     {
+      "label_key": "p06_09.data.01.row.04.label",
+      "value_key": "p06_09.data.01.row.04.value"
+     },
+     {
+      "label_key": "p06_09.data.01.row.05.label",
+      "value_key": "p06_09.data.01.row.05.value"
+     },
+     {
+      "label_key": "p06_09.data.01.row.06.label",
+      "value_key": "p06_09.data.01.row.06.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p06_10",
+  "route": "/lore/06/after-the-brightest-moment",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 6,
+   "section_id": "s06",
+   "title_key": "s06_index.title",
+   "label_key": "s06_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s06_index.title",
+    "route": "/lore/06"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_09",
+   "parent_id": "s06_index",
+   "next_id": "s07_index",
+   "back_fallback_id": "s06_index"
+  },
+  "header": {
+   "title_key": "p06_10.title",
+   "category_key": "p06_10.category",
+   "summary_keys": [
+    "p06_10.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p06_10",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p06_10.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_10.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_10.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_10.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_10.body.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p06_10.body.06"
+   },
+   {
+    "type": "quote",
+    "text_key": "p06_10.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "s07_index",
+  "route": "/lore/07",
+  "template": "section_index",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p06_10",
+   "parent_id": "p00_01",
+   "next_id": "p07_01",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "s07_index.title",
+   "category_key": "s07_index.category",
+   "summary_keys": [
+    "s07_index.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "s07_index",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "s07_index.body.01"
+   },
+   {
+    "type": "list",
+    "title_key": "s07_index.list.01.title",
+    "items": [
+     "s07_index.list.01.item.01",
+     "s07_index.list.01.item.02",
+     "s07_index.list.01.item.03",
+     "s07_index.list.01.item.04",
+     "s07_index.list.01.item.05",
+     "s07_index.list.01.item.06",
+     "s07_index.list.01.item.07",
+     "s07_index.list.01.item.08"
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p07_01",
+   "p07_02",
+   "p07_03",
+   "p07_04",
+   "p07_05",
+   "p07_06",
+   "p07_07",
+   "p07_08"
+  ]
+ },
+ {
+  "page_id": "p07_01",
+  "route": "/lore/07/photocard",
+  "template": "article",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s07_index.title",
+    "route": "/lore/07"
+   }
+  ],
+  "nav": {
+   "prev_id": "s07_index",
+   "parent_id": "s07_index",
+   "next_id": "p07_02",
+   "back_fallback_id": "s07_index"
+  },
+  "header": {
+   "title_key": "p07_01.title",
+   "category_key": "p07_01.category",
+   "summary_keys": [
+    "p07_01.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p07_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p07_01.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_01.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_01.body.03"
+   },
+   {
+    "type": "quote",
+    "text_key": "p07_01.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p07_02",
+  "route": "/lore/07/my-binder",
+  "template": "codex_grid",
+  "status": "planned",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s07_index.title",
+    "route": "/lore/07"
+   }
+  ],
+  "nav": {
+   "prev_id": "p07_01",
+   "parent_id": "s07_index",
+   "next_id": "p07_03",
+   "back_fallback_id": "s07_index"
+  },
+  "header": {
+   "title_key": "p07_02.title",
+   "category_key": "p07_02.category",
+   "summary_keys": [
+    "p07_02.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p07_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p07_02.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p07_02.quote.01"
+   },
+   {
+    "type": "codex_grid",
+    "title_key": "p07_02.codex.01.title",
+    "items": [
+     {
+      "label_key": "p07_02.codex.01.card.01.label",
+      "text_key": "p07_02.codex.01.card.01.text"
+     },
+     {
+      "label_key": "p07_02.codex.01.card.02.label",
+      "text_key": "p07_02.codex.01.card.02.text"
+     },
+     {
+      "label_key": "p07_02.codex.01.card.03.label",
+      "text_key": "p07_02.codex.01.card.03.text"
+     },
+     {
+      "label_key": "p07_02.codex.01.card.04.label",
+      "text_key": "p07_02.codex.01.card.04.text"
+     },
+     {
+      "label_key": "p07_02.codex.01.card.05.label",
+      "text_key": "p07_02.codex.01.card.05.text"
+     },
+     {
+      "label_key": "p07_02.codex.01.card.06.label",
+      "text_key": "p07_02.codex.01.card.06.text"
+     },
+     {
+      "label_key": "p07_02.codex.01.card.07.label",
+      "text_key": "p07_02.codex.01.card.07.text"
+     },
+     {
+      "label_key": "p07_02.codex.01.card.08.label",
+      "text_key": "p07_02.codex.01.card.08.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p07_03",
+  "route": "/lore/07/monthly-dream-diary",
+  "template": "timeline",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s07_index.title",
+    "route": "/lore/07"
+   }
+  ],
+  "nav": {
+   "prev_id": "p07_02",
+   "parent_id": "s07_index",
+   "next_id": "p07_04",
+   "back_fallback_id": "s07_index"
+  },
+  "header": {
+   "title_key": "p07_03.title",
+   "category_key": "p07_03.category",
+   "summary_keys": [
+    "p07_03.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p07_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p07_03.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_03.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p07_03.quote.01"
+   },
+   {
+    "type": "timeline",
+    "title_key": "p07_03.time.01.title",
+    "items": [
+     {
+      "label_key": "p07_03.time.01.item.01.label",
+      "text_key": "p07_03.time.01.item.01.text"
+     },
+     {
+      "label_key": "p07_03.time.01.item.02.label",
+      "text_key": "p07_03.time.01.item.02.text"
+     },
+     {
+      "label_key": "p07_03.time.01.item.03.label",
+      "text_key": "p07_03.time.01.item.03.text"
+     },
+     {
+      "label_key": "p07_03.time.01.item.04.label",
+      "text_key": "p07_03.time.01.item.04.text"
+     },
+     {
+      "label_key": "p07_03.time.01.item.05.label",
+      "text_key": "p07_03.time.01.item.05.text"
+     },
+     {
+      "label_key": "p07_03.time.01.item.06.label",
+      "text_key": "p07_03.time.01.item.06.text"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p07_04",
+  "route": "/lore/07/visual-view",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s07_index.title",
+    "route": "/lore/07"
+   }
+  ],
+  "nav": {
+   "prev_id": "p07_03",
+   "parent_id": "s07_index",
+   "next_id": "p07_05",
+   "back_fallback_id": "s07_index"
+  },
+  "header": {
+   "title_key": "p07_04.title",
+   "category_key": "p07_04.category",
+   "summary_keys": [
+    "p07_04.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p07_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p07_04.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_04.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_04.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_04.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p07_04.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p07_05",
+  "route": "/lore/07/friend-island-visit",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s07_index.title",
+    "route": "/lore/07"
+   }
+  ],
+  "nav": {
+   "prev_id": "p07_04",
+   "parent_id": "s07_index",
+   "next_id": "p07_06",
+   "back_fallback_id": "s07_index"
+  },
+  "header": {
+   "title_key": "p07_05.title",
+   "category_key": "p07_05.category",
+   "summary_keys": [
+    "p07_05.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p07_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p07_05.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_05.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_05.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_05.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p07_05.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p07_06",
+  "route": "/lore/07/share-etiquette",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s07_index.title",
+    "route": "/lore/07"
+   }
+  ],
+  "nav": {
+   "prev_id": "p07_05",
+   "parent_id": "s07_index",
+   "next_id": "p07_07",
+   "back_fallback_id": "s07_index"
+  },
+  "header": {
+   "title_key": "p07_06.title",
+   "category_key": "p07_06.category",
+   "summary_keys": [
+    "p07_06.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p07_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p07_06.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_06.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_06.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_06.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p07_06.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p07_07",
+  "route": "/lore/07/copy-and-share-safety",
+  "template": "data_box",
+  "status": "draft",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s07_index.title",
+    "route": "/lore/07"
+   }
+  ],
+  "nav": {
+   "prev_id": "p07_06",
+   "parent_id": "s07_index",
+   "next_id": "p07_08",
+   "back_fallback_id": "s07_index"
+  },
+  "header": {
+   "title_key": "p07_07.title",
+   "category_key": "p07_07.category",
+   "summary_keys": [
+    "p07_07.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p07_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p07_07.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p07_07.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p07_07.data.01.title",
+    "items": [
+     {
+      "label_key": "p07_07.data.01.row.01.label",
+      "value_key": "p07_07.data.01.row.01.value"
+     },
+     {
+      "label_key": "p07_07.data.01.row.02.label",
+      "value_key": "p07_07.data.01.row.02.value"
+     },
+     {
+      "label_key": "p07_07.data.01.row.03.label",
+      "value_key": "p07_07.data.01.row.03.value"
+     },
+     {
+      "label_key": "p07_07.data.01.row.04.label",
+      "value_key": "p07_07.data.01.row.04.value"
+     },
+     {
+      "label_key": "p07_07.data.01.row.05.label",
+      "value_key": "p07_07.data.01.row.05.value"
+     },
+     {
+      "label_key": "p07_07.data.01.row.06.label",
+      "value_key": "p07_07.data.01.row.06.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p07_08",
+  "route": "/lore/07/private-records",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 7,
+   "section_id": "s07",
+   "title_key": "s07_index.title",
+   "label_key": "s07_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s07_index.title",
+    "route": "/lore/07"
+   }
+  ],
+  "nav": {
+   "prev_id": "p07_07",
+   "parent_id": "s07_index",
+   "next_id": "s08_index",
+   "back_fallback_id": "s07_index"
+  },
+  "header": {
+   "title_key": "p07_08.title",
+   "category_key": "p07_08.category",
+   "summary_keys": [
+    "p07_08.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p07_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p07_08.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_08.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_08.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p07_08.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p07_08.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "s08_index",
+  "route": "/lore/08/look-again",
+  "template": "section_index",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   }
+  ],
+  "nav": {
+   "prev_id": "p07_08",
+   "parent_id": "p00_01",
+   "next_id": "p08_01",
+   "back_fallback_id": "p00_01"
+  },
+  "header": {
+   "title_key": "s08_index.title",
+   "category_key": "s08_index.category",
+   "summary_keys": [
+    "s08_index.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "s08_index",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "s08_index.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "s08_index.body.02"
+   },
+   {
+    "type": "list",
+    "title_key": "s08_index.list.01.title",
+    "items": [
+     "s08_index.list.01.item.01",
+     "s08_index.list.01.item.02",
+     "s08_index.list.01.item.03",
+     "s08_index.list.01.item.04",
+     "s08_index.list.01.item.05",
+     "s08_index.list.01.item.06",
+     "s08_index.list.01.item.07",
+     "s08_index.list.01.item.08",
+     "s08_index.list.01.item.09",
+     "s08_index.list.01.item.10"
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": [
+   "p08_01",
+   "p08_02",
+   "p08_03",
+   "p08_04",
+   "p08_05",
+   "p08_06",
+   "p08_07",
+   "p08_08",
+   "p08_09",
+   "p08_10"
+  ]
+ },
+ {
+  "page_id": "p08_01",
+  "route": "/lore/08/glossary",
+  "template": "data_box",
+  "status": "needs_merge",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "s08_index",
+   "parent_id": "s08_index",
+   "next_id": "p08_02",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_01.title",
+   "category_key": "p08_01.category",
+   "summary_keys": [
+    "p08_01.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_01",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_01.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_01.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p08_01.data.01.title",
+    "items": [
+     {
+      "label_key": "p08_01.data.01.row.01.label",
+      "value_key": "p08_01.data.01.row.01.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.02.label",
+      "value_key": "p08_01.data.01.row.02.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.03.label",
+      "value_key": "p08_01.data.01.row.03.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.04.label",
+      "value_key": "p08_01.data.01.row.04.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.05.label",
+      "value_key": "p08_01.data.01.row.05.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.06.label",
+      "value_key": "p08_01.data.01.row.06.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.07.label",
+      "value_key": "p08_01.data.01.row.07.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.08.label",
+      "value_key": "p08_01.data.01.row.08.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.09.label",
+      "value_key": "p08_01.data.01.row.09.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.10.label",
+      "value_key": "p08_01.data.01.row.10.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.11.label",
+      "value_key": "p08_01.data.01.row.11.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.12.label",
+      "value_key": "p08_01.data.01.row.12.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.13.label",
+      "value_key": "p08_01.data.01.row.13.value"
+     },
+     {
+      "label_key": "p08_01.data.01.row.14.label",
+      "value_key": "p08_01.data.01.row.14.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_02",
+  "route": "/lore/08/area-index",
+  "template": "map",
+  "status": "draft",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_01",
+   "parent_id": "s08_index",
+   "next_id": "p08_03",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_02.title",
+   "category_key": "p08_02.category",
+   "summary_keys": [
+    "p08_02.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_02",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_02.body.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p08_02.data.01.title",
+    "items": [
+     {
+      "label_key": "p08_02.data.01.row.01.label",
+      "value_key": "p08_02.data.01.row.01.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.02.label",
+      "value_key": "p08_02.data.01.row.02.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.03.label",
+      "value_key": "p08_02.data.01.row.03.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.04.label",
+      "value_key": "p08_02.data.01.row.04.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.05.label",
+      "value_key": "p08_02.data.01.row.05.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.06.label",
+      "value_key": "p08_02.data.01.row.06.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.07.label",
+      "value_key": "p08_02.data.01.row.07.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.08.label",
+      "value_key": "p08_02.data.01.row.08.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.09.label",
+      "value_key": "p08_02.data.01.row.09.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.10.label",
+      "value_key": "p08_02.data.01.row.10.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.11.label",
+      "value_key": "p08_02.data.01.row.11.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.12.label",
+      "value_key": "p08_02.data.01.row.12.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.13.label",
+      "value_key": "p08_02.data.01.row.13.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.14.label",
+      "value_key": "p08_02.data.01.row.14.value"
+     },
+     {
+      "label_key": "p08_02.data.01.row.15.label",
+      "value_key": "p08_02.data.01.row.15.value"
+     }
+    ]
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_02.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_02.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_03",
+  "route": "/lore/08/aidong-record-labels",
+  "template": "article",
+  "status": "planned",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_02",
+   "parent_id": "s08_index",
+   "next_id": "p08_04",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_03.title",
+   "category_key": "p08_03.category",
+   "summary_keys": [
+    "p08_03.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_03",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_03.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_03.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_03.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_03.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_03.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_04",
+  "route": "/lore/08/remembering-aidong-islands",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_03",
+   "parent_id": "s08_index",
+   "next_id": "p08_05",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_04.title",
+   "category_key": "p08_04.category",
+   "summary_keys": [
+    "p08_04.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_04",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_04.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_04.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p08_04.data.01.title",
+    "items": [
+     {
+      "label_key": "p08_04.data.01.row.01.label",
+      "value_key": "p08_04.data.01.row.01.value"
+     },
+     {
+      "label_key": "p08_04.data.01.row.02.label",
+      "value_key": "p08_04.data.01.row.02.value"
+     },
+     {
+      "label_key": "p08_04.data.01.row.03.label",
+      "value_key": "p08_04.data.01.row.03.value"
+     },
+     {
+      "label_key": "p08_04.data.01.row.04.label",
+      "value_key": "p08_04.data.01.row.04.value"
+     },
+     {
+      "label_key": "p08_04.data.01.row.05.label",
+      "value_key": "p08_04.data.01.row.05.value"
+     },
+     {
+      "label_key": "p08_04.data.01.row.06.label",
+      "value_key": "p08_04.data.01.row.06.value"
+     },
+     {
+      "label_key": "p08_04.data.01.row.07.label",
+      "value_key": "p08_04.data.01.row.07.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_05",
+  "route": "/lore/08/string-table",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_04",
+   "parent_id": "s08_index",
+   "next_id": "p08_06",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_05.title",
+   "category_key": "p08_05.category",
+   "summary_keys": [
+    "p08_05.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_05",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_05.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_05.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_05.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p08_05.data.01.title",
+    "items": [
+     {
+      "label_key": "p08_05.data.01.row.01.label",
+      "value_key": "p08_05.data.01.row.01.value"
+     },
+     {
+      "label_key": "p08_05.data.01.row.02.label",
+      "value_key": "p08_05.data.01.row.02.value"
+     },
+     {
+      "label_key": "p08_05.data.01.row.03.label",
+      "value_key": "p08_05.data.01.row.03.value"
+     },
+     {
+      "label_key": "p08_05.data.01.row.04.label",
+      "value_key": "p08_05.data.01.row.04.value"
+     },
+     {
+      "label_key": "p08_05.data.01.row.05.label",
+      "value_key": "p08_05.data.01.row.05.value"
+     },
+     {
+      "label_key": "p08_05.data.01.row.06.label",
+      "value_key": "p08_05.data.01.row.06.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_06",
+  "route": "/lore/08/production-notes",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_05",
+   "parent_id": "s08_index",
+   "next_id": "p08_07",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_06.title",
+   "category_key": "p08_06.category",
+   "summary_keys": [
+    "p08_06.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_06",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_06.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_06.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_06.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_06.body.04"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_06.body.05"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_06.body.06"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_06.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_07",
+  "route": "/lore/08/open-questions",
+  "template": "data_box",
+  "status": "draft",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_06",
+   "parent_id": "s08_index",
+   "next_id": "p08_08",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_07.title",
+   "category_key": "p08_07.category",
+   "summary_keys": [
+    "p08_07.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_07",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_07.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_07.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p08_07.data.01.title",
+    "items": [
+     {
+      "label_key": "p08_07.data.01.row.01.label",
+      "value_key": "p08_07.data.01.row.01.value"
+     },
+     {
+      "label_key": "p08_07.data.01.row.02.label",
+      "value_key": "p08_07.data.01.row.02.value"
+     },
+     {
+      "label_key": "p08_07.data.01.row.03.label",
+      "value_key": "p08_07.data.01.row.03.value"
+     },
+     {
+      "label_key": "p08_07.data.01.row.04.label",
+      "value_key": "p08_07.data.01.row.04.value"
+     },
+     {
+      "label_key": "p08_07.data.01.row.05.label",
+      "value_key": "p08_07.data.01.row.05.value"
+     },
+     {
+      "label_key": "p08_07.data.01.row.06.label",
+      "value_key": "p08_07.data.01.row.06.value"
+     },
+     {
+      "label_key": "p08_07.data.01.row.07.label",
+      "value_key": "p08_07.data.01.row.07.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_08",
+  "route": "/lore/08/worldbuilding-checklist",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_07",
+   "parent_id": "s08_index",
+   "next_id": "p08_09",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_08.title",
+   "category_key": "p08_08.category",
+   "summary_keys": [
+    "p08_08.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_08",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_08.body.01"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_08.quote.01"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p08_08.data.01.title",
+    "items": [
+     {
+      "label_key": "p08_08.data.01.row.01.label",
+      "value_key": "p08_08.data.01.row.01.value"
+     },
+     {
+      "label_key": "p08_08.data.01.row.02.label",
+      "value_key": "p08_08.data.01.row.02.value"
+     },
+     {
+      "label_key": "p08_08.data.01.row.03.label",
+      "value_key": "p08_08.data.01.row.03.value"
+     },
+     {
+      "label_key": "p08_08.data.01.row.04.label",
+      "value_key": "p08_08.data.01.row.04.value"
+     },
+     {
+      "label_key": "p08_08.data.01.row.05.label",
+      "value_key": "p08_08.data.01.row.05.value"
+     },
+     {
+      "label_key": "p08_08.data.01.row.06.label",
+      "value_key": "p08_08.data.01.row.06.value"
+     },
+     {
+      "label_key": "p08_08.data.01.row.07.label",
+      "value_key": "p08_08.data.01.row.07.value"
+     },
+     {
+      "label_key": "p08_08.data.01.row.08.label",
+      "value_key": "p08_08.data.01.row.08.value"
+     },
+     {
+      "label_key": "p08_08.data.01.row.09.label",
+      "value_key": "p08_08.data.01.row.09.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_09",
+  "route": "/lore/08/image-prompt-rule",
+  "template": "article",
+  "status": "draft",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_08",
+   "parent_id": "s08_index",
+   "next_id": "p08_10",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_09.title",
+   "category_key": "p08_09.category",
+   "summary_keys": [
+    "p08_09.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_09",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_09.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_09.body.02"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_09.body.03"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_09.body.04"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_09.quote.01"
+   }
+  ],
+  "related_items": [],
+  "children": []
+ },
+ {
+  "page_id": "p08_10",
+  "route": "/lore/08/ssot-index",
+  "template": "data_box",
+  "status": "planned",
+  "section": {
+   "chapter_no": 8,
+   "section_id": "s08",
+   "title_key": "s08_index.title",
+   "label_key": "s08_index.category"
+  },
+  "depth": [
+   {
+    "label_key": "nav.home",
+    "route": "/"
+   },
+   {
+    "label_key": "s08_index.title",
+    "route": "/lore/08/look-again"
+   }
+  ],
+  "nav": {
+   "prev_id": "p08_09",
+   "parent_id": "s08_index",
+   "next_id": "p00_01",
+   "back_fallback_id": "s08_index"
+  },
+  "header": {
+   "title_key": "p08_10.title",
+   "category_key": "p08_10.category",
+   "summary_keys": [
+    "p08_10.summary.01"
+   ]
+  },
+  "i18n": {
+   "source_locale": "ko",
+   "string_prefix": "p08_10",
+   "translation_status": "ko_draft"
+  },
+  "body_blocks": [
+   {
+    "type": "paragraph",
+    "text_key": "p08_10.body.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_10.body.02"
+   },
+   {
+    "type": "quote",
+    "text_key": "p08_10.quote.01"
+   },
+   {
+    "type": "paragraph",
+    "text_key": "p08_10.body.03"
+   },
+   {
+    "type": "data_box",
+    "title_key": "p08_10.data.01.title",
+    "items": [
+     {
+      "label_key": "p08_10.data.01.row.01.label",
+      "value_key": "p08_10.data.01.row.01.value"
+     },
+     {
+      "label_key": "p08_10.data.01.row.02.label",
+      "value_key": "p08_10.data.01.row.02.value"
+     },
+     {
+      "label_key": "p08_10.data.01.row.03.label",
+      "value_key": "p08_10.data.01.row.03.value"
+     },
+     {
+      "label_key": "p08_10.data.01.row.04.label",
+      "value_key": "p08_10.data.01.row.04.value"
+     },
+     {
+      "label_key": "p08_10.data.01.row.05.label",
+      "value_key": "p08_10.data.01.row.05.value"
+     },
+     {
+      "label_key": "p08_10.data.01.row.06.label",
+      "value_key": "p08_10.data.01.row.06.value"
+     },
+     {
+      "label_key": "p08_10.data.01.row.07.label",
+      "value_key": "p08_10.data.01.row.07.value"
+     },
+     {
+      "label_key": "p08_10.data.01.row.08.label",
+      "value_key": "p08_10.data.01.row.08.value"
+     },
+     {
+      "label_key": "p08_10.data.01.row.09.label",
+      "value_key": "p08_10.data.01.row.09.value"
+     }
+    ]
+   }
+  ],
+  "related_items": [],
+  "children": []
+ }
+]
