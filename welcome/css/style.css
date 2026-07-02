@@ -400,3 +400,58 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
   .cloud, .star-dot, .scroll-cue, .cta__btn, .clock__big { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+/* ============================================================
+ * 생기 업그레이드 — 컬러풀 오로라 글로우 · 반짝 별 · 떠오르는 반짝이 · 글로우 강조
+ * (밤하늘 톤 유지, prefers-reduced-motion 존중)
+ * ============================================================ */
+.sky .aurora{
+  position:absolute; border-radius:50%; filter:blur(72px);
+  opacity:.55; mix-blend-mode:screen; animation:auroraDrift 24s ease-in-out infinite;
+}
+.sky .au1{width:520px;height:520px;left:-110px;top:-130px;background:#a855f7;animation-duration:26s;}
+.sky .au2{width:560px;height:560px;right:-150px;top:40px;background:#22d3ee;animation-duration:31s;animation-delay:-8s;}
+.sky .au3{width:480px;height:480px;left:32%;bottom:-180px;background:#f472b6;animation-duration:28s;animation-delay:-15s;}
+@keyframes auroraDrift{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(60px,44px) scale(1.14)}
+  66%{transform:translate(-46px,28px) scale(.94)}
+}
+.sky .skystars{
+  position:absolute; inset:0;
+  background-image:
+    radial-gradient(2px 2px at 18% 22%, rgba(255,255,255,.95), transparent),
+    radial-gradient(2px 2px at 68% 16%, rgba(255,255,255,.85), transparent),
+    radial-gradient(1.5px 1.5px at 38% 62%, rgba(255,255,255,.9), transparent),
+    radial-gradient(2px 2px at 83% 52%, rgba(255,255,255,.85), transparent),
+    radial-gradient(1.5px 1.5px at 52% 38%, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 12% 74%, rgba(255,255,255,.85), transparent),
+    radial-gradient(1.5px 1.5px at 90% 80%, rgba(255,255,255,.8), transparent);
+  animation:skyTwinkle 3.6s ease-in-out infinite;
+}
+@keyframes skyTwinkle{0%,100%{opacity:.55}50%{opacity:1}}
+.sky .wspark{
+  position:absolute; bottom:-24px; color:#fff; font-size:16px; opacity:0;
+  animation:wfloat linear infinite; filter:drop-shadow(0 0 6px rgba(255,255,255,.9));
+}
+@keyframes wfloat{
+  0%{transform:translateY(0) rotate(0);opacity:0}
+  12%{opacity:1}88%{opacity:1}
+  100%{transform:translateY(-112vh) rotate(160deg);opacity:0}
+}
+
+/* 시계 숫자 글로우 강조 */
+.clock__big{filter:drop-shadow(0 0 20px rgba(244,63,94,.45)) drop-shadow(0 0 40px rgba(217,70,239,.25));}
+
+/* 위키 카드/버튼 컬러 글로우 */
+.wiki-card{transition:transform .24s cubic-bezier(.2,.8,.2,1), box-shadow .24s;}
+.wiki-card:hover{transform:translateY(-6px) scale(1.01);}
+.wiki-btn{animation:wikiGlow 3s ease-in-out infinite;}
+@keyframes wikiGlow{
+  0%,100%{box-shadow:0 8px 22px rgba(43,127,255,.34)}
+  50%{box-shadow:0 12px 34px rgba(43,127,255,.62), 0 0 0 4px rgba(43,127,255,.12)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .sky .aurora, .sky .skystars, .sky .wspark, .wiki-btn { animation:none; }
+}
