@@ -505,3 +505,18 @@ h1{
   .profile__art{min-height:238px}
   .pedia-grid{gap:6px}
 }
+
+/* ── 아이동 카드 아이콘 개선: 흰 배경 webp가 그림자와 함께 '떠 보이던' 문제 해결.
+   아트존을 꽉 채워 캐릭터 확대(여백 넉넉해 잘림 없음) + 드롭섀도 제거 + 은은한 프레임 ── */
+.card .aidong-art{ min-height:150px; overflow:hidden; }
+.card .aidong-art img{
+  width:100%; height:100%;
+  object-fit:cover; object-position:center 47%;
+  filter:none;
+}
+.card .aidong-art::before{
+  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+  box-shadow: inset 0 0 22px rgba(38,43,54,.05);
+  border-bottom:1px solid rgba(38,43,54,.07);
+}
+
