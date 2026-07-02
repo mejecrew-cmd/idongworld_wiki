@@ -149,6 +149,15 @@
   function section(title, body, wide){
     return '<section class="section'+(wide?" wide":"")+'"><h3>'+esc(title)+'</h3><p>'+esc(body)+'</p></section>';
   }
+  function kwSection(kw){
+    var cats=[["코어",kw.core],["감성·분위기",kw.vibe],["사물·공간",kw.obj],["행동·태도",kw.act],["구문·복합",kw.phrase]];
+    var rows=cats.filter(function(c){return c[1]&&c[1].length;}).map(function(c){
+      return '<div class="kw-cat"><span class="kw-label">'+esc(c[0])+'</span><span class="kw-list">'+esc(c[1].join(", "))+'</span></div>';
+    }).join("");
+    return '<section class="section wide kw-banner"><div class="kw-eyebrow">아이동 키워드</div>'
+      +(kw.tag?'<p class="kw-tag">'+esc(kw.tag)+'</p>':'')
+      +'<div class="kw-cats">'+rows+'</div></section>';
+  }
   function pediaGrid(i){
     var items = PEDIA[i] || [];
     var h = "";
@@ -168,6 +177,7 @@
     var island = cleanIsland(row.il);
     var c = content(i);
     var line = c.intro || (name + "는 " + island + "에서 " + row.an + "의 작고 또렷한 리듬으로 하루를 연다.");
+    var kw = (window.IDW_SHEET_KW && window.IDW_SHEET_KW[i]) || null;
     itemBookTop.href = itemBookHref(i);
     detail.innerHTML =
       '<aside class="profile">'
@@ -186,11 +196,11 @@
       + '<div class="sections">'
         + section("본연", c.intro)
         + section("모습과 빛깔", c.mood)
-        + section("무대에서 온 결", textList(c.keywords,6))
-        + section("버릇과 표식", textList(c.props,6))
+        + (kw ? "" : section("무대에서 온 결", textList(c.keywords,6)))
+        + (kw ? "" : section("버릇과 표식", textList(c.props,6)))
         + section("돌아갈 섬", c.island + (c.todo && c.todo.length ? " 할 일: " + textList(c.todo,5) : ""))
         + section("하루의 목소리", textList(c.voice,4))
-        + section("저마다의 이야기", textList(c.story,3))
+        + (kw ? kwSection(kw) : section("저마다의 이야기", textList(c.story,3)))
         + '<section class="section wide"><div class="pedia-head"><h3>품은 것들</h3><a href="'+itemBookHref(i)+'">아이템 카드북에서 보기</a></div><div class="pedia-grid">'+pediaGrid(i)+'</div></section>'
       + '</div>';
     listView.hidden = true;
