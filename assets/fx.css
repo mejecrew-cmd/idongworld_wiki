@@ -10,7 +10,8 @@
   width:100%; height:100%; display:block; opacity:0; transition:opacity 1.1s ease;
 }
 body.fx-gl-on #fx-canvas{ opacity:1; }
-body.fx-gl-on .skyfx .blob{ opacity:0 !important; }   /* WebGL이 배경 그라데이션을 맡음 */
+body.fx-gl-on .skyfx .blob{ opacity:0 !important; }   /* 홈: WebGL이 배경 그라데이션을 맡음 */
+body.fx-gl-on .sky .aurora{ opacity:0 !important; }   /* 웰컴: 무거운 CSS 오로라 블롭 대신 WebGL이 담당 */
 
 /* 커스텀 커서 (데스크톱 포인터 전용) */
 .fx-cursor-dot,.fx-cursor-ring{

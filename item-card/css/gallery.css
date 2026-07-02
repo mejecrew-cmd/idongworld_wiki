@@ -263,3 +263,12 @@ body.locked{overflow:hidden;}
 /* 특집 네비 그룹 */
 .chipgroup.feat .chip{background:linear-gradient(90deg,rgba(242,153,74,.14),rgba(242,153,74,.06));border-color:rgba(242,153,74,.4);}
 .chipgroup.feat .chip.on{background:#f2994a;color:#fff;}
+
+/* ── 카드 3D 틸트 + 커서 추종 광택(app.js 위임 처리) ── */
+.card{ will-change:transform; }
+.card.is-tilting{ transition:transform .09s ease-out; z-index:5; }
+.card .card-glare{ position:absolute; inset:0; z-index:6; pointer-events:none; opacity:0;
+  border-radius:inherit; mix-blend-mode:soft-light; transition:opacity .3s ease;
+  background:radial-gradient(circle at var(--gx,50%) var(--gy,50%), rgba(255,255,255,.55), transparent 55%); }
+.card.is-tilting .card-glare{ opacity:1; }
+@media (hover:none),(prefers-reduced-motion:reduce){ .card .card-glare{ display:none !important; } }

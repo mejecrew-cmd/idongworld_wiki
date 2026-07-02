@@ -21,6 +21,11 @@
               || canvas.getContext('experimental-webgl'); } catch (e) { return; }
     if (!gl) return;
 
+    // 팔레트: data-theme="night"(웰컴) vs 기본 주간(홈)
+    var night = canvas.getAttribute('data-theme') === 'night';
+    var P = night
+      ? { c1:'vec3(0.42,0.24,0.70)', c2:'vec3(0.17,0.15,0.44)', c3:'vec3(0.18,0.58,0.66)', c4:'vec3(0.62,0.24,0.60)', base:'vec3(0.08,0.06,0.17)', mix:'0.62', band:'0.07' }
+      : { c1:'vec3(1.0,0.63,0.81)', c2:'vec3(0.56,0.44,0.95)', c3:'vec3(0.32,0.85,0.94)', c4:'vec3(1.0,0.83,0.57)', base:'vec3(0.98,0.97,1.0)', mix:'0.5', band:'0.05' };
     var VS = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.0,1.0);}';
     var FS = [
       'precision highp float;',
@@ -29,18 +34,18 @@
       'float noise(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*(3.0-2.0*f);',
       'return mix(mix(dot(hash(i),f),dot(hash(i+vec2(1,0)),f-vec2(1,0)),u.x),',
       'mix(dot(hash(i+vec2(0,1)),f-vec2(0,1)),dot(hash(i+vec2(1,1)),f-vec2(1,1)),u.x),u.y);}',
-      'float fbm(vec2 p){float v=0.0,a=0.5;for(int i=0;i<5;i++){v+=a*noise(p);p*=2.02;a*=0.5;}return v;}',
+      'float fbm(vec2 p){float v=0.0,a=0.5;for(int i=0;i<4;i++){v+=a*noise(p);p*=2.02;a*=0.5;}return v;}',
       'void main(){vec2 uv=gl_FragCoord.xy/u_res;vec2 p=uv;p.x*=u_res.x/u_res.y;',
       'float t=u_time*0.04;vec2 m=(u_mouse/u_res-0.5)*0.5;',
       'float n=fbm(p*2.1+vec2(t,t*0.6)+m);',
       'float n2=fbm(p*3.0-vec2(t*0.7,-t)+n*0.8);',
-      'vec3 c1=vec3(1.0,0.63,0.81),c2=vec3(0.56,0.44,0.95),c3=vec3(0.32,0.85,0.94),c4=vec3(1.0,0.83,0.57);',
+      'vec3 c1='+P.c1+',c2='+P.c2+',c3='+P.c3+',c4='+P.c4+';',
       'vec3 col=mix(c1,c2,smoothstep(-0.2,0.8,n));',
       'col=mix(col,c3,smoothstep(0.15,0.95,n2));',
       'col=mix(col,c4,smoothstep(0.55,1.0,fbm(p*1.6+t*0.8)));',
       'float band=sin((uv.x+uv.y)*7.0+u_time*0.5+n2*3.0)*0.5+0.5;',
-      'col+=band*0.05;',
-      'col=mix(vec3(0.98,0.97,1.0),col,0.5);',
+      'col+=band*'+P.band+';',
+      'col=mix('+P.base+',col,'+P.mix+');',
       'gl_FragColor=vec4(col,1.0);}'
     ].join('\n');
 
@@ -64,9 +69,9 @@
 
     var tmouse = [0.5, 0.5], mouse = [0.5, 0.5];
     function resize() {
-      var dpr = Math.min(window.devicePixelRatio || 1, 1.6);
-      canvas.width = Math.max(2, Math.floor(innerWidth * dpr));
-      canvas.height = Math.max(2, Math.floor(innerHeight * dpr));
+      var scale = 0.55; // 저해상 렌더 후 CSS 업스케일(오로라는 소프트해 티 안 남 → 성능 대폭 절감)
+      canvas.width = Math.max(2, Math.floor(innerWidth * scale));
+      canvas.height = Math.max(2, Math.floor(innerHeight * scale));
       gl.viewport(0, 0, canvas.width, canvas.height);
     }
     resize();
@@ -97,8 +102,10 @@
     requestAnimationFrame(frame);
   }
 
-  /* ---------------- Lenis 부드러운 스크롤 ---------------- */
+  /* ---------------- Lenis 부드러운 스크롤 (기본 OFF: 네이티브 스크롤이 즉각 반응.
+     html[data-smooth] 지정 시에만 사용) ---------------- */
   function initLenis() {
+    if (!html.hasAttribute('data-smooth')) return;   // 렉(반응 지연) 방지 위해 기본 비활성
     if (REDUCED || !window.Lenis) return;
     try {
       var lenis = new Lenis({ lerp:0.11, wheelMultiplier:1, smoothWheel:true, smoothTouch:false });

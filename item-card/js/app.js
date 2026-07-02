@@ -288,6 +288,25 @@
     showList(); applyFilter(); renderNav(); renderSub(); window.scrollTo(0,0);
   });
   grid.addEventListener("click",function(e){var m=e.target.closest("[data-di]");if(m){var mi=byId[m.dataset.di];if(mi)showDetail(mi);return;}var c=e.target.closest(".card");if(c)showDetail(byId[c.dataset.id]);});
+
+  /* 카드 3D 틸트 + 커서 추종 광택 (동적 카드 → 이벤트 위임, 데스크톱 전용) */
+  (function cardTilt(){
+    if(!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+    var cur=null, rect=null;
+    function reset(){ if(!cur)return; cur.classList.remove('is-tilting'); cur.style.transform=''; cur=null; rect=null; }
+    grid.addEventListener('pointermove', function(e){
+      var card=e.target.closest('.card'); if(!card){ reset(); return; }
+      if(card!==cur){ reset(); cur=card; rect=card.getBoundingClientRect();
+        if(!card.querySelector('.card-glare')){ var g=document.createElement('span'); g.className='card-glare'; g.setAttribute('aria-hidden','true'); card.appendChild(g); }
+        card.classList.add('is-tilting'); }
+      if(!rect) rect=card.getBoundingClientRect();
+      var px=(e.clientX-rect.left)/rect.width, py=(e.clientY-rect.top)/rect.height;
+      card.style.transform='perspective(760px) rotateX('+((py-0.5)*-6)+'deg) rotateY('+((px-0.5)*8)+'deg) translateY(-4px)';
+      card.style.setProperty('--gx',(px*100)+'%'); card.style.setProperty('--gy',(py*100)+'%');
+    }, {passive:true});
+    grid.addEventListener('pointerleave', reset);
+  })();
   document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !detailView.hidden) showList(true); });
 
   // ── 아이동 배너 (특정 아이동 도감 필터 시 리스트 위에) ──
