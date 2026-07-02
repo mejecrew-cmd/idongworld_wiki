@@ -88,7 +88,8 @@
 
   // 상태: 단일 선택자 (all | cat | tag | aidong)
   var initialAd=initialAidongFromUrl();
-  var sel=initialAd>=0?{kind:"aidong",key:initialAd}:{kind:"all",key:null}, q="", sort="id";
+  var initFeat=(function(){try{return new URLSearchParams(location.search).get("feature");}catch(e){return null;}})();
+  var sel=initFeat==="recipe"?{kind:"recipe",key:null}:(initialAd>=0?{kind:"aidong",key:initialAd}:{kind:"all",key:null}), q="", sort="id";
   var filtered=[], shown=0, BATCH=80;
   var grid=document.getElementById("grid"), sentinel=document.getElementById("sentinel"), countEl=document.getElementById("count");
 
@@ -101,6 +102,8 @@
   }
   function applyFilter(){
     var lg=curLang();
+    if(sel.kind==="recipe"){ renderRecipeFeature(); return; }
+    grid.classList.remove("recipes");
     filtered=ITEMS.filter(match);
     filtered.sort(function(a,b){
       if(sort==="name") return itemNM(a).localeCompare(itemNM(b),lg);
@@ -124,11 +127,12 @@
     var more=it.tg.length-shownTags.length;
     var tagHtml=shownTags.map(function(t){return tagChip(t);}).join("")+(more>0?'<span class="more">+'+more+'</span>':'');
     var sub2 = curLang()==="ko" ? ('<p class="sub2">'+esc(tail(it.pt))+'</p>') : "";
-    return '<article class="card" data-id="'+it.id+'" style="'+accent(lead)+gvars(it.gr)+'">'
+    var u1badge = it.u1?'<span class="u1badge" title="update1 · '+esc(u1Label(it.u1))+'">'+esc(u1Label(it.u1))+'</span>':'';
+    var art = it.im?'<img src="assets/thumb/'+it.im+'" srcset="assets/mini/'+it.im+' 96w, assets/thumb/'+it.im+' 320w" sizes="(max-width:560px) 60px, 200px" alt="'+esc(itemNM(it))+'" loading="lazy" />':phTag();
+    return '<article class="card'+(it.u1?" is-u1":"")+'" data-id="'+it.id+'"'+(it.u1?' data-u1="'+it.u1+'"':'')+' style="'+accent(lead)+gvars(it.gr)+'">'
       +'<div class="card__top"><div class="tags">'+catChips+'</div>'
         +'<span class="grade"><span class="gem">'+G.g+'</span>'+esc(gradeName(it.gr))+'</span></div>'
-      +'<div class="art"><span class="tw a"></span><span class="tw b"></span>'
-        +'<img src="assets/thumb/'+it.im+'" srcset="assets/mini/'+it.im+' 96w, assets/thumb/'+it.im+' 320w" sizes="(max-width:560px) 60px, 200px" alt="'+esc(itemNM(it))+'" loading="lazy" /></div>'
+      +'<div class="art"><span class="tw a"></span><span class="tw b"></span>'+u1badge+art+'</div>'
       +'<div class="card__body"><h3 class="name">'+esc(itemNM(it))+'</h3>'
         +sub2
         +'<div class="tags small">'+tagHtml+'</div></div></article>';
@@ -168,7 +172,8 @@
       + '<button type="button" class="tags-toggle" id="tagsToggle">'+(open?'▴ '+esc(L("tags_less")):'▾ '+esc(L("tags_more"))+' ('+nTags+')')+'</button></div>'
       + '<div class="tags-body">'+rows+'</div>';
 
-    filterBox.innerHTML='<div class="chipgroup">'+cat+'</div><div class="chipgroup tags-group'+(open?" open":"")+'">'+tg+'</div>';
+    var feat='<div class="chipgroup feat"><span class="grouplabel">✨ '+esc(L("nav_feat")||"특집")+'</span>'+chip("🍳 "+(L("feat_recipe")||"요리 레시피"),"recipe",null,"#F2994A","",Object.keys(RECIPES).length,false)+'</div>';
+    filterBox.innerHTML='<div class="chipgroup">'+cat+'</div>'+feat+'<div class="chipgroup tags-group'+(open?" open":"")+'">'+tg+'</div>';
 
     if(sel.kind==="cat"&&CAT[sel.key]){tagdesc.hidden=false;tagdesc.innerHTML='<b style="color:'+CAT[sel.key].c+'">#'+esc(catName(sel.key))+'</b> — '+esc(catDesc(sel.key));}
     else if(sel.kind==="tag"&&sel.key==="소장템"){tagdesc.hidden=false;tagdesc.innerHTML='<b style="color:#5B8DEF">#'+esc(tagName("소장템"))+'</b> — '+esc(L("tagdesc_collect"));}
@@ -180,7 +185,7 @@
     if(tog){var g=filterBox.querySelector(".tags-group");var op=g.classList.toggle("open");
       tog.textContent=op?("▴ "+L("tags_less")):("▾ "+L("tags_more"));return;}
     var c=e.target.closest(".chip");if(!c)return;
-    sel={kind:c.dataset.k,key:c.dataset.k==="all"?null:c.dataset.v};
+    sel={kind:c.dataset.k,key:(c.dataset.k==="all"||c.dataset.k==="recipe")?null:c.dataset.v};
     if(sel.kind!=="aidong"){var asel=document.getElementById("aidongSel");if(asel)asel.value="-1";}
     applyFilter();renderNav();window.scrollTo({top:0,behavior:"smooth"});});
 
@@ -210,6 +215,18 @@
   var HOME="../index.html";
   var curDetail=null;
 
+  // ── 레시피(요리↔재료) + update1 표식 ──
+  var RECIPES=window.IDW_RECIPES||{}, USEDIN={};
+  Object.keys(RECIPES).forEach(function(d){ (RECIPES[d]||[]).forEach(function(ing){ (USEDIN[ing]=USEDIN[ing]||[]).push(d); }); });
+  var U1LABEL={D:"도감",C:"항해",F:"요리"};
+  function u1Label(u){ return (u||"").split("").map(function(c){return U1LABEL[c]||c;}).join("·"); }
+  function phTag(){ return '<div class="planned-ph">'+esc(L("planned")||"준비중")+'</div>'; }
+  function artThumb(it){ return (it&&it.im)?'<img src="assets/thumb/'+it.im+'" srcset="assets/mini/'+it.im+' 96w, assets/thumb/'+it.im+' 320w" sizes="120px" alt="'+esc(itemNM(it))+'" loading="lazy"/>':phTag(); }
+  function recipeMini(icon){ var it=byId[icon]; if(!it) return ''; var img=it.im?'<img src="assets/mini/'+it.im+'" alt="'+esc(itemNM(it))+'"/>':'<span class="mini-ph">'+esc(L("planned")||"준비중")+'</span>'; return '<span class="rmini" data-di="'+esc(icon)+'" title="'+esc(itemNM(it))+'">'+img+'<b>'+esc(itemNM(it))+'</b></span>'; }
+  function recipeStripHtml(it){ if(RECIPES[it.id]){ var g=RECIPES[it.id]; return '<div class="recipe-strip"><div class="rs-title">🍳 '+esc(L("recipe")||"레시피")+' <span>'+g.length+'</span></div><div class="rs-items">'+g.map(recipeMini).join("")+'</div></div>'; } var ds=USEDIN[it.id]; if(ds&&ds.length){ return '<div class="recipe-strip alt"><div class="rs-title">🍽️ '+esc(L("usedin")||"이 재료가 들어가는 요리")+' <span>'+ds.length+'</span></div><div class="rs-items">'+ds.map(recipeMini).join("")+'</div></div>'; } return ""; }
+  function recipeCardHtml(it){ var g=RECIPES[it.id]||[]; return '<article class="card recipe-card'+(it.u1?" is-u1":"")+'" data-id="'+it.id+'"'+(it.u1?' data-u1="'+it.u1+'"':'')+' style="'+accent(catC(it.cat[0]))+'"><div class="rc-dish">'+artThumb(it)+'<h3 class="name">'+esc(itemNM(it))+'</h3></div><div class="rc-eq">=</div><div class="rc-ings">'+g.map(recipeMini).join("")+'</div></article>'; }
+  function renderRecipeFeature(){ var lg=curLang(); var ds=Object.keys(RECIPES).map(function(d){return byId[d];}).filter(Boolean); if(q){var s=q.toLowerCase(); ds=ds.filter(function(it){return itemNM(it).toLowerCase().indexOf(s)>=0||it.nm.toLowerCase().indexOf(s)>=0;});} ds.sort(function(a,b){ if(sort==="name")return itemNM(a).localeCompare(itemNM(b),lg); return a.id.localeCompare(b.id); }); filtered=ds; shown=ds.length; countEl.textContent=L("count",{n:ds.length.toLocaleString()}); updateBack(); syncAidongUrl(); if(bannerEl)bannerEl.hidden=true; grid.classList.add("recipes"); grid.innerHTML=ds.length?ds.map(recipeCardHtml).join(""):'<div class="empty">'+esc(L("empty"))+'</div>'; }
+
   function famGroup(it){
     var groups={"기능":[],"소재":[],"형태":[],"소장":[]};
     it.tg.forEach(function(t){groups[famOf(t)].push(t);});
@@ -228,19 +245,21 @@
     detail.setAttribute("style",accent(lead)+gvars(it.gr));
     detail.innerHTML='<div class="detail__hero"><div class="row"><div class="tags">'+catChips+'</div>'
         +'<span class="grade"><span class="gem">'+G.g+'</span>'+esc(gradeName(it.gr))+'</span></div>'
-        +'<div class="detail__art"><span class="tw a"></span><span class="tw b"></span><img src="assets/thumb/'+it.im+'" alt="'+esc(nm)+'"/></div>'
+        +'<div class="detail__art"><span class="tw a"></span><span class="tw b"></span>'+(it.im?'<img src="assets/thumb/'+it.im+'" alt="'+esc(nm)+'"/>':phTag())+'</div>'
         +'<h2 class="objname">'+esc(on||nm)+'</h2>'+(it.ipa?'<div class="ipa">['+esc(it.ipa)+']</div>':'')
       +'</div>'
       +'<div class="detail__body">'
         +'<div class="fullname">'+(diff?'<span class="fnlabel">'+esc(L("d_fullname"))+'</span> ':'')+esc(nm)+'<span class="id">'+it.id+'</span></div>'
         +(de?'<p class="lore">'+esc(de)+'</p>':'<div class="lore tbd">'+esc(L("desc_tbd"))+'</div>')
+        +recipeStripHtml(it)
         +'<div class="info">'
           +'<div class="ir"><span class="k">'+esc(L("d_cat"))+'</span><span class="v"><div class="tags">'+catChips+'</div></span></div>'
           +famGroup(it)
           +'<div class="ir"><span class="k">'+esc(L("d_grade"))+'</span><span class="v"><span class="gem" style="color:'+G.c+'">'+G.g+'</span> '+esc(gradeName(it.gr))+'</span></div>'
           +'<div class="ir"><span class="k">'+esc(L("d_ref"))+'</span><span class="v">'+esc(L("d_ref_val",{n:it.rf}))+'</span></div>'
           +aidongRow
-          +'<div class="ir"><span class="k">'+esc(L("d_icon"))+'</span><span class="v path">'+esc(it.im)+'</span></div>'
+          +(it.u1?'<div class="ir"><span class="k">update1</span><span class="v"><span class="u1chip">'+esc(u1Label(it.u1))+'</span></span></div>':'')
+          +'<div class="ir"><span class="k">'+esc(L("d_icon"))+'</span><span class="v path">'+esc(it.im||"(준비중)")+'</span></div>'
         +'</div><button class="detail__back" id="detailBack">'+esc(L("back"))+'</button></div>';
     if(!listView.hidden) listScroll=window.scrollY; // 리스트에서 진입할 때만 위치 저장
     detailView.hidden=false; listView.hidden=true; window.scrollTo(0,0);
@@ -252,7 +271,7 @@
   function updateBack(){
     if(sel.kind==="all"){ backBtn.textContent=L("back_home"); crumb.textContent=""; }
     else{ backBtn.textContent=L("back_main");
-      var label=(sel.kind==="aidong"?("🐾 "+aidongName(sel.key)):("#"+(sel.kind==="cat"?catName(sel.key):tagName(sel.key))));
+      var label=(sel.kind==="recipe"?"🍳 "+(L("feat_recipe")||"요리 레시피"):(sel.kind==="aidong"?("🐾 "+aidongName(sel.key)):("#"+(sel.kind==="cat"?catName(sel.key):tagName(sel.key)))));
       crumb.textContent=label+" ("+filtered.length.toLocaleString()+")"; }
   }
   backBtn.addEventListener("click",function(){
@@ -262,12 +281,13 @@
   dBack.addEventListener("click",function(){showList(true);});
 
   detail.addEventListener("click",function(e){
+    var m=e.target.closest("[data-di]"); if(m){var mi=byId[m.dataset.di]; if(mi)showDetail(mi); return;}
     var n=e.target.closest("[data-navk]"); if(!n)return;
     var k=n.dataset.navk,v=n.dataset.navv;
     sel = k==="aidong"?{kind:"aidong",key:parseInt(v,10)}:{kind:k,key:v};
     showList(); applyFilter(); renderNav(); renderSub(); window.scrollTo(0,0);
   });
-  grid.addEventListener("click",function(e){var c=e.target.closest(".card");if(c)showDetail(byId[c.dataset.id]);});
+  grid.addEventListener("click",function(e){var m=e.target.closest("[data-di]");if(m){var mi=byId[m.dataset.di];if(mi)showDetail(mi);return;}var c=e.target.closest(".card");if(c)showDetail(byId[c.dataset.id]);});
   document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !detailView.hidden) showList(true); });
 
   // ── 아이동 배너 (특정 아이동 도감 필터 시 리스트 위에) ──

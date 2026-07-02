@@ -222,3 +222,40 @@ body.locked{overflow:hidden;}
 .aidong-banner:hover .ab-cta{background:#d55f8c;}
 @media(max-width:560px){.aidong-banner{gap:12px;padding:12px 14px;}.ab-art{width:66px;height:66px;border-radius:14px;}
   .ab-name{font-size:1.15rem;}.ab-desc{-webkit-line-clamp:3;font-size:.85rem;}}
+
+/* ══ 요리 레시피 특집 + update1 표식 (2026-07-02 추가) ══ */
+.card .art{position:relative;}
+.planned-ph{display:grid;place-items:center;width:100%;aspect-ratio:1;border-radius:12px;background:repeating-linear-gradient(45deg,#eef1f6 0 8px,#e6eaf1 8px 16px);color:#9aa2b1;font-size:12px;font-weight:800;}
+.mini-ph{display:grid;place-items:center;width:100%;height:100%;background:#eef1f6;color:#9aa2b1;font-size:10px;font-weight:800;border-radius:8px;}
+/* update1 표식 카드 (기본=보라, 항해C=초록, 요리F=주황) */
+.card.is-u1{border-color:#8b6df0;box-shadow:0 0 0 1px rgba(139,109,240,.35),0 6px 18px rgba(139,109,240,.14);background:linear-gradient(180deg,rgba(139,109,240,.06),transparent 42%);}
+.card.is-u1 .art{background:rgba(139,109,240,.05);}
+.u1badge{position:absolute;left:8px;top:8px;z-index:3;background:#8b6df0;color:#fff;font-size:10px;font-weight:800;padding:2px 7px;border-radius:999px;box-shadow:0 2px 6px rgba(139,109,240,.4);}
+.card[data-u1*="C"].is-u1{border-color:#3f9d6b;box-shadow:0 0 0 1px rgba(63,157,107,.35),0 6px 18px rgba(63,157,107,.14);}
+.card[data-u1*="C"] .u1badge{background:#3f9d6b;box-shadow:0 2px 6px rgba(63,157,107,.4);}
+.card[data-u1*="F"].is-u1{border-color:#f2994a;box-shadow:0 0 0 1px rgba(242,153,74,.4),0 6px 18px rgba(242,153,74,.16);}
+.card[data-u1*="F"] .u1badge{background:#f2994a;box-shadow:0 2px 6px rgba(242,153,74,.45);}
+.u1chip{display:inline-block;background:rgba(139,109,240,.14);color:#6a4fd0;border:1px solid rgba(139,109,240,.3);border-radius:999px;padding:1px 9px;font-size:12px;font-weight:800;}
+/* 상세 레시피 스트립 */
+.recipe-strip{margin:12px 0;padding:12px 14px;border:1px solid rgba(242,153,74,.3);background:rgba(242,153,74,.07);border-radius:14px;}
+.recipe-strip.alt{border-color:rgba(91,141,239,.3);background:rgba(91,141,239,.07);}
+.rs-title{font-size:13px;font-weight:800;color:#3a4150;margin-bottom:8px;}
+.rs-title span{background:rgba(0,0,0,.06);border-radius:999px;padding:1px 8px;font-size:11px;margin-left:4px;}
+.rs-items{display:flex;flex-wrap:wrap;gap:10px;}
+.rmini{display:flex;flex-direction:column;align-items:center;gap:4px;width:72px;cursor:pointer;text-decoration:none;}
+.rmini img,.rmini .mini-ph{width:56px;height:56px;object-fit:contain;background:#fff;border:1px solid rgba(40,48,66,.12);border-radius:12px;padding:4px;box-shadow:0 2px 6px rgba(43,47,58,.08);}
+.rmini b{font-size:11px;font-weight:700;color:#3a4150;text-align:center;line-height:1.2;}
+.rmini:hover img{border-color:#f2994a;transform:translateY(-2px);transition:.15s;}
+/* 요리 레시피 특집 그리드 */
+.grid.recipes{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
+.recipe-card{display:flex;align-items:center;gap:10px;padding:12px;cursor:pointer;}
+.recipe-card .rc-dish{display:flex;flex-direction:column;align-items:center;gap:6px;width:112px;flex:none;}
+.recipe-card .rc-dish img,.recipe-card .rc-dish .planned-ph{width:88px;height:88px;object-fit:contain;background:#fff;border-radius:14px;border:1px solid rgba(40,48,66,.1);padding:6px;}
+.recipe-card .rc-dish .name{font-size:13px;font-weight:800;text-align:center;margin:0;}
+.recipe-card .rc-eq{font-size:20px;color:#c3c9d4;font-weight:800;flex:none;}
+.recipe-card .rc-ings{display:flex;gap:8px;flex:1;}
+.recipe-card .rc-ings .rmini{width:62px;}
+.recipe-card .rc-ings .rmini img,.recipe-card .rc-ings .rmini .mini-ph{width:48px;height:48px;}
+/* 특집 네비 그룹 */
+.chipgroup.feat .chip{background:linear-gradient(90deg,rgba(242,153,74,.14),rgba(242,153,74,.06));border-color:rgba(242,153,74,.4);}
+.chipgroup.feat .chip.on{background:#f2994a;color:#fff;}
