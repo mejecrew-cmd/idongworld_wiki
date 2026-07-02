@@ -64,11 +64,11 @@ body[dir="rtl"] { direction: rtl; }
   background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.5), rgba(255,255,255,0) 70%);
   filter: blur(8px);
   opacity: 0.6;
-  animation: drift 32s linear infinite;
+  animation: drift 22.4s linear infinite;
 }
-.cloud-1 { width: 320px; height: 160px; top: 12%; left: -10%; animation-duration: 44s; }
-.cloud-2 { width: 240px; height: 120px; top: 38%; right: -12%; animation-duration: 56s; animation-direction: reverse; }
-.cloud-3 { width: 200px; height: 100px; top: 68%; left: 20%; animation-duration: 72s; opacity: 0.4; }
+.cloud-1 { width: 320px; height: 160px; top: 12%; left: -10%; animation-duration: 30.8s; }
+.cloud-2 { width: 240px; height: 120px; top: 38%; right: -12%; animation-duration: 39.2s; animation-direction: reverse; }
+.cloud-3 { width: 200px; height: 100px; top: 68%; left: 20%; animation-duration: 50.4s; opacity: 0.4; }
 @keyframes drift {
   0%   { transform: translateX(0) translateY(0); }
   50%  { transform: translateX(40px) translateY(-16px); }
@@ -102,7 +102,7 @@ section { padding: var(--section-gap) var(--spacing-24); }
   background: transparent; color: var(--on-canvas);
   border: 1px solid rgba(255,255,255,0.6); border-radius: 9999px;
   padding: 6px 12px; font-family: var(--font-control); font-size: 13px;
-  cursor: pointer; transition: border-color 0.2s, background 0.2s;
+  cursor: pointer; transition: border-color 0.14s, background 0.14s;
 }
 .lang-chip:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
 .lang-chip__dot {
@@ -116,7 +116,7 @@ section { padding: var(--section-gap) var(--spacing-24); }
 /* Latin 브랜드 워드마크는 RTL 언어에서도 항상 좌→우 */
 .wordmark, .morph__svg { direction: ltr; }
 
-/* ── 타이틀 "결합" 연출 (5.6s · 흩어진 빛에서 모여 맺힘 → 다시 풀어짐 · 몽실몽실 몽환) ──
+/* ── 타이틀 "결합" 연출 (3.92s · 흩어진 빛에서 모여 맺힘 → 다시 풀어짐 · 몽실몽실 몽환) ──
    IDO(채움)·NG(외곽선)·World(커시브) 세 빛덩이 + 빛가루가 부드럽게 결합. */
 .morph__svg { width: clamp(264px, 82vw, 432px); height: auto; display: block; margin: 0 auto; }
 .morph text {
@@ -135,17 +135,17 @@ section { padding: var(--section-gap) var(--spacing-24); }
 /* 전체를 부드럽게 띄우고 따뜻한 빛무리 */
 .morph__float {
   transform-box: fill-box; transform-origin: center;
-  animation: floaty 4.8s ease-in-out infinite;
+  animation: floaty 3.36s ease-in-out infinite;
   filter: drop-shadow(0 0 16px rgba(255,238,205,0.45)) drop-shadow(0 6px 30px rgba(150,180,230,0.30));
 }
 @keyframes floaty { 0%,100% { transform: translateY(-5px); } 50% { transform: translateY(6px); } }
 
-.m-ido   { animation: idoIn 5.6s cubic-bezier(.32,1.35,.5,1) infinite; }
-.m-ng    { animation: ngIn  5.6s cubic-bezier(.32,1.35,.5,1) infinite; }
-.morph .m-world { animation: worldIn 5.6s cubic-bezier(.32,1.35,.5,1) infinite; }
-.m-spark { animation: sparkIn 5.6s ease-in-out infinite; }
-.m-spark.s2 { animation-delay: -0.48s; } .m-spark.s3 { animation-delay: -0.96s; }
-.m-spark.s4 { animation-delay: -0.24s; } .m-spark.s5 { animation-delay: -0.72s; }
+.m-ido   { animation: idoIn 3.92s cubic-bezier(.32,1.35,.5,1) infinite; }
+.m-ng    { animation: ngIn  3.92s cubic-bezier(.32,1.35,.5,1) infinite; }
+.morph .m-world { animation: worldIn 3.92s cubic-bezier(.32,1.35,.5,1) infinite; }
+.m-spark { animation: sparkIn 3.92s ease-in-out infinite; }
+.m-spark.s2 { animation-delay: -0.336s; } .m-spark.s3 { animation-delay: -0.672s; }
+.m-spark.s4 { animation-delay: -0.168s; } .m-spark.s5 { animation-delay: -0.504s; }
 
 /* IDO: 왼쪽 아래 빛에서 모여 맺힘 → 유지 → 다시 빛으로 풀어짐 */
 @keyframes idoIn {
@@ -218,7 +218,7 @@ section { padding: var(--section-gap) var(--spacing-24); }
   -webkit-text-fill-color: transparent; color: transparent;
   filter: drop-shadow(0 2px 16px rgba(199, 73, 181, 0.35));
   /* 은은한 느린 시머(같은 계열만 이동) — 끄려면 animation 한 줄 제거 */
-  animation: kpopShimmer 9.6s ease-in-out infinite;
+  animation: kpopShimmer 6.72s ease-in-out infinite;
 }
 @keyframes kpopShimmer {
   0%   { background-position: 0% 50%; }
@@ -249,7 +249,7 @@ section { padding: var(--section-gap) var(--spacing-24); }
 .scroll-cue {
   display: inline-block; margin-top: var(--spacing-32);
   color: var(--on-canvas-dim); font-size: 20px; text-decoration: none;
-  animation: bounce 1.6s infinite;
+  animation: bounce 1.12s infinite;
 }
 @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
 
@@ -267,8 +267,8 @@ section { padding: var(--section-gap) var(--spacing-24); }
 .star-item {
   display: flex; align-items: center; gap: 12px;
   padding: 10px 12px; border-radius: var(--radius-lg);
-  cursor: pointer; transition: background 0.2s; min-width: 0;
-  opacity: 0; animation: fadeUp 0.48s ease forwards;
+  cursor: pointer; transition: background 0.14s; min-width: 0;
+  opacity: 0; animation: fadeUp 0.336s ease forwards;
 }
 body[dir="rtl"] .star-item { flex-direction: row-reverse; }
 .star-item:hover { background: rgba(255,255,255,0.08); }
@@ -276,12 +276,12 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
 .star-dot {
   width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
   background: #fff; box-shadow: 0 0 12px 3px var(--star-glow);
-  animation: twinkle 2.4s infinite ease-in-out;
-  transition: transform 0.24s, box-shadow 0.24s;
+  animation: twinkle 1.68s infinite ease-in-out;
+  transition: transform 0.168s, box-shadow 0.168s;
 }
 .star-item:hover .star-dot { transform: scale(1.6); }
 .star-dot.clicked { transform: scale(2.4); box-shadow: 0 0 26px 9px var(--star-glow); }
-.star-name { font-size: 15px; color: var(--on-canvas-dim); transition: color 0.2s; }
+.star-name { font-size: 15px; color: var(--on-canvas-dim); transition: color 0.14s; }
 .star-item:hover .star-name, .star-item.is-active .star-name { color: var(--on-canvas); }
 @keyframes twinkle { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.35;transform:scale(.7)} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
@@ -311,7 +311,7 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 12px 36px rgba(20,40,70,0.30);
   overflow: hidden;
-  transition: transform 0.2s cubic-bezier(.2,.8,.2,1), box-shadow 0.2s;
+  transition: transform 0.14s cubic-bezier(.2,.8,.2,1), box-shadow 0.14s;
 }
 .wiki-card:hover { transform: translateY(-4px); box-shadow: 0 18px 46px rgba(20,40,70,0.36); }
 .wiki-card:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
@@ -327,7 +327,7 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
 .aidong-cluster {
   display: flex; justify-content: center; align-items: flex-end;
   margin: var(--spacing-24) 0 var(--spacing-20); height: 100px;
-  animation: aidongFloat 4s ease-in-out infinite;
+  animation: aidongFloat 2.8s ease-in-out infinite;
 }
 .aidong-ava {
   width: 84px; height: 84px; border-radius: 50%;
@@ -347,7 +347,7 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
   color: #fff; background: var(--color-action-blue);
   border-radius: 9999px; padding: 15px 32px; letter-spacing: 0.02em;
   box-shadow: 0 10px 26px rgba(43,127,255,0.45);
-  transition: background 0.16s, box-shadow 0.16s;
+  transition: background 0.112s, box-shadow 0.112s;
 }
 .wiki-card:hover .wiki-btn { background: #1f6fff; box-shadow: 0 14px 32px rgba(43,127,255,0.55); }
 @media (prefers-reduced-motion: reduce) { .aidong-cluster { animation: none; } }
@@ -359,7 +359,7 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
   color: var(--color-action-blue); background: transparent;
   border: 1px solid var(--color-action-blue); border-radius: 9999px;
   padding: 14px 28px; cursor: not-allowed; letter-spacing: 0.02em;
-  box-shadow: 0 0 0 0 rgba(43,127,255,0.4); animation: pulse 2.08s infinite;
+  box-shadow: 0 0 0 0 rgba(43,127,255,0.4); animation: pulse 1.456s infinite;
 }
 @keyframes pulse {
   0%   { box-shadow: 0 0 0 0 rgba(43,127,255,0.45); }
@@ -406,16 +406,16 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
  * (밤하늘 톤 유지, prefers-reduced-motion 존중)
  * ============================================================ */
 .sky .aurora{
-  position:absolute; border-radius:50%; filter:blur(86px);
-  opacity:.55; mix-blend-mode:screen; animation:auroraDrift 19.2s ease-in-out infinite;
+  position:absolute; border-radius:50%; filter:blur(215px);
+  opacity:.55; mix-blend-mode:screen; animation:auroraDrift 13.44s ease-in-out infinite;
 }
-.sky .au1{width:624px;height:624px;left:-110px;top:-130px;background:#a855f7;animation-duration:20.8s;}
-.sky .au2{width:672px;height:672px;right:-150px;top:40px;background:#22d3ee;animation-duration:24.8s;animation-delay:-6.4s;}
-.sky .au3{width:576px;height:576px;left:32%;bottom:-180px;background:#f472b6;animation-duration:22.4s;animation-delay:-12s;}
+.sky .au1{width:1560px;height:1560px;left:-110px;top:-130px;background:#a855f7;animation-duration:14.56s;}
+.sky .au2{width:1680px;height:1680px;right:-150px;top:40px;background:#22d3ee;animation-duration:17.36s;animation-delay:-4.48s;}
+.sky .au3{width:1440px;height:1440px;left:32%;bottom:-180px;background:#f472b6;animation-duration:15.68s;animation-delay:-8.4s;}
 @keyframes auroraDrift{
   0%,100%{transform:translate(0,0) scale(1)}
-  33%{transform:translate(72px,53px) scale(1.17)}
-  66%{transform:translate(-55px,34px) scale(.93)}
+  33%{transform:translate(180px,133px) scale(1.17)}
+  66%{transform:translate(-138px,85px) scale(.93)}
 }
 .sky .skystars{
   position:absolute; inset:0;
@@ -427,11 +427,11 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
     radial-gradient(1.5px 1.5px at 52% 38%, rgba(255,255,255,.8), transparent),
     radial-gradient(2px 2px at 12% 74%, rgba(255,255,255,.85), transparent),
     radial-gradient(1.5px 1.5px at 90% 80%, rgba(255,255,255,.8), transparent);
-  animation:skyTwinkle 2.88s ease-in-out infinite;
+  animation:skyTwinkle 2.016s ease-in-out infinite;
 }
 @keyframes skyTwinkle{0%,100%{opacity:.55}50%{opacity:1}}
 .sky .wspark{
-  position:absolute; bottom:-24px; color:#fff; font-size:19px; opacity:0;
+  position:absolute; bottom:-24px; color:#fff; font-size:48px; opacity:0;
   animation:wfloat linear infinite; filter:drop-shadow(0 0 6px rgba(255,255,255,.9));
 }
 @keyframes wfloat{
@@ -444,9 +444,9 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
 .clock__big{filter:drop-shadow(0 0 24px rgba(244,63,94,.5)) drop-shadow(0 0 48px rgba(217,70,239,.3));}
 
 /* 위키 카드/버튼 컬러 글로우 */
-.wiki-card{transition:transform 0.192s cubic-bezier(.2,.8,.2,1), box-shadow 0.192s;}
+.wiki-card{transition:transform 0.134s cubic-bezier(.2,.8,.2,1), box-shadow 0.134s;}
 .wiki-card:hover{transform:translateY(-6px) scale(1.01);}
-.wiki-btn{animation:wikiGlow 2.4s ease-in-out infinite;}
+.wiki-btn{animation:wikiGlow 1.68s ease-in-out infinite;}
 @keyframes wikiGlow{
   0%,100%{box-shadow:0 8px 22px rgba(43,127,255,.34)}
   50%{box-shadow:0 14px 41px rgba(43,127,255,.62), 0 0 0 5px rgba(43,127,255,.14)}
