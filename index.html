@@ -16,7 +16,7 @@
     background:radial-gradient(1200px 620px at 50% -8%,#fff 0,rgba(255,255,255,0) 60%),linear-gradient(165deg,#eef3fb,#f7f4ef);
     min-height:100vh;padding:0 0 80px;}
   .wrap{max-width:1000px;margin:0 auto;padding:0 22px;}
-  .masthead{padding:52px 0 30px;text-align:center;}
+  .masthead{padding:52px 0 24px;text-align:center;}
   .eyebrow{font-size:.78rem;letter-spacing:.34em;color:var(--muted);font-weight:700;text-transform:uppercase;}
   .masthead h1{margin:.32em 0 .18em;font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;letter-spacing:-.01em;}
   .masthead h1 .dot{color:var(--accent);}
@@ -55,12 +55,39 @@
   .status.on{background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 30%,#fff);}
   .status.wait{background:rgba(40,48,66,.06);color:#8a90a0;border:1px solid var(--hair);}
 
+  /* 가로 배너 — 웰컴(카드 위)·매뉴얼(카드 아래), 전체 너비 */
+  .hero-banner{position:relative;display:flex;align-items:stretch;text-decoration:none;color:inherit;
+    background:#fff;border:1px solid var(--hair);border-radius:24px;overflow:hidden;isolation:isolate;
+    box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 12px 30px rgba(43,47,58,.09),0 3px 8px rgba(43,47,58,.05);
+    transition:transform .26s cubic-bezier(.2,.8,.2,1),box-shadow .26s;}
+  .hero-banner::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;z-index:2;
+    background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 55%,#fff));}
+  .hero-banner .hb-art{width:34%;min-height:172px;flex:none;display:grid;place-items:center;
+    background:radial-gradient(120% 100% at 30% 20%,#fff,color-mix(in srgb,var(--c) 22%,#fff));}
+  .hero-banner .hb-emoji{font-size:clamp(3rem,8vw,5rem);line-height:1;filter:drop-shadow(0 8px 14px rgba(43,47,58,.16));}
+  .hero-banner .hb-body{padding:28px 34px;display:flex;flex-direction:column;justify-content:center;gap:10px;flex:1;}
+  .hero-banner .hb-body h2{margin:0;font-size:clamp(1.5rem,3.4vw,2rem);font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:8px;}
+  .hero-banner .hb-body p{margin:0;font-size:1.02rem;line-height:1.6;color:#5d6373;max-width:58ch;}
+  .hero-banner.live{cursor:pointer;}
+  .hero-banner.live:hover{transform:translateY(-6px);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 22px 44px color-mix(in srgb,var(--c) 30%,transparent),0 6px 14px rgba(43,47,58,.1);}
+  .hero-banner.soon{opacity:.8;}
+  .hero-banner.welcome{margin:4px 0 24px;}
+  .hero-banner.manual{margin:24px 0 0;}
+  @media (max-width:760px){
+    .hero-banner{flex-direction:column;}
+    .hero-banner .hb-art{width:100%;aspect-ratio:16/7;min-height:0;}
+    .hero-banner .hb-body{padding:22px 22px 24px;}
+  }
+
+  /* 브랜드 로고 → 웰컴 페이지 링크 */
+  a.idw-brand{text-decoration:none;color:inherit;cursor:pointer;}
+
   .foot{margin-top:46px;text-align:center;color:var(--muted);font-size:.82rem;line-height:1.7;}
 </style>
 </head>
 <body>
   <header class="idw-topbar">
-    <span class="idw-brand"><span class="idw-brand__mark">💠</span><span data-i18n="top_label">아이동월드</span></span>
+    <a class="idw-brand" href="welcome/index.html"><span class="idw-brand__mark">💠</span><span data-i18n="top_label">아이동월드</span></a>
     <button class="idw-langchip" id="idwLangChip" type="button" aria-label="language">
       <span class="idw-langchip__dot"></span><span id="idwLangName">한국어</span><span class="idw-langchip__ico">▾</span>
     </button>
@@ -71,6 +98,16 @@
       <h1><span data-i18n="home_title">아이동월드 위키</span><span class="dot">.</span></h1>
       <p data-i18n="home_tagline">아이돌과 동물이 만난 작은 행성 — 세계관과 도감을 한곳에.</p>
     </header>
+
+    <!-- 웰컴 페이지 배너 (카드 위, 라이브) -->
+    <a class="hero-banner welcome live" href="welcome/index.html" style="--c:#8B6DF0">
+      <div class="hb-art"><span class="hb-emoji">✨</span></div>
+      <div class="hb-body">
+        <h2 data-i18n="home_welcome_title">✨ 아이동 웰컴</h2>
+        <p data-i18n="home_welcome_desc">회색섬에 처음 도착하는 순간. K-pop 시계와 별빛 인사가 맞이하는 아이동월드의 첫 페이지.</p>
+        <span class="status on" data-i18n="home_welcome_cta">입장하기 →</span>
+      </div>
+    </a>
 
     <main class="books">
       <!-- 월드북 -->
@@ -109,6 +146,16 @@
         </div>
       </a>
     </main>
+
+    <!-- 아이동 매뉴얼 배너 (카드 아래, 준비중) -->
+    <div class="hero-banner manual soon" style="--c:#E6A94D">
+      <div class="hb-art"><span class="hb-emoji">📔</span></div>
+      <div class="hb-body">
+        <h2 data-i18n="book_manual_title">📔 아이동 매뉴얼</h2>
+        <p data-i18n="book_manual_desc">아이동을 만나 숙소에서 함께 지내고, 반짝 산 무대에 데뷔시키기까지 — 아이동월드를 즐기는 모든 방법을 담은 안내서.</p>
+        <span class="status wait" data-i18n="status_soon">준비중</span>
+      </div>
+    </div>
 
     <p class="foot">
       <span data-i18n="foot_credit">© IDONG World · 한국콘텐츠진흥원 지원 작품</span><br/>
