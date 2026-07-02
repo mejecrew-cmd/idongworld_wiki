@@ -246,15 +246,19 @@ body.locked{overflow:hidden;}
 .rmini img,.rmini .mini-ph{width:56px;height:56px;object-fit:contain;background:#fff;border:1px solid rgba(40,48,66,.12);border-radius:12px;padding:4px;box-shadow:0 2px 6px rgba(43,47,58,.08);}
 .rmini b{font-size:11px;font-weight:700;color:#3a4150;text-align:center;line-height:1.2;}
 .rmini:hover img{border-color:#f2994a;transform:translateY(-2px);transition:.15s;}
-/* 요리 레시피 특집 그리드 */
-.grid.recipes{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
-.recipe-card{display:flex;align-items:center;gap:10px;padding:12px;cursor:pointer;}
+/* 요리 레시피 특집 그리드 — 요리+재료 3개가 한 카드에 다 들어가야 함.
+   모바일 퍼스트: 기본 1열(트랙=컨테이너폭이라 가로 오버플로·잘림 원천 차단), 800px 이상에서만 2열. */
+.grid.recipes{grid-template-columns:1fr;}
+@media (min-width:800px){ .grid.recipes{grid-template-columns:1fr 1fr;} }
+/* flex-wrap: 카드가 좁으면 재료 3개 묶음이 통째로 아래 줄로 내려가 잘리지 않음(미디어쿼리 불필요) */
+.recipe-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;padding:12px;cursor:pointer;}
 .recipe-card .rc-dish{display:flex;flex-direction:column;align-items:center;gap:6px;width:112px;flex:none;}
 .recipe-card .rc-dish img,.recipe-card .rc-dish .planned-ph{width:88px;height:88px;object-fit:contain;background:#fff;border-radius:14px;border:1px solid rgba(40,48,66,.1);padding:6px;}
 .recipe-card .rc-dish .name{font-size:13px;font-weight:800;text-align:center;margin:0;}
 .recipe-card .rc-eq{font-size:20px;color:#c3c9d4;font-weight:800;flex:none;}
-.recipe-card .rc-ings{display:flex;gap:8px;flex:1;}
-.recipe-card .rc-ings .rmini{width:62px;}
+/* flex:1 1 200px + min-width로 재료 묶음이 200px 미만이면 줄바꿈되고, 3개(≈202px)는 절대 안 줄어듦 */
+.recipe-card .rc-ings{display:flex;gap:8px;flex:1 1 200px;min-width:min-content;justify-content:center;}
+.recipe-card .rc-ings .rmini{width:62px;flex:none;}
 .recipe-card .rc-ings .rmini img,.recipe-card .rc-ings .rmini .mini-ph{width:48px;height:48px;}
 /* 특집 네비 그룹 */
 .chipgroup.feat .chip{background:linear-gradient(90deg,rgba(242,153,74,.14),rgba(242,153,74,.06));border-color:rgba(242,153,74,.4);}

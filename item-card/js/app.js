@@ -329,4 +329,17 @@
 
   // init
   renderAll();
+
+  // ── 월드북 코덱스 카드 → 아이템 딥링크(?icon=ICON-xxxx) ──
+  (function deepLinkIcon(){
+    var raw=""; try{ raw=(new URLSearchParams(location.search).get("icon")||"").trim(); }catch(e){}
+    if(!raw) return;
+    var id=raw.toUpperCase();
+    var it=byId[id];
+    if(!it && /^\d+$/.test(raw)){ id="ICON-"+("0000"+raw).slice(-4); it=byId[id]; }
+    if(!it) return;
+    showDetail(it);
+    var db=detail.querySelector("#detailBack");
+    if(db && history.length>1){ db.textContent="← 월드북으로 돌아가기"; db.onclick=function(){ history.back(); }; }
+  }());
 })();
