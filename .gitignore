@@ -1,7 +1,7 @@
 .DS_Store
 Thumbs.db
 
-# 내부 전용 — 공개 배포 금지 (KOCCA: .md·실명 금지)
-worldbook/
-WORKFLOW.md
+# 공개 배포 금지 — 문서·노트(.md 전부), 내부 자료
+*.md
 _research/
+_source_prompts/
