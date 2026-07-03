@@ -34,6 +34,15 @@
   }
   function no(i){ return String(i + 1).padStart(3,"0"); }
   function cleanIsland(s){ return (s || "").replace(/개인섬$/,"섬"); }
+  function animalName(an){
+    var p = window.IDW_ANIMAL_TR && window.IDW_ANIMAL_TR[curLang()];
+    return (p && p[an]) || an;
+  }
+  function islandName(i){
+    var p = window.IDW_ISLAND_TR && window.IDW_ISLAND_TR[curLang()];
+    return (p && p[i]) || cleanIsland((SHEET[i] || {}).il || "");
+  }
+  function lbl(key, ko){ var v = window.IDWLang ? IDWLang.t(key) : ""; return v || ko; }
   function textList(arr, limit){
     var list = arr || [];
     return list.slice(0,limit || list.length).join(" · ");
@@ -157,12 +166,12 @@
     return '<section class="section'+(wide?" wide":"")+'"><h3>'+esc(title)+'</h3><p>'+esc(body)+'</p></section>';
   }
   function kwSection(kw){
-    var cats=[["코어",kw.core],["감성·분위기",kw.vibe],["사물·공간",kw.obj],["행동·태도",kw.act],["구문·복합",kw.phrase]];
+    var cats=[[lbl("skw_core","코어"),kw.core],[lbl("skw_vibe","감성·분위기"),kw.vibe],[lbl("skw_obj","사물·공간"),kw.obj],[lbl("skw_act","행동·태도"),kw.act],[lbl("skw_phrase","구문·복합"),kw.phrase]];
     var rows=cats.filter(function(c){return c[1]&&c[1].length;}).map(function(c){
       var chips=c[1].map(function(w){return '<span class="kw-chip">'+esc(w)+'</span>';}).join("");
       return '<div class="kw-cat"><span class="kw-label">'+esc(c[0])+'</span><span class="kw-list">'+chips+'</span></div>';
     }).join("");
-    return '<section class="section wide kw-banner"><div class="kw-eyebrow">아이동 키워드</div>'
+    return '<section class="section wide kw-banner"><div class="kw-eyebrow">'+esc(lbl("skw_head","아이동 키워드"))+'</div>'
       +'<div class="kw-cats">'+rows+'</div></section>';
   }
   function tagHero(tag){
@@ -176,7 +185,7 @@
       var t=String(v).trim().replace(/^[\s"“”'’]+|[\s"“”'’]+$/g,"");
       return '<li class="voice-line">'+esc(t)+'</li>';
     }).join("");
-    return '<section class="section wide voice-sec"><h3>하루의 목소리</h3><ul class="voice-list">'+items+'</ul></section>';
+    return '<section class="section wide voice-sec"><h3>'+esc(lbl("s_voice","하루의 목소리"))+'</h3><ul class="voice-list">'+items+'</ul></section>';
   }
   function pediaGrid(i){
     var items = PEDIA[i] || [];
@@ -194,7 +203,7 @@
     selected = i;
     var row = SHEET[i];
     var name = aidongName(i);
-    var island = cleanIsland(row.il);
+    var island = islandName(i);
     var c = content(i);
     var line = c.intro || (name + "는 " + island + "에서 " + row.an + "의 작고 또렷한 리듬으로 하루를 연다.");
     var kwTr = window.IDW_SHEET_KW_TR && window.IDW_SHEET_KW_TR[curLang()];
@@ -208,18 +217,18 @@
           + '<h2>'+esc(name)+'</h2>'
           + '<p class="line">'+esc(line)+'</p>'
           + '<div class="quick">'
-            + '<div><span>동물</span><strong>'+esc(row.an)+'</strong></div>'
-            + '<div><span>섬</span><strong>'+esc(island)+'</strong></div>'
+            + '<div><span>'+esc(lbl("s_animal","동물"))+'</span><strong>'+esc(animalName(row.an))+'</strong></div>'
+            + '<div><span>'+esc(lbl("s_isle","섬"))+'</span><strong>'+esc(island)+'</strong></div>'
           + '</div>'
         + '</div>'
       + '</aside>'
       + '<div class="sections">'
         + (kw && kw.tag ? tagHero(kw.tag) : "")
-        + (c.look ? section("외모", c.look) : (kw ? "" : section("모습과 빛깔", c.mood)))
-        + (kw ? kwSection(kw) : section("무대에서 온 결", textList(c.keywords,6)))
+        + (c.look ? section(lbl("s_appear","외모"), c.look) : (kw ? "" : section(lbl("s_look","모습과 빛깔"), c.mood)))
+        + (kw ? kwSection(kw) : section(lbl("s_stage","무대에서 온 결"), textList(c.keywords,6)))
         + voiceSection(c.voice)
-        + section(island || "돌아갈 섬", c.island)
-        + '<section class="section wide"><div class="pedia-head"><h3>품은 것들</h3><a href="'+itemBookHref(i)+'">아이템 카드북에서 보기</a></div><div class="pedia-grid">'+pediaGrid(i)+'</div></section>'
+        + section(island || lbl("s_island","돌아갈 섬"), c.island)
+        + '<section class="section wide"><div class="pedia-head"><h3>'+esc(lbl("s_pedia","품은 것들"))+'</h3><a href="'+itemBookHref(i)+'">'+esc(lbl("s_pedia_link","아이템 카드북에서 보기"))+'</a></div><div class="pedia-grid">'+pediaGrid(i)+'</div></section>'
       + '</div>';
     listView.hidden = true;
     detailView.hidden = false;
