@@ -1,254 +1,168 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>아이동월드 위키</title>
-<link rel="stylesheet" href="i18n/lang.css" />
-<style>
-  :root{
-    --ink:#2b2f3a; --muted:#7b8190; --hair:rgba(40,48,66,.10);
-    --font:"Noto Sans KR","Apple SD Gothic Neo",system-ui,-apple-system,"Segoe UI",sans-serif;
-    --accent:#5B8DEF;
-  }
-  *{box-sizing:border-box;} html,body{margin:0;padding:0;}
-  body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased;
-    min-height:100vh;padding:0 0 80px;position:relative;overflow-x:hidden;
-    background:linear-gradient(125deg,#ffe3f1 0%,#ece6ff 26%,#e0f4ff 50%,#e4fbf2 72%,#fff2df 100%);
-    background-size:320% 320%;animation:aurora 12.32s ease-in-out infinite;}
-  @keyframes aurora{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>아이동월드 · IDONG World</title>
+  <meta name="description" content="IDOL + 動物 = 아이동. K-pop 시계와 함께하는 아이동월드." />
 
-  /* 배경 반짝 레이어 (별·글로우 블롭·떠오르는 반짝이) */
-  .skyfx{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
-  .skyfx .blob{position:absolute;border-radius:50%;filter:blur(138px);opacity:.55;mix-blend-mode:multiply;animation:drift 11.2s ease-in-out infinite;}
-  .skyfx .b1{width:1080px;height:1080px;left:-60px;top:-40px;background:#ff9ecb;animation-duration:13.44s;}
-  .skyfx .b2{width:1260px;height:1260px;right:-80px;top:120px;background:#8fb8ff;animation-duration:15.68s;animation-delay:-3.36s;}
-  .skyfx .b3{width:900px;height:900px;left:36%;bottom:-60px;background:#ffd98a;animation-duration:14.56s;animation-delay:-6.72s;}
-  @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(120px,90px) scale(1.1)}66%{transform:translate(-90px,60px) scale(.95)}}
-  .skyfx .stars{position:absolute;inset:0;
-    background-image:
-      radial-gradient(2px 2px at 20% 30%,rgba(255,255,255,.9),transparent),
-      radial-gradient(2px 2px at 70% 20%,rgba(255,255,255,.8),transparent),
-      radial-gradient(1.5px 1.5px at 40% 70%,rgba(255,255,255,.85),transparent),
-      radial-gradient(2px 2px at 85% 60%,rgba(255,255,255,.8),transparent),
-      radial-gradient(1.5px 1.5px at 55% 45%,rgba(255,255,255,.75),transparent),
-      radial-gradient(2px 2px at 15% 80%,rgba(255,255,255,.8),transparent);
-    animation:twinkle 1.904s ease-in-out infinite;}
-  @keyframes twinkle{0%,100%{opacity:.5}50%{opacity:1}}
-  .spark{position:absolute;bottom:-24px;font-size:48px;opacity:0;animation:floatUp linear infinite;
-    filter:drop-shadow(0 0 6px rgba(255,214,120,.8));}
-  @keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}
-    12%{opacity:.95}88%{opacity:.95}100%{transform:translateY(-108vh) rotate(120deg);opacity:0}}
+  <!-- 폰트: Air 토큰 대체서체 + 한글 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;700&family=Dancing+Script:wght@500;700&family=Space+Mono:wght@400;700&family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&family=Gowun+Dodum&display=swap" rel="stylesheet" />
 
-  .idw-topbar{position:relative;z-index:3;}
-  .wrap{max-width:1000px;margin:0 auto;padding:0 22px;position:relative;z-index:2;}
-  .masthead{padding:54px 0 26px;text-align:center;}
-  .eyebrow{font-size:.8rem;letter-spacing:.36em;color:#8a6ff0;font-weight:800;text-transform:uppercase;}
-  .masthead h1{margin:.28em 0 .2em;font-size:clamp(2.2rem,6.2vw,3.5rem);font-weight:900;letter-spacing:-.02em;
-    background:linear-gradient(92deg,#ff6fae,#8b6df0 44%,#4aa6ff 74%,#ffb14a);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-    background-size:200% auto;animation:hue 5.04s linear infinite;filter:drop-shadow(0 3px 12px rgba(139,109,240,.18));}
-  @keyframes hue{to{background-position:200% center}}
-  .masthead h1 .dot{-webkit-text-fill-color:#ff6fae;}
-  .masthead p{margin:0;color:#6a6f80;font-size:1.04rem;font-weight:600;}
-
-  .books{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:14px;}
-  @media (max-width:760px){ .books{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto;} }
-
-  .book{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;
-    background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.7);border-radius:24px;overflow:hidden;isolation:isolate;
-    box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 14px 34px rgba(43,47,58,.12),0 3px 8px rgba(43,47,58,.06);
-    transition:transform 0.134s cubic-bezier(.2,.8,.2,1),box-shadow 0.134s;}
-  .book::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;z-index:2;
-    background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 45%,#fff));}
-  /* hover 시 스치는 광택 */
-  .book::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;
-    background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 48%,transparent 66%);
-    transform:translateX(-120%);transition:opacity 0.112s;}
-  .book.live:hover::after{opacity:1;animation:sheen 0.448s ease;}
-  @keyframes sheen{to{transform:translateX(120%)}}
-  .book.live{cursor:pointer;}
-  .book.live:hover{transform:translateY(-10px) scale(1.015);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 26px 52px color-mix(in srgb,var(--c) 38%,transparent),0 8px 16px rgba(43,47,58,.12);}
-  .book.soon{opacity:.82;}
-
-  .cover{position:relative;aspect-ratio:16/11;overflow:hidden;
-    background:radial-gradient(120% 90% at 30% 18%,#fff,color-mix(in srgb,var(--c) 16%,#fff));
-    display:grid;place-items:center;}
-  .cover img{width:100%;height:100%;object-fit:cover;transition:transform 0.168s ease;}
-  .book.live:hover .cover img{transform:scale(1.05);}
-  .cover.contain img{width:72%;height:72%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(43,47,58,.16));}
-  .book.live:hover .cover.contain img{transform:scale(1.08) rotate(-2deg);}
-  /* 카드북 몽타주 */
-  .montage{position:relative;width:100%;height:100%;}
-  .montage img{position:absolute;width:42%;aspect-ratio:1;object-fit:contain;border-radius:14px;background:#fff;
-    border:1px solid var(--hair);box-shadow:0 8px 18px rgba(43,47,58,.14);transition:transform 0.168s ease;}
-  .montage img:nth-child(1){left:10%;top:24%;transform:rotate(-9deg);}
-  .montage img:nth-child(2){left:30%;top:12%;transform:rotate(2deg);z-index:2;}
-  .montage img:nth-child(3){left:50%;top:24%;transform:rotate(10deg);}
-  .book.live:hover .montage img:nth-child(1){transform:rotate(-14deg) translateY(-4px);}
-  .book.live:hover .montage img:nth-child(2){transform:rotate(2deg) translateY(-8px) scale(1.05);}
-  .book.live:hover .montage img:nth-child(3){transform:rotate(15deg) translateY(-4px);}
-
-  .book__body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:7px;flex:1;}
-  .book__body h2{margin:0;font-size:1.32rem;font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:8px;}
-  .book__body p{margin:0;font-size:.9rem;line-height:1.55;color:#5d6373;flex:1;}
-  .status{align-self:flex-start;margin-top:4px;padding:6px 13px;border-radius:999px;font-size:.78rem;font-weight:800;}
-  .status.on{background:color-mix(in srgb,var(--c) 16%,#fff);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 34%,#fff);}
-  .status.wait{background:rgba(40,48,66,.06);color:#8a90a0;border:1px solid var(--hair);}
-
-  /* 가로 배너 — 웰컴(카드 위)·매뉴얼(카드 아래), 전체 너비 */
-  .hero-banner{position:relative;display:flex;align-items:stretch;text-decoration:none;color:inherit;
-    background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.7);border-radius:24px;overflow:hidden;isolation:isolate;
-    box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 14px 34px rgba(43,47,58,.12),0 3px 8px rgba(43,47,58,.06);
-    transition:transform 0.134s cubic-bezier(.2,.8,.2,1),box-shadow 0.134s;}
-  .hero-banner::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;z-index:2;
-    background:linear-gradient(90deg,var(--c),color-mix(in srgb,var(--c) 45%,#fff));}
-  .hero-banner .hb-art{width:34%;min-height:176px;flex:none;display:grid;place-items:center;
-    background:radial-gradient(120% 100% at 30% 20%,#fff,color-mix(in srgb,var(--c) 24%,#fff));}
-  .hero-banner .hb-emoji{font-size:clamp(3rem,8vw,5rem);line-height:1;filter:drop-shadow(0 8px 14px rgba(43,47,58,.16));}
-  .hero-banner .hb-body{padding:28px 34px;display:flex;flex-direction:column;justify-content:center;gap:10px;flex:1;}
-  .hero-banner .hb-body h2{margin:0;font-size:clamp(1.5rem,3.4vw,2rem);font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:8px;}
-  .hero-banner .hb-body p{margin:0;font-size:1.02rem;line-height:1.6;color:#5d6373;max-width:58ch;}
-  .hero-banner.live{cursor:pointer;}
-  .hero-banner.live:hover{transform:translateY(-6px) scale(1.008);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 26px 52px color-mix(in srgb,var(--c) 34%,transparent),0 8px 16px rgba(43,47,58,.12);}
-  .hero-banner.soon{opacity:.82;}
-  .hero-banner.welcome{margin:4px 0 24px;animation:welcomeGlow 2.016s ease-in-out infinite;}
-  @keyframes welcomeGlow{0%,100%{box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 14px 34px rgba(139,109,240,.16),0 3px 8px rgba(43,47,58,.06)}
-    50%{box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 20px 48px rgba(139,109,240,.4),0 3px 8px rgba(43,47,58,.06)}}
-  .hero-banner.welcome .hb-art{background:radial-gradient(120% 100% at 30% 20%,#fff,#e7ddff);}
-  .hero-banner.welcome .hb-emoji{animation:pulseSpin 1.344s ease-in-out infinite;}
-  @keyframes pulseSpin{0%,100%{transform:scale(1) rotate(-5deg)}50%{transform:scale(1.22) rotate(10deg)}}
-  .hero-banner.welcome .status.on{background:linear-gradient(90deg,#8b6df0,#c084fc);color:#fff;border:none;box-shadow:0 4px 14px rgba(139,109,240,.4);}
-  .hero-banner.manual{margin:24px 0 0;}
-  @media (max-width:760px){
-    .hero-banner{flex-direction:column;}
-    .hero-banner .hb-art{width:100%;aspect-ratio:16/7;min-height:0;}
-    .hero-banner .hb-body{padding:22px 22px 24px;}
-  }
-
-  /* 브랜드 로고 → 웰컴 페이지 링크 */
-  a.idw-brand{text-decoration:none;color:inherit;cursor:pointer;transition:transform 0.112s ease;}
-  a.idw-brand:hover{transform:scale(1.05);}
-
-  .foot{margin-top:46px;text-align:center;color:#7b8190;font-size:.82rem;line-height:1.7;}
-
-  /* 등장 애니메이션(스태거) */
-  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-  .masthead,.hero-banner,.book,.foot{animation:rise 0.336s cubic-bezier(.2,.8,.2,1) both;}
-  .masthead{animation-delay:0.011s}
-  .hero-banner.welcome{animation:rise 0.336s cubic-bezier(.2,.8,.2,1) both,welcomeGlow 2.016s ease-in-out infinite;animation-delay:0.056s,0.56s;}
-  .books .book:nth-child(1){animation-delay:0.101s}
-  .books .book:nth-child(2){animation-delay:0.146s}
-  .books .book:nth-child(3){animation-delay:0.19s}
-  .hero-banner.manual{animation-delay:0.235s}
-  .foot{animation-delay:0.28s}
-
-  @media (prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important;}
-    body{background-position:0% 50%!important;}
-  }
-</style>
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="assets/fx.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   <script defer src="assets/fx.js"></script>
 </head>
 <body>
-  <canvas id="fx-canvas" aria-hidden="true"></canvas>
+  <canvas id="fx-canvas" data-theme="night" aria-hidden="true"></canvas>
   <div class="fx-intro" aria-hidden="true"><div class="fx-intro__mark">아이동<span class="spk">월드</span></div></div>
   <span class="fx-cursor-dot" aria-hidden="true"></span>
   <span class="fx-cursor-ring" aria-hidden="true"></span>
-  <div class="skyfx" aria-hidden="true">
-    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
-    <div class="stars"></div>
-    <span class="spark" style="left:8%;animation-duration:7.28s;animation-delay:0s">✦</span>
-    <span class="spark" style="left:24%;animation-duration:9.52s;animation-delay:-2.24s;font-size:35px">✧</span>
-    <span class="spark" style="left:42%;animation-duration:8.4s;animation-delay:-4.48s">✦</span>
-    <span class="spark" style="left:61%;animation-duration:10.64s;animation-delay:-1.12s;font-size:40px">✧</span>
-    <span class="spark" style="left:78%;animation-duration:7.84s;animation-delay:-5.6s">✦</span>
-    <span class="spark" style="left:91%;animation-duration:8.96s;animation-delay:-3.36s;font-size:35px">✧</span>
+  <!-- 하늘 배경 레이어 (오로라 글로우·별·구름·반짝이) -->
+  <div class="sky" aria-hidden="true">
+    <span class="aurora au1"></span>
+    <span class="aurora au2"></span>
+    <span class="aurora au3"></span>
+    <div class="skystars"></div>
+    <span class="cloud cloud-1"></span>
+    <span class="cloud cloud-2"></span>
+    <span class="cloud cloud-3"></span>
+    <span class="wspark" style="left:9%;animation-duration:8.4s;animation-delay:0s">✦</span>
+    <span class="wspark" style="left:27%;animation-duration:10.64s;animation-delay:-2.8s;font-size:40px">✧</span>
+    <span class="wspark" style="left:46%;animation-duration:8.96s;animation-delay:-5.04s">✦</span>
+    <span class="wspark" style="left:64%;animation-duration:11.76s;animation-delay:-1.68s;font-size:43px">✧</span>
+    <span class="wspark" style="left:81%;animation-duration:9.52s;animation-delay:-6.72s">✦</span>
+    <span class="wspark" style="left:94%;animation-duration:10.08s;animation-delay:-3.92s;font-size:35px">✧</span>
   </div>
 
-  <header class="idw-topbar">
-    <a class="idw-brand" href="welcome/index.html"><span class="idw-brand__mark">💠</span><span data-i18n="top_label">아이동월드</span></a>
-    <button class="idw-langchip" id="idwLangChip" type="button" aria-label="language">
-      <span class="idw-langchip__dot"></span><span id="idwLangName">한국어</span><span class="idw-langchip__ico">▾</span>
+  <!-- 상단 작은 아이동월드 + 현재 언어 칩 -->
+  <header class="topbar">
+    <span class="topbar__label" data-i18n="top_label">아이동월드</span>
+    <button class="lang-chip" id="lang-chip" type="button" aria-label="language">
+      <span class="lang-chip__dot"></span>
+      <span id="lang-chip-name">한국어</span>
     </button>
   </header>
-  <div class="wrap">
-    <header class="masthead" data-reveal="load">
-      <div class="eyebrow" data-i18n="home_eyebrow">IDONG WORLD · WIKI</div>
-      <h1><span data-i18n="home_title">아이동월드 위키</span><span class="dot">.</span></h1>
-      <p data-i18n="home_tagline">아이돌과 동물이 만난 작은 행성 — 세계관과 도감을 한곳에.</p>
-    </header>
 
-    <!-- 웰컴 페이지 배너 (카드 위, 라이브) -->
-    <a class="hero-banner welcome live" href="welcome/index.html" style="--c:#8B6DF0" data-reveal="load" data-tilt>
-      <div class="hb-art"><span class="hb-emoji">✨</span></div>
-      <div class="hb-body">
-        <h2 data-i18n="home_welcome_title">✨ 아이동 웰컴</h2>
-        <p data-i18n="home_welcome_desc">회색섬에 처음 도착하는 순간. K-pop 시계와 별빛 인사가 맞이하는 아이동월드의 첫 페이지.</p>
-        <span class="status on" data-i18n="home_welcome_cta" data-magnetic>입장하기 →</span>
-      </div>
-    </a>
+  <main class="page">
 
-    <main class="books">
-      <!-- 월드북 -->
-      <a class="book live" href="worldbook/index.html" style="--c:#6f9d58" data-reveal="load" data-tilt>
-        <div class="cover"><img src="assets/home/worldbook.webp" alt="아이동 월드북" loading="lazy" /></div>
-        <div class="book__body">
-          <h2 data-i18n="book_world_title">📖 아이동 월드북</h2>
-          <p data-i18n="book_world_desc">회색섬에서 시작되는 세계관. 15구역·아이동·반짝섬의 이야기와 설정을 담은 로어북.</p>
-          <span class="status on">열람하기 →</span>
-        </div>
-      </a>
+    <!-- 1. 히어로: IDO·NG World 워드마크 -->
+    <section class="hero" id="top">
+      <h1 class="wordmark morph" role="img" aria-label="IDONG World">
+        <svg class="morph__svg" viewBox="0 0 420 220" overflow="visible" xmlns="http://www.w3.org/2000/svg">
+          <g class="morph__float">
+            <!-- 몽실몽실 빛가루 -->
+            <circle class="m-spark s1" cx="92"  cy="58"  r="2.6"></circle>
+            <circle class="m-spark s2" cx="322" cy="52"  r="3.2"></circle>
+            <circle class="m-spark s3" cx="352" cy="150" r="2.4"></circle>
+            <circle class="m-spark s4" cx="74"  cy="152" r="3"></circle>
+            <circle class="m-spark s5" cx="208" cy="40"  r="2"></circle>
+            <!-- 세 빛덩이가 모여 맺힘 -->
+            <text class="m-ido"   text-anchor="end"    x="210" y="122">IDO</text>
+            <text class="m-ng"    text-anchor="start"  x="214" y="122">NG</text>
+            <text class="m-world" text-anchor="middle" x="198" y="184">World</text>
+          </g>
+        </svg>
+      </h1>
+      <p class="hero__caption" data-i18n="hero_caption">IDOL + 動物 = 아이동</p>
 
-      <!-- 아이동 시트북 -->
-      <a class="book live" href="sheet/index.html" style="--c:#EC5B9B" data-reveal="load" data-tilt>
-        <div class="cover contain"><img src="sheet/assets/icon/AIDONG-0019.webp" alt="아이동 시트북" loading="lazy" /></div>
-        <div class="book__body">
-          <h2 data-i18n="book_sheet_title">🐾 아이동 시트북</h2>
-          <p data-i18n="book_sheet_desc">671 아이의 캐릭터 시트. 타입·성격·기질·도감을 한 장씩 펼쳐보는 캐릭터북.</p>
-          <span class="status on">671 아이 · 열람하기 →</span>
-        </div>
-      </a>
-
-      <!-- 아이템 카드북 -->
-      <a class="book live" href="item-card/index.html" style="--c:#5B8DEF" data-reveal="load" data-tilt>
-        <div class="cover">
-          <div class="montage">
-            <img src="item-card/assets/thumb/p_0003_ribon.webp" alt="" loading="lazy" />
-            <img src="item-card/assets/thumb/p_0007_sigye.webp" alt="" loading="lazy" />
-            <img src="item-card/assets/thumb/u_1356_haendeumaikeu.webp" alt="" loading="lazy" />
+      <!-- 2. K-pop 시계 (현재 시각) -->
+      <section class="clock" aria-label="K-pop clock">
+        <p class="kicker" data-i18n="clock_kicker">지금, K-pop 시계</p>
+        <div class="clock__face">
+          <div class="clock__row clock__row--hour">
+            <span class="clock__slot-tag" data-i18n="clock_tag_hour">時</span>
+            <span class="clock__big" id="clock-hour-big"></span>
+            <span class="clock__lyric" id="clock-hour-text"></span>
+            <span class="clock__src" id="clock-hour-src"></span>
           </div>
+          <div class="clock__divider"></div>
+          <div class="clock__row clock__row--minute">
+            <span class="clock__slot-tag" data-i18n="clock_tag_minute">分</span>
+            <span class="clock__big" id="clock-minute-big"></span>
+            <span class="clock__lyric" id="clock-minute-text"></span>
+            <span class="clock__src" id="clock-minute-src"></span>
+          </div>
+          <div class="clock__digital" id="clock-digital">--:--</div>
         </div>
-        <div class="book__body">
-          <h2 data-i18n="book_item_title">💠 아이템 카드북</h2>
-          <p data-i18n="book_item_desc">2,832종 아이템 도감. 분류·태그·아이동별로 찾아보는 반짝 컬렉터블 카드.</p>
-          <span class="status on" data-i18n="status_item">2,832종 · 열람하기 →</span>
+      </section>
+
+      <a class="scroll-cue" href="#wiki" aria-hidden="true">▾</a>
+    </section>
+
+    <!-- ★ 아이동월드 위키 바로가기 (LIVE) -->
+    <section class="wiki-cta" id="wiki" data-reveal>
+      <a class="wiki-card" href="index_wiki.html" data-tilt>
+        <span class="wiki-badge" data-i18n="wiki_badge">지금 공개</span>
+        <p class="kicker" data-i18n="wiki_kicker">지금 바로</p>
+        <h2 class="section-title wiki-title" data-i18n="wiki_title">아이동월드 위키</h2>
+        <div class="aidong-cluster" aria-hidden="true">
+          <img class="aidong-ava a1" src="images/aidong/pig.webp"   alt="" width="84" height="84" loading="lazy" />
+          <img class="aidong-ava a2" src="images/aidong/whale.webp" alt="" width="92" height="92" loading="lazy" />
+          <img class="aidong-ava a3" src="images/aidong/chick.webp" alt="" width="92" height="92" loading="lazy" />
+          <img class="aidong-ava a4" src="images/aidong/frog.webp"  alt="" width="84" height="84" loading="lazy" />
         </div>
+        <p class="body-text" data-i18n="wiki_body">2,832종 아이템 도감과 세계관을 한곳에. 반짝이는 아이동들의 세계를 둘러보세요.</p>
+        <span class="wiki-btn" data-i18n="wiki_button" data-magnetic>위키 구경하러 가기 →</span>
       </a>
-    </main>
+    </section>
 
-    <!-- 아이동 매뉴얼 배너 (카드 아래, 준비중) -->
-    <div class="hero-banner manual soon" style="--c:#E6A94D" data-reveal data-tilt>
-      <div class="hb-art"><span class="hb-emoji">📔</span></div>
-      <div class="hb-body">
-        <h2 data-i18n="book_manual_title">📔 아이동 매뉴얼</h2>
-        <p data-i18n="book_manual_desc">아이동을 만나 숙소에서 함께 지내고, 반짝 산 무대에 데뷔시키기까지 — 아이동월드를 즐기는 모든 방법을 담은 안내서.</p>
-        <span class="status wait" data-i18n="status_soon">준비중</span>
+    <!-- 3. 별빛 언어 선택 -->
+    <section class="langs" id="languages" data-reveal>
+      <p class="kicker" data-i18n="lang_kicker">당신의 언어로</p>
+      <h2 class="section-title" data-i18n="lang_title">별빛을 따라, 당신의 별을 톡</h2>
+      <p class="section-hint" data-i18n="lang_hint"></p>
+      <div class="starfield" id="starfield"><!-- JS가 별을 채움 --></div>
+    </section>
+
+    <!-- 4. 아이동월드 설명 -->
+    <section class="about" data-reveal>
+      <div class="glass-card">
+        <p class="kicker" data-i18n="about_kicker">아이동월드란?</p>
+        <h2 class="section-title" data-i18n="about_title"></h2>
+        <p class="body-text" data-i18n="about_body"></p>
       </div>
-    </div>
+    </section>
 
-    <p class="foot" data-reveal>
-      <span data-i18n="foot_credit">© IDONG World · 한국콘텐츠진흥원 지원 작품</span><br/>
-      <span data-i18n="foot_note">준비중 항목은 순차 공개됩니다.</span>
-    </p>
-  </div>
+    <!-- 5. 반짝섬 -->
+    <section class="island" data-reveal>
+      <div class="glass-card glass-card--island">
+        <p class="kicker" data-i18n="island_kicker">반짝섬</p>
+        <h2 class="section-title" data-i18n="island_title"></h2>
+        <p class="body-text" data-i18n="island_body"></p>
+      </div>
+    </section>
 
-  <script>window.IDW_I18N_DIR="i18n/";</script>
-  <script src="i18n/languages.js"></script>
-  <script src="i18n/ui.js"></script>
-  <script src="i18n/lang-core.js"></script>
+    <!-- 6. 게임 진입(커밍순 게이트) — contents.idongworld.com 비밀코드 게이트로 연결 -->
+    <section class="cta" data-reveal>
+      <a class="cta__btn" href="https://contents.idongworld.com" data-i18n="cta_button">
+        준비 중 · 2026년 11월 Coming Soon
+      </a>
+
+      <!-- 한국콘텐츠진흥원 지원 크레딧 (로고는 교체용 플레이스홀더) -->
+      <div class="support">
+        <p class="support__label" data-i18n="support_label">한국콘텐츠진흥원 지원 작품</p>
+        <img class="support__logo" src="images/kocca-logo.svg"
+             alt="한국콘텐츠진흥원 KOREA CREATIVE CONTENT AGENCY" width="330" height="72" />
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. 사업자 정보 -->
+  <footer class="biz">
+    <p class="biz__copyright" data-i18n="biz_copyright">ⓒ MEJE Works Corp.</p>
+    <p class="biz__rights" data-i18n="biz_rights">All Rights Reserved.</p>
+    <p class="biz__info" data-i18n="biz_info"></p>
+  </footer>
+
+  <!-- 데이터 (오프라인 더블클릭으로도 열리도록 파일 분리 로드) -->
+  <script src="data/i18n.js"></script>
+  <script src="data/languages.js"></script>
+  <script src="data/clock.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
