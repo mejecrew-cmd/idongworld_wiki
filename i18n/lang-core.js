@@ -15,9 +15,13 @@
   var DIR = window.IDW_I18N_DIR || "i18n/";       // 페이지별 상대경로
   var LOAD_ITEMS  = !!window.IDW_LOAD_ITEM_PACKS;   // 아이템 페이지
   var LOAD_AIDONG = !!(window.IDW_LOAD_ITEM_PACKS || window.IDW_LOAD_AIDONG_PACKS); // 아이템·시트 페이지
+  var LOAD_SHEET  = !!window.IDW_LOAD_SHEET_PACKS;  // 시트 상세 산문 페이지
+  var SHEET_DIR   = window.IDW_SHEET_PACK_DIR || DIR; // 시트 팩 경로(기본은 i18n DIR)
 
   window.IDW_ITEMS_TR  = window.IDW_ITEMS_TR  || {};
   window.IDW_AIDONG_TR = window.IDW_AIDONG_TR || {};
+  window.IDW_SHEET_TR    = window.IDW_SHEET_TR    || {}; // code → [{intro,look,island,voice},...]
+  window.IDW_SHEET_KW_TR = window.IDW_SHEET_KW_TR || {}; // code → [{tag,core,vibe,obj,act,phrase},...]
 
   var rtl = {}; LANGS.forEach(function (l) { if (l.rtl) rtl[l.code] = true; });
   function hasLang(c){ return LANGS.some(function(l){return l.code===c;}); }
@@ -116,10 +120,11 @@
   /* ---- 번역팩 지연 로드 ---- */
   var loaded = {}; // code → true(완료)
   function loadPacks(code, done) {
-    if ((!LOAD_ITEMS && !LOAD_AIDONG) || code === "ko" || loaded[code]) { done(); return; }
+    if ((!LOAD_ITEMS && !LOAD_AIDONG && !LOAD_SHEET) || code === "ko" || loaded[code]) { done(); return; }
     var need = [];
     if (LOAD_ITEMS  && !window.IDW_ITEMS_TR[code])  need.push(DIR + "items." + code + ".js");
     if (LOAD_AIDONG && !window.IDW_AIDONG_TR[code]) need.push(DIR + "aidong." + code + ".js");
+    if (LOAD_SHEET  && !window.IDW_SHEET_TR[code])  need.push(SHEET_DIR + "sheet." + code + ".js");
     if (!need.length) { loaded[code] = true; done(); return; }
     var left = need.length, finished = false;
     function one() { if (--left <= 0 && !finished) { finished = true; loaded[code] = true; done(); } }

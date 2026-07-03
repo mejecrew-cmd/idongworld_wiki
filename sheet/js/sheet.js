@@ -42,7 +42,7 @@
     var row = SHEET[i] || {};
     var name = aidongName(i);
     var island = cleanIsland(row.il || "");
-    return KO[i] || {
+    var base = KO[i] || {
       intro: name + "는 " + island + "에서 " + row.an + "의 작고 또렷한 리듬으로 하루를 연다.",
       island: island + "은 이 아이동의 하루가 모이는 장소다.",
       mood: row.an + "다운 움직임과 조용한 환대가 먼저 느껴진다.",
@@ -52,6 +52,13 @@
       voice: ["천천히 들어와도 돼."],
       story: [row.an + "의 발자국을 따라 작은 소품을 찾아간다."]
     };
+    var tr = window.IDW_SHEET_TR && window.IDW_SHEET_TR[curLang()];
+    if (tr && tr[i]) {
+      var m = {}, k; for (k in base) m[k] = base[k];
+      var t = tr[i]; for (k in t) { if (t[k] != null && t[k] !== "") m[k] = t[k]; }
+      return m;
+    }
+    return base;
   }
   function imgTag(i, cls){
     var id = SHEET[i].id;
@@ -190,7 +197,8 @@
     var island = cleanIsland(row.il);
     var c = content(i);
     var line = c.intro || (name + "는 " + island + "에서 " + row.an + "의 작고 또렷한 리듬으로 하루를 연다.");
-    var kw = (window.IDW_SHEET_KW && window.IDW_SHEET_KW[i]) || null;
+    var kwTr = window.IDW_SHEET_KW_TR && window.IDW_SHEET_KW_TR[curLang()];
+    var kw = (kwTr && kwTr[i]) || (window.IDW_SHEET_KW && window.IDW_SHEET_KW[i]) || null;
     itemBookTop.href = itemBookHref(i);
     detail.innerHTML =
       '<aside class="profile">'
