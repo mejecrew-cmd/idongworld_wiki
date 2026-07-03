@@ -152,11 +152,24 @@
   function kwSection(kw){
     var cats=[["코어",kw.core],["감성·분위기",kw.vibe],["사물·공간",kw.obj],["행동·태도",kw.act],["구문·복합",kw.phrase]];
     var rows=cats.filter(function(c){return c[1]&&c[1].length;}).map(function(c){
-      return '<div class="kw-cat"><span class="kw-label">'+esc(c[0])+'</span><span class="kw-list">'+esc(c[1].join(", "))+'</span></div>';
+      var chips=c[1].map(function(w){return '<span class="kw-chip">'+esc(w)+'</span>';}).join("");
+      return '<div class="kw-cat"><span class="kw-label">'+esc(c[0])+'</span><span class="kw-list">'+chips+'</span></div>';
     }).join("");
     return '<section class="section wide kw-banner"><div class="kw-eyebrow">아이동 키워드</div>'
-      +(kw.tag?'<p class="kw-tag">'+esc(kw.tag)+'</p>':'')
       +'<div class="kw-cats">'+rows+'</div></section>';
+  }
+  function tagHero(tag){
+    return '<section class="section wide tag-hero"><span class="tag-hero__quote">“</span>'
+      +'<p class="tag-hero__line">'+esc(tag)+'</p></section>';
+  }
+  function voiceSection(voice){
+    var lines=(voice||[]).filter(function(v){return v&&String(v).trim();});
+    if(!lines.length) return "";
+    var items=lines.map(function(v){
+      var t=String(v).trim().replace(/^[\s"“”'’]+|[\s"“”'’]+$/g,"");
+      return '<li class="voice-line">'+esc(t)+'</li>';
+    }).join("");
+    return '<section class="section wide voice-sec"><h3>하루의 목소리</h3><ul class="voice-list">'+items+'</ul></section>';
   }
   function pediaGrid(i){
     var items = PEDIA[i] || [];
@@ -188,19 +201,16 @@
           + '<p class="line">'+esc(line)+'</p>'
           + '<div class="quick">'
             + '<div><span>동물</span><strong>'+esc(row.an)+'</strong></div>'
-            + '<div><span>개인섬</span><strong>'+esc(island)+'</strong></div>'
-            + '<div><span>도감</span><strong>25칸</strong></div>'
+            + '<div><span>섬</span><strong>'+esc(island)+'</strong></div>'
           + '</div>'
         + '</div>'
       + '</aside>'
       + '<div class="sections">'
-        + section("본연", c.intro)
-        + section("모습과 빛깔", c.mood)
-        + (kw ? "" : section("무대에서 온 결", textList(c.keywords,6)))
-        + (kw ? "" : section("버릇과 표식", textList(c.props,6)))
-        + section("돌아갈 섬", c.island + (c.todo && c.todo.length ? " 할 일: " + textList(c.todo,5) : ""))
-        + section("하루의 목소리", textList(c.voice,4))
-        + (kw ? kwSection(kw) : section("저마다의 이야기", textList(c.story,3)))
+        + (kw && kw.tag ? tagHero(kw.tag) : "")
+        + (c.look ? section("외모", c.look) : (kw ? "" : section("모습과 빛깔", c.mood)))
+        + (kw ? kwSection(kw) : section("무대에서 온 결", textList(c.keywords,6)))
+        + voiceSection(c.voice)
+        + section(island || "돌아갈 섬", c.island)
         + '<section class="section wide"><div class="pedia-head"><h3>품은 것들</h3><a href="'+itemBookHref(i)+'">아이템 카드북에서 보기</a></div><div class="pedia-grid">'+pediaGrid(i)+'</div></section>'
       + '</div>';
     listView.hidden = true;
