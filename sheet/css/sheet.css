@@ -606,3 +606,7 @@ h1{
   .kw-label{ justify-self:start; padding:6px 16px; }
 }
 
+
+/* 한국어 줄바꿈: 어절 단위로 끊어 단어/조사 중간 깨짐 방지 */
+.detail-page .tag-hero__line,.detail-page .section>p,.detail-page .line,
+.detail-page .voice-line,.detail-page .kw-list,.detail-page .profile h2{ word-break:keep-all; }
