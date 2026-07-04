@@ -127,6 +127,18 @@
     if (window.ScrollTrigger) g.registerPlugin(ScrollTrigger);
     if (REDUCED) { g.set(items, { opacity:1, y:0 }); return; }
 
+    var fallbackTimer = window.setTimeout(function () {
+      try { g.set(items, { opacity:1, y:0, clearProps:'transform' }); }
+      catch (e) { items.forEach(function (el) { el.style.opacity = 1; el.style.transform = ''; }); }
+      if (introEl && introEl.parentNode) introEl.parentNode.removeChild(introEl);
+    }, SMALL ? 900 : 3200);
+    function clearFallback() {
+      if (fallbackTimer) {
+        window.clearTimeout(fallbackTimer);
+        fallbackTimer = null;
+      }
+    }
+
     g.set(items, { opacity:0, y:46 });
     var load = items.filter(function (e) { return e.getAttribute('data-reveal') === 'load'; });
     var onScroll = items.filter(function (e) { return e.getAttribute('data-reveal') !== 'load'; });
@@ -149,9 +161,11 @@
         .to({}, { duration:0.95 })         // 마크 감상
         .to(introEl, { yPercent:-100, duration:0.9, ease:'power4.inOut',
               onComplete:function () { introEl.parentNode && introEl.parentNode.removeChild(introEl); } })
-        .to(load, { opacity:1, y:0, duration:0.95, ease:'power3.out', stagger:0.12, clearProps:'transform' }, '<0.35');
+        .to(load, { opacity:1, y:0, duration:0.95, ease:'power3.out', stagger:0.12, clearProps:'transform',
+              onComplete:clearFallback }, '<0.35');
     } else {
-      tl.to(load, { opacity:1, y:0, duration:0.95, ease:'power3.out', stagger:0.12, clearProps:'transform', delay:0.2 });
+      tl.to(load, { opacity:1, y:0, duration:0.95, ease:'power3.out', stagger:0.12, clearProps:'transform',
+        delay:0.2, onComplete:clearFallback });
     }
   }
 
@@ -217,7 +231,7 @@
     // 인트로: 세션당 1회만(책 오가며 반복 노출 방지). reduced-motion은 CSS로 이미 숨김.
     var introEl = document.querySelector('.fx-intro'), introPlay = false;
     try {
-      if (introEl && !REDUCED) {
+      if (introEl && !REDUCED && !SMALL) {
         var seen = false; try { seen = !!sessionStorage.getItem('fxIntroSeen'); } catch (e) {}
         if (seen) { introEl.parentNode && introEl.parentNode.removeChild(introEl); }
         else { try { sessionStorage.setItem('fxIntroSeen', '1'); } catch (e) {} introPlay = true; }

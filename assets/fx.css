@@ -67,6 +67,7 @@ html.fx-cursor-on .fx-cursor-dot, html.fx-cursor-on .fx-cursor-ring{ opacity:1; 
   .fx-cursor-dot,.fx-cursor-ring{ display:none; }
 }
 @media (max-width:820px), (hover:none){
+  .fx-intro{ display:none; }
   .fx-cursor-dot,.fx-cursor-ring{ display:none; }
   html.fx-cursor-on{ cursor:auto; }
 }
