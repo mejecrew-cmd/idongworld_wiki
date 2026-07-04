@@ -75,6 +75,7 @@
   .cover img{width:100%;height:100%;object-fit:cover;transition:transform 0.168s ease;}
   .cover.contain img{width:72%;height:72%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(43,47,58,.16));}
   /* 카드북 몽타주 */
+  .worldbook-cover img{width:82%;height:82%;}
   .sheet-cover{background:radial-gradient(120% 90% at 30% 18%,#fff,#ffe5f1 48%,#e8eeff);}
   .montage{position:relative;width:100%;height:100%;}
   .montage img{position:absolute;width:42%;aspect-ratio:1;object-fit:contain;border-radius:14px;background:#fff;
@@ -189,7 +190,7 @@
     <main class="books">
       <!-- 월드북 -->
       <a class="book live" href="worldbook/index.html" style="--c:#6f9d58" data-reveal="load" data-tilt>
-        <div class="cover"><img src="assets/home/worldbook.webp" alt="아이동 월드북" loading="lazy" /></div>
+        <div class="cover contain worldbook-cover"><img src="assets/home/worldbook.webp?v=260704-worldbook-card1" alt="아이동 월드북" loading="lazy" /></div>
         <div class="book__body">
           <h2 data-i18n="book_world_title">📖 아이동 월드북</h2>
           <p data-i18n="book_world_desc">회색섬에서 시작되는 세계관. 15구역·아이동·반짝섬의 이야기와 설정을 담은 로어북.</p>
