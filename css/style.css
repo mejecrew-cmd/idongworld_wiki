@@ -359,7 +359,9 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
   overflow: hidden;
   transition: transform 0.14s cubic-bezier(.2,.8,.2,1), box-shadow 0.14s;
 }
-.wiki-card:hover { transform: translateY(-4px); box-shadow: 0 18px 46px rgba(20,40,70,0.36); }
+@media (hover:hover) and (pointer:fine) {
+  .wiki-card:hover { box-shadow: 0 18px 46px rgba(20,40,70,0.36); }
+}
 .wiki-card:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 .wiki-badge {
   display: inline-block; margin-bottom: var(--spacing-16);
@@ -395,7 +397,9 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
   box-shadow: 0 10px 26px rgba(43,127,255,0.45);
   transition: background 0.112s, box-shadow 0.112s;
 }
-.wiki-card:hover .wiki-btn { background: #1f6fff; box-shadow: 0 14px 32px rgba(43,127,255,0.55); }
+@media (hover:hover) and (pointer:fine) {
+  .wiki-card:hover .wiki-btn { background: #1f6fff; box-shadow: 0 14px 32px rgba(43,127,255,0.55); }
+}
 @media (prefers-reduced-motion: reduce) { .aidong-cluster { animation: none; } }
 
 /* ── 준비중 버튼 (Air 아웃라인 액션) ── */
@@ -501,7 +505,15 @@ body[dir="rtl"] .star-item { flex-direction: row-reverse; }
 
 /* 위키 카드/버튼 컬러 글로우 */
 .wiki-card{transition:transform 0.134s cubic-bezier(.2,.8,.2,1), box-shadow 0.134s;}
-.wiki-card:hover{transform:translateY(-6px) scale(1.01);}
+@media (hover:hover) and (pointer:fine) {
+  .wiki-card:hover{animation:homeWikiWind 1.72s ease-in-out both;}
+}
+@keyframes homeWikiWind{
+  0%{transform:translateY(0) rotate(0);}
+  32%{transform:translateY(-4px) rotate(-.35deg);}
+  66%{transform:translateY(-6px) rotate(.28deg);}
+  100%{transform:translateY(-4px) rotate(-.12deg);}
+}
 .wiki-btn{animation:wikiGlow 1.68s ease-in-out infinite;}
 @keyframes wikiGlow{
   0%,100%{box-shadow:0 8px 22px rgba(43,127,255,.34)}

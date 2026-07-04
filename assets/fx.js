@@ -1,13 +1,12 @@
 /* ============================================================
  * 아이동월드 위키 · 공유 FX 엔진 (홈·웰컴 공용)
  * 의존(있으면 사용, 없으면 폴백): GSAP, ScrollTrigger, Lenis
- * data-속성으로 강화: [data-reveal] [data-tilt] [data-magnetic]
+ * data-속성으로 강화: [data-reveal], CSS-only hover sway
  * ============================================================ */
 (function () {
   "use strict";
   var mq = function (q) { return !!(window.matchMedia && matchMedia(q).matches); };
   var REDUCED = mq('(prefers-reduced-motion: reduce)');
-  var HOVER   = mq('(hover: hover) and (pointer: fine)');
   var SMALL   = mq('(max-width: 820px)');
   var body = document.body, html = document.documentElement;
 
@@ -67,7 +66,6 @@
         uTime = gl.getUniformLocation(prog, 'u_time'),
         uMouse = gl.getUniformLocation(prog, 'u_mouse');
 
-    var tmouse = [0.5, 0.5], mouse = [0.5, 0.5];
     function resize() {
       var scale = 0.55; // 저해상 렌더 후 CSS 업스케일(오로라는 소프트해 티 안 남 → 성능 대폭 절감)
       canvas.width = Math.max(2, Math.floor(innerWidth * scale));
@@ -76,20 +74,14 @@
     }
     resize();
     window.addEventListener('resize', resize, { passive:true });
-    window.addEventListener('pointermove', function (e) {
-      tmouse[0] = e.clientX / innerWidth * canvas.width;
-      tmouse[1] = (1 - e.clientY / innerHeight) * canvas.height;
-    }, { passive:true });
 
     var start = null, running = true;
     function frame(ts) {
       if (!running) return;
       if (start === null) start = ts;
-      mouse[0] += (tmouse[0] - mouse[0]) * 0.05;
-      mouse[1] += (tmouse[1] - mouse[1]) * 0.05;
       gl.uniform2f(uRes, canvas.width, canvas.height);
       gl.uniform1f(uTime, (ts - start) / 1000);
-      gl.uniform2f(uMouse, mouse[0], mouse[1]);
+      gl.uniform2f(uMouse, canvas.width * 0.5, canvas.height * 0.5);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       requestAnimationFrame(frame);
     }
@@ -169,63 +161,6 @@
     }
   }
 
-  /* ---------------- 3D 틸트 + 글레어 ---------------- */
-  function initTilt() {
-    if (!HOVER || REDUCED) return;
-    [].slice.call(document.querySelectorAll('[data-tilt]')).forEach(function (el) {
-      var glare = document.createElement('span'); glare.className = 'fx-glare'; el.appendChild(glare);
-      var rect = null;
-      el.addEventListener('pointerenter', function () { rect = el.getBoundingClientRect(); el.classList.add('is-tilting'); });
-      el.addEventListener('pointermove', function (e) {
-        if (!rect) rect = el.getBoundingClientRect();
-        var px = (e.clientX - rect.left) / rect.width, py = (e.clientY - rect.top) / rect.height;
-        var rx = (py - 0.5) * -8, ry = (px - 0.5) * 10;
-        el.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-8px) scale(1.02)';
-        el.style.setProperty('--gx', (px * 100) + '%');
-        el.style.setProperty('--gy', (py * 100) + '%');
-      });
-      el.addEventListener('pointerleave', function () { el.classList.remove('is-tilting'); el.style.transform = ''; rect = null; });
-    });
-  }
-
-  /* ---------------- 마그네틱 CTA ---------------- */
-  function initMagnetic() {
-    if (!HOVER || REDUCED) return;
-    [].slice.call(document.querySelectorAll('[data-magnetic]')).forEach(function (el) {
-      var rect = null;
-      el.style.transition = 'transform .25s cubic-bezier(.2,.8,.2,1)';
-      el.addEventListener('pointerenter', function () { rect = el.getBoundingClientRect(); });
-      el.addEventListener('pointermove', function (e) {
-        if (!rect) rect = el.getBoundingClientRect();
-        var mx = e.clientX - (rect.left + rect.width / 2), my = e.clientY - (rect.top + rect.height / 2);
-        el.style.transform = 'translate(' + (mx * 0.3) + 'px,' + (my * 0.45) + 'px)';
-      });
-      el.addEventListener('pointerleave', function () { el.style.transform = ''; rect = null; });
-    });
-  }
-
-  /* ---------------- 커스텀 커서 ---------------- */
-  function initCursor() {
-    if (!HOVER || REDUCED) return;
-    var dot = document.querySelector('.fx-cursor-dot'), ring = document.querySelector('.fx-cursor-ring');
-    if (!dot || !ring) return;
-    html.classList.add('fx-cursor-on');
-    var x = innerWidth / 2, y = innerHeight / 2, rx = x, ry = y;
-    window.addEventListener('pointermove', function (e) {
-      x = e.clientX; y = e.clientY;
-      dot.style.transform = 'translate(' + x + 'px,' + y + 'px) translate(-50%,-50%)';
-    }, { passive:true });
-    (function loop() {
-      rx += (x - rx) * 0.18; ry += (y - ry) * 0.18;
-      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)';
-      requestAnimationFrame(loop);
-    })();
-    [].slice.call(document.querySelectorAll('a,button,[data-tilt],[data-magnetic]')).forEach(function (el) {
-      el.addEventListener('pointerenter', function () { ring.classList.add('is-hover'); });
-      el.addEventListener('pointerleave', function () { ring.classList.remove('is-hover'); });
-    });
-  }
-
   function safe(fn) { try { fn(); } catch (e) {} }
   function init() {
     // 인트로: 세션당 1회만(책 오가며 반복 노출 방지). reduced-motion은 CSS로 이미 숨김.
@@ -243,7 +178,6 @@
       [].slice.call(document.querySelectorAll('[data-reveal]')).forEach(function (el) { el.style.opacity = 1; });
       if (introEl && introEl.parentNode) introEl.parentNode.removeChild(introEl);
     }
-    safe(initTilt); safe(initMagnetic); safe(initCursor);
   }
   if (document.readyState !== 'loading') init();
   else document.addEventListener('DOMContentLoaded', init);

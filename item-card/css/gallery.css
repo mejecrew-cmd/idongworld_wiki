@@ -264,11 +264,21 @@ body.locked{overflow:hidden;}
 .chipgroup.feat .chip{background:linear-gradient(90deg,rgba(242,153,74,.14),rgba(242,153,74,.06));border-color:rgba(242,153,74,.4);}
 .chipgroup.feat .chip.on{background:#f2994a;color:#fff;}
 
-/* ── 카드 3D 틸트 + 커서 추종 광택(app.js 위임 처리) ── */
-.card{ will-change:transform; }
-.card.is-tilting{ transition:transform .09s ease-out; z-index:5; }
-.card .card-glare{ position:absolute; inset:0; z-index:6; pointer-events:none; opacity:0;
-  border-radius:inherit; mix-blend-mode:soft-light; transition:opacity .3s ease;
-  background:radial-gradient(circle at var(--gx,50%) var(--gy,50%), rgba(255,255,255,.55), transparent 55%); }
-.card.is-tilting .card-glare{ opacity:1; }
-@media (hover:none),(prefers-reduced-motion:reduce){ .card .card-glare{ display:none !important; } }
+/* ── 데스크톱 hover: 좌표 추종 대신 가벼운 바람 흔들림 ── */
+.card{ will-change:auto; }
+@media (hover:hover) and (pointer:fine){
+  .card{ transition:transform .24s ease, box-shadow .24s ease; transform-origin:50% 92%; }
+  .card:hover{ animation:itemWindSway 1.48s ease-in-out both; z-index:5; }
+  .grid .card:nth-child(3n+2):hover{ animation-delay:.04s; }
+  .grid .card:nth-child(3n):hover{ animation-delay:.08s; }
+}
+@keyframes itemWindSway{
+  0%{ transform:translateY(0) rotate(0deg); }
+  23%{ transform:translate(-1px,-3px) rotate(-.55deg); }
+  51%{ transform:translate(2px,-4px) rotate(.45deg); }
+  77%{ transform:translate(-1px,-2px) rotate(-.25deg); }
+  100%{ transform:translateY(0) rotate(0deg); }
+}
+@media (hover:none),(prefers-reduced-motion:reduce){
+  .card{ animation:none !important; transition:none !important; transform:none !important; }
+}
