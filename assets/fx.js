@@ -7,7 +7,7 @@
   "use strict";
   var mq = function (q) { return !!(window.matchMedia && matchMedia(q).matches); };
   var REDUCED = mq('(prefers-reduced-motion: reduce)');
-  var SMALL   = mq('(max-width: 820px)');
+  var SMALL   = mq('(max-width: 820px)') || mq('(hover: none) and (pointer: coarse)'); // 터치기기(아이폰 가로 포함)도 경량 모드
   var body = document.body, html = document.documentElement;
 
   /* ---------------- WebGL 오로라 (경량, 모바일/리듀스드 시 스킵→CSS 폴백) ---------------- */
