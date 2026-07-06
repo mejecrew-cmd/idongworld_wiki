@@ -14,11 +14,16 @@
     <style>
       /* 위키 통일 상단바(idw-topbar)와 공존 — 월드북 자체 내비를 상단바 아래로 */
       .top-nav { top: 48px; }
+      /* 심사·공개용: 문서 성숙도(draft/planned/needs_merge) 상태 뱃지 숨김 */
+      .status-pill { display: none !important; }
     </style>
   </head>
   <body>
     <header class="idw-topbar">
-      <a class="idw-brand" href="../index_wiki.html"><span class="idw-brand__mark">💠</span><span data-i18n="top_label">아이동월드</span></a>
+      <span style="display:flex;align-items:center;gap:12px;">
+        <a class="idw-brand" href="../index_wiki.html"><span class="idw-brand__mark">💠</span><span data-i18n="top_label">아이동월드</span></a>
+        <a class="idw-brand" href="../index.html" style="font-size:.82rem;opacity:.72;">아이동월드 소개 →</a>
+      </span>
       <button class="idw-langchip" id="idwLangChip" type="button" aria-label="language">
         <span class="idw-langchip__dot"></span><span id="idwLangName">한국어</span><span class="idw-langchip__ico">▾</span>
       </button>
