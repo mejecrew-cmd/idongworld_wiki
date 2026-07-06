@@ -13,6 +13,28 @@
 
   <link rel="stylesheet" href="css/style.css?v=260704-pointerless-home1" />
   <link rel="stylesheet" href="assets/fx.css?v=260704-pointerless-fx1" />
+  <!-- 모바일(≤600px): 배경 특수효과 전면 제거 → 성능·호환성 최적 + 스크롤 리빌 실패로 인한 '절반 미표시' 방지 -->
+  <style id="mobile-fx-off">
+  @media (max-width: 600px) {
+    /* 배경 특수효과(WebGL 캔버스·오로라·별·반짝이·구름·무대 조명·인트로 커튼) 전부 제거 → body 솔리드 그라데이션만 */
+    #fx-canvas, .sky, .fx-intro { display: none !important; }
+    /* 스크롤 리빌이 어긋나도 모든 콘텐츠가 항상 보이도록(핵심: 위키 이후 구간 미표시 방지) */
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+    /* 무거운/불필요한 데코 애니메이션·글로우 정지(성능·호환) */
+    .morph__float, .clock__big, .wiki-btn, .aidong-cluster,
+    .cta__btn, .scroll-cue, .star-dot, .cloud,
+    .m-ido, .m-ng, .morph .m-world, .m-spark { animation: none !important; }
+    .m-ido, .m-ng, .morph .m-world { opacity: 1 !important; transform: none !important; }
+    .m-spark { opacity: 0 !important; }
+    .clock__big, .morph__float { filter: none !important; }
+    /* iOS Safari 전용 렌더링 버그·과부하 대응 */
+    body { background-attachment: scroll !important; }               /* iOS Safari의 fixed 배경 버그(깨짐·로딩 멈춤) 회피 */
+    .topbar, .clock__face, .glass-card, .wiki-card {                 /* 스크롤 중 대형 backdrop-filter 과부하 제거 */
+      -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+    }
+    .topbar { background: rgba(66,97,136,0.92) !important; }          /* 블러 제거 대신 반투명 솔리드로 가독성 유지 */
+  }
+  </style>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   <script defer src="assets/fx.js?v=260704-pointerless-fx1"></script>

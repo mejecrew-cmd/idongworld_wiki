@@ -117,7 +117,8 @@
     if (!window.gsap) { items.forEach(function (el) { el.style.opacity = 1; }); return; }  // 인트로는 CSS가 자동 종료
     var g = window.gsap;
     if (window.ScrollTrigger) g.registerPlugin(ScrollTrigger);
-    if (REDUCED) { g.set(items, { opacity:1, y:0 }); return; }
+    // 모바일/리듀스드: 리빌 애니메이션을 생략하고 콘텐츠를 즉시 표시(ScrollTrigger 의존 제거 → '절반 미표시' 방지)
+    if (REDUCED || SMALL) { g.set(items, { opacity:1, y:0 }); return; }
 
     var fallbackTimer = window.setTimeout(function () {
       try { g.set(items, { opacity:1, y:0, clearProps:'transform' }); }
@@ -125,7 +126,9 @@
       if (introEl && introEl.parentNode) introEl.parentNode.removeChild(introEl);
     }, SMALL ? 900 : 3200);
     function clearFallback() {
-      if (fallbackTimer) {
+      // load(위폴드) 요소가 있을 때만 안전망 해제. index.html처럼 load가 비어 있으면
+      // 타이머를 유지 → 스크롤 리빌(ScrollTrigger)이 어긋나도 뒤이어 전 구역이 강제 표시된다.
+      if (load.length && fallbackTimer) {
         window.clearTimeout(fallbackTimer);
         fallbackTimer = null;
       }
